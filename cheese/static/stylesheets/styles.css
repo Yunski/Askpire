@@ -35,6 +35,11 @@ body {
 .card {
 }
 
+.navbar-fixed{
+background: rgba(66, 190, 255, 1);
+
+}
+
 /* custom css */
 
 .navbar-custom {
@@ -62,8 +67,6 @@ body {
 .shrink .navbar-nav .nav-link.active {
   border-bottom: 3px solid white;
 }
-
-/* index content */
 
 .parallax {
   height: 100vh;
@@ -102,21 +105,14 @@ body {
   text-align: center;
 }
 
+
 #profiles {
-  position: absolute;
-  top: 10rem;
+position: absolute;;
+  top: 7rem;
   left: 10%;
   right: 10%;
 }
 
-#profiles .col-sm-3 {
-  left: auto;
-  max-width: 100%;
-  min-width: 20%;
-  background-position: 50% 50%;
-  background-repeat:   no-repeat;
-  background-size:     cover;
-}
 
   #profiles img {
   left: auto;
@@ -130,15 +126,17 @@ body {
 #profiles .main-text{
   display: inline-block;
   text-align: justify;
+  font-size: 11px;
   right: auto;
   width: 100%
 }
 
 
+#profiles .profileskeyinfo{
+font-size: 10px
+}
 
 .footer {
   height: 5rem;
   background: black;
 }
-
-/* Profiles page */
