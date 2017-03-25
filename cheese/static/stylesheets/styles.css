@@ -1,0 +1,144 @@
+body {
+  font-size: 16px;
+}
+
+/* Bootstrap Overrides */
+
+.navbar {
+  padding: 0;
+}
+
+.navbar-light {
+  /*background: white;*/
+}
+
+.navbar-brand {
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+.navbar-nav {
+  padding-right: 5rem;
+}
+
+.navbar-toggleable-md .navbar-nav .nav-link {
+  text-align: center;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+.row {
+  padding: 0;
+  margin: 2rem 0rem 2rem 0rem;
+}
+
+.card {
+}
+
+/* custom css */
+
+.navbar-custom {
+  height: 6rem;
+}
+
+.shrink {
+  background: rgba(0, 0, 0, 0.3);
+  height: 4rem;
+  -webkit-transition: height 300ms ease-in-out;
+  -moz-transition: height 300ms ease-in-out;
+  -o-transition: height 300ms ease-in-out;
+  transition: height 300ms ease-in-out;
+}
+
+.shrink .navbar-brand {
+  color: white;
+}
+
+.shrink .navbar-nav .nav-link {
+  color: white;
+  padding-left: 1rem;
+}
+
+.shrink .navbar-nav .nav-link.active {
+  border-bottom: 3px solid white;
+}
+
+/* index content */
+
+.parallax {
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-perspective: 1px;
+  perspective: 1px;
+}
+
+.parallax-layer {
+  padding: 75vh 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.parallax-layer-content {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+.parallax-layer-background {
+  background: url("/static/img/princeton_students.jpg") no-repeat center;
+  background-size: cover;
+  -webkit-transform: translateZ(-1px) scale(2);
+  transform: translateZ(-1px) scale(2);
+}
+
+.parallax-content {
+  background: white;
+}
+
+.hero {
+  text-align: center;
+}
+
+#profiles {
+  position: absolute;
+  top: 10rem;
+  left: 10%;
+  right: 10%;
+}
+
+#profiles .col-sm-3 {
+  left: auto;
+  max-width: 100%;
+  min-width: 20%;
+  background-position: 50% 50%;
+  background-repeat:   no-repeat;
+  background-size:     cover;
+}
+
+  #profiles img {
+  left: auto;
+  max-width: 100%;
+  min-width: 20%;
+  background-position: 50% 50%;
+  background-repeat:   no-repeat;
+  background-size:     cover;
+}
+
+#profiles .main-text{
+  display: inline-block;
+  text-align: justify;
+  right: auto;
+  width: 100%
+}
+
+
+
+.footer {
+  height: 5rem;
+  background: black;
+}
+
+/* Profiles page */
