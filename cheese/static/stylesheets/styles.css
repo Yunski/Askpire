@@ -1,5 +1,6 @@
 body {
   font-size: 16px;
+  color: #1B2F43;
 }
 
 /* Bootstrap Overrides */
@@ -9,12 +10,21 @@ body {
 }
 
 .navbar-light {
-  background: white;
+  background: #1B2F43;
 }
 
-.navbar-brand {
+.navbar-light .navbar-nav .nav-link {
+  color: #f4f4f4;
+}
+
+.navbar-light .navbar-brand, .navbar-light .navbar-toggler {
+  color: #f4f4f4;
   padding-left: 5rem;
   padding-right: 5rem;
+}
+
+.navbar-light .navbar-brand:hover {
+  color: white;
 }
 
 .navbar-nav {
@@ -27,14 +37,20 @@ body {
   padding-left: 1rem;
 }
 
+.row {
+  padding: 0;
+  margin: 0;
+  max-width: 100%;
+}
+
 /* navbar */
 
 .navbar-custom {
-  height: 6rem;
+  height: 4.5rem;
 }
 
 .shrink {
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(244, 244, 244, 0.9);
   height: 4rem;
   -webkit-transition: height 300ms ease-in-out;
   -moz-transition: height 300ms ease-in-out;
@@ -43,16 +59,26 @@ body {
 }
 
 .shrink .navbar-brand {
-  color: white;
+  color: #1B2F43;
 }
 
 .shrink .navbar-nav .nav-link {
-  color: white;
+  color: #1B2F43;
   padding-left: 1rem;
 }
 
 .shrink .navbar-nav .nav-link.active {
-  border-bottom: 3px solid white;
+  border-bottom: 3px solid #1B2F43;
+}
+
+/* custom layout */
+
+.section {
+  width: 100%;
+}
+
+.section h1 {
+  padding-bottom: 2rem;
 }
 
 /* index apge */
@@ -66,7 +92,7 @@ body {
 }
 
 .parallax-layer {
-  padding: 75vh 0;
+  padding-top: 30vh;
   position: absolute;
   top: 0;
   right: 0;
@@ -80,24 +106,25 @@ body {
 }
 
 .parallax-layer-background {
-  background: url("/static/img/princeton_students.jpg") no-repeat center;
-  background-size: cover;
+  /*background: url("/static/img/will_liu.jpg") no-repeat center;
+  background-size: cover;*/
+  background: white;
   -webkit-transform: translateZ(-1px) scale(2);
   transform: translateZ(-1px) scale(2);
 }
 
-.parallax-content {
-  background: white;
-}
-
 #main-content .hero {
   text-align: center;
+  padding-bottom: 8rem;
 }
 
-#main-content .row {
-  padding: 0;
-  margin-left: 5%;
-  margin-right: 5%;
+#main-content .jumbotron {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+#main-content .profile-cards {
+  background-color: white;
+  padding: 5%;
 }
 
 #main-content .card {
@@ -112,6 +139,11 @@ body {
 
 #main-content .card span {
   padding-left: 0.2rem;
+}
+
+#main-content .card-link {
+  color: #1B2F43;
+  font-size: bold;
 }
 
 /* profiles page */
@@ -144,7 +176,74 @@ body {
   font-size: 10px;
 }
 
+.studentprofmain {
+  margin-top: 4.5rem;
+}
+
+.studentprofmain .card {
+  border: none;
+  border-radius: 0;
+}
+
+.studentprofmain .card-img-top {
+  border-radius: 0;
+}
+
+.bottomcomp{
+  right: 10px;
+}
+
+#profilecards img {
+  max-width: 100%;
+  min-width: 20%;
+  height: 22.5rem;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* footer */
+
 .footer {
-  height: 5rem;
-  background: black;
+  height: 20rem;
+  background: #1B2F43;
+  color: white;
+}
+
+.footer-inner {
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+}
+
+.footer-inner .row {
+  height: 100%;
+}
+
+.col-md-8 {
+  padding: 0;
+}
+
+.col-md-4 {
+  padding: 0;
+}
+
+.footer-left {
+  position: relative;
+}
+
+.copyright {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.footer .nav-link {
+  padding-left: 0;
+  padding-right: 3rem;
+  color: white;
+}
+
+.footer-right .icons {
+  padding-top: 1rem;
 }

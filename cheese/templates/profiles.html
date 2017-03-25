@@ -21,101 +21,66 @@
 {% endblock %}
 {% block content %}
 
-<!--Student Profiles -->
-  <div id="profiles">
+<!--Student Profile -->
+<div class = "studentprofmain">
+  <div id = "profilecards">
 
-    <div class="container-fluid">
-        <div class="col-md-3">
-        <img class="card-img-top" src="/static/img/pic2.png">
-        <div class = "profileskeyinfo">
-        <h3 class="card-title">Jasper Gebhardt</h3>
-        <p class="card-text">SAT: 2350 (99.8 percentile)  <br>Major: Mechanical Engineering</p>
-      </div>
-        <div class="btn-group" role="group" aria-label="...">
-        <button href="jasperg1/" type="button" class="btn btn-default">Detailed Profile</button>
-        <button href="jasperg2/"type="button" class="btn btn-default">Schedule a meeting</button>
-        </div>
-    <!--    <a href="jasperg1/" class="btn btn-primary">Open Detailed Profile</a>
-        <a href="jasperg2/" class="btn btn-primary">Schedule a meeting</a> -->
-        </div>
-        <div class="col-md-9">
-          <div class="main-text">
-          <p> Jasper is a General Partner at Flybridge Capital Partners whose investment interests and experience broadly
-              cover companies and technologies in the information technology sector. He currently represents the firm on the boards of 1-800-FREE411
-              (Jingle Networks), MongoDB, First Best Systems, Infobright, Placemark, Reveal Imaging, and Sciformix and was previously a director
-              at Bowstreet (acquired by IBM), mValent (acquired by Oracle) and SupplyScape (acquired by TraceLink). Before joining Flybridge
-              in May 2002, Chip was a General Partner with Greylock Partners, a leading venture capital firm he joined in 1994. While at
-              Greylock, Chip led or participated in numerous successful investments in the enterprise information technology field
-              including Narrative Communications (acquired by @Home), Idiom Technologies (acquired by SDL), iPhrase Technologies
-              (acquired by IBM), IBA (acquired by ServiceSoft/Kana), Storage Networks (IPO), Totality (acquired by MCI) and the
-              Vincam Group (IPO in 1996, acquired by ADP). Prior to Greylock, he was with Company Assistance Limited, an investment
-              and consulting firm in Warsaw Poland; and Bain and Company, an international management consulting firm. Chip received
-              a BA with honors from Stanford University and an MBA from Harvard Business School where he was a Baker Scholar and a
-              Ford Scholar.
-          </p>
+    <div class = "cardcomp">
+      <div class="card">
+        <img class="card-img-top" src="static/img/stockimage.jpg" alt="Card image cap">
+          <div class="card-block">
+            <p class="card-text">Princeton Student - Class of 2019</p>
+            <h3>William Liu</h3>
+            <h5>San Diego, CA, United States | Economics </h5>
           </div>
-        </div>
-      </div>
-
-    <div class="container-fluid">
-        <div class="col-md-3">
-        <img class="card-img-top" src="/static/img/pic3.jpg">
-        <h3 class="card-title">Liz Digennero</h3>
-        <p class="card-text">ACT score: 35 <br>Major: International Relationship</p>
-        <a href="jasperg1/" class="btn btn-primary">Open Detailed Profile</a>
-        <a href="jasperg2/" class="btn btn-primary">Schedule a meeting</a>
-        </div>
-        <div class="col-md-9">
-          <div class="main-text">
-          <p> Jasper is a General Partner at Flybridge Capital Partners whose investment interests and experience broadly
-              cover companies and technologies in the information technology sector. He currently represents the firm on the boards of 1-800-FREE411
-              (Jingle Networks), MongoDB, First Best Systems, Infobright, Placemark, Reveal Imaging, and Sciformix and was previously a director
-              at Bowstreet (acquired by IBM), mValent (acquired by Oracle) and SupplyScape (acquired by TraceLink). Before joining Flybridge
-              in May 2002, Chip was a General Partner with Greylock Partners, a leading venture capital firm he joined in 1994. While at
-              Greylock, Chip led or participated in numerous successful investments in the enterprise information technology field
-              including Narrative Communications (acquired by @Home), Idiom Technologies (acquired by SDL), iPhrase Technologies
-              (acquired by IBM), IBA (acquired by ServiceSoft/Kana), Storage Networks (IPO), Totality (acquired by MCI) and the
-              Vincam Group (IPO in 1996, acquired by ADP). Prior to Greylock, he was with Company Assistance Limited, an investment
-              and consulting firm in Warsaw Poland; and Bain and Company, an international management consulting firm. Chip received
-              a BA with honors from Stanford University and an MBA from Harvard Business School where he was a Baker Scholar and a
-              Ford Scholar.
-          </p>
-          </div>
-        </div>
       </div>
     </div>
 
-
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-3">
-        <img class="card-img-top" src="/static/img/pic4.jpg">
-        <h3 class="card-title">Liz Digennero</h3>
-        <p class="card-text">ACT score: 35 <br>Major: International Relationship</p>
-        <a href="jasperg1/" class="btn btn-primary">Open Detailed Profile</a>
-        <a href="jasperg2/" class="btn btn-primary">Schedule a meeting</a>
-        </div>
-        <div class="col-md-9">
-          <div class="main-text">
-          <
-          <p> Jasper is a General Partner at Flybridge Capital Partners whose investment interests and experience broadly
-              cover companies and technologies in the information technology sector. He currently represents the firm on the boards of 1-800-FREE411
-              (Jingle Networks), MongoDB, First Best Systems, Infobright, Placemark, Reveal Imaging, and Sciformix and was previously a director
-              at Bowstreet (acquired by IBM), mValent (acquired by Oracle) and SupplyScape (acquired by TraceLink). Before joining Flybridge
-              in May 2002, Chip was a General Partner with Greylock Partners, a leading venture capital firm he joined in 1994. While at
-              Greylock, Chip led or participated in numerous successful investments in the enterprise information technology field
-              including Narrative Communications (acquired by @Home), Idiom Technologies (acquired by SDL), iPhrase Technologies
-              (acquired by IBM), IBA (acquired by ServiceSoft/Kana), Storage Networks (IPO), Totality (acquired by MCI) and the
-              Vincam Group (IPO in 1996, acquired by ADP). Prior to Greylock, he was with Company Assistance Limited, an investment
-              and consulting firm in Warsaw Poland; and Bain and Company, an international management consulting firm. Chip received
-              a BA with honors from Stanford University and an MBA from Harvard Business School where he was a Baker Scholar and a
-              Ford Scholar.
+    <div class="bottomcomp">
+      <div class = "row">
+        <div class="col-md-7">
+          <h3>
+            Husband, dad, technology obsessed geek turned VC, mountain biker,
+            rock music lover, part-time tech support, teller of jokes.
+          </h3>
+          <p>
+            David’s investment focus includes Infrastructure, SaaS, IoT and Cyber Security.
+            Prior to joining Flybridge in June 2005, David spent nearly a decade focusing
+            on early-stage investing at Greylock Partners and before that, held management
+            roles at Chipcom, a network equipment and software vendor. While working
+            full-time on his MBA, David was co-founder and COO of HappyPuppy.
+            <br>
+            Earlier in his career he held technical positions at Bell Labs where he developed secure
+            network software. David holds a BS in Computer Science from the University of Vermont,
+            cum laude and with college honors, an MS in Computer Engineering from the University of
+            Southern California, and an MBA with Distinction from Harvard Business School.
           </p>
+        </div>
+        <div class="col-md-5">
+          <h3>
+            EXTRACURRICULAR ACTIVITIES
+          </h3>
+          <p>
+            IOS Developer Violinist Water-drinker
+            <br> College-Consultant
+          </p>
+          <div>
+            <h3>
+              <br>CURRENT INVESTMENTS
+            </h3>
+            <p>
+              SINGLE LINE PLEASE
+            </p>
           </div>
         </div>
       </div>
     </div>
   </div>
+</div>
+
+
+
+
 
 {% endblock %}
 {% block footer %}

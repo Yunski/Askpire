@@ -3,7 +3,7 @@ $(window).on("load", function() {
 });
 
 $(".parallax").scroll(function() {
-    if ($(".parallax").scrollTop() > 160) {
+    if ($(".parallax").scrollTop() > 96) {
         $(".navbar-custom").addClass("shrink");
         //$(".navbar").addClass("fixed-top");
     } else {
