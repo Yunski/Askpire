@@ -27,6 +27,11 @@ def create_app(config, debug=False, testing=False, config_overrides=None):
         return render_template('index.html')
 
 
+    @app.route('/contact')
+    def contact():
+        return render_template('contact.html')
+
+
     @app.route('/profiles')
     def profiles():
         return render_template('profiles.html')
@@ -34,7 +39,8 @@ def create_app(config, debug=False, testing=False, config_overrides=None):
 
     @app.route('/services')
     def services():
-        return render_template('profiles.html')
+        return render_template('services.html')
+
 
     @app.route('/vision')
     def vision():
