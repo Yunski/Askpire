@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+{% block navbar %}
+<nav class="navbar fixed-top navbar-toggleable-md navbar-light navbar-custom" data-aos="fade">
+  <a class="navbar-brand" href="/">Logo</a>
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+    <!--  <a class="nav-item nav-link active" href="/">Home</a> -->
+      <a class="nav-item nav-link" href="/profiles">Student Profiles</a>
+      <a class="nav-item nav-link" href="/services">Services</a>
+      <a class="nav-item nav-link" href="#">Our Vision</a>
+      <a class="nav-item nav-link" href="/contact">Contact Us</a>
+    <!--  <a class="nav-item nav-link" href="/login">Login</a> -->
+    </div>
+  </div>
+</nav>
+{% endblock %}
+{% block content %}
+
+
+
+<div class="main-form">
+  <form>
+    <div class = "main-image">
+    <div class = "main-text">
+    <h1> CONTACT US </h1>
+    </div>
+    </div>
+  <div class = "main-container">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="exampleInputEmail1">Please enter your email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Email here">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+          </div>
+          <div class="form-group">
+            <label for="subjectline">Please a subject line</label>
+            <input type="subject" class="form-control" id="subjectlineinput" placeholder="Enter Subject here">
+          </div>
+          <div class="form-group">
+            <label for="exampleTextarea">Enter your message below, please</label>
+            <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+          </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+        <div class="col-md-6">
+
+          <p>
+            Contact Details
+            <br> Email Address: hlee_84@yahoo.col-md-8
+            <br> Skype: haiyanli84
+            <br> WeChat: wliu978 | haiyanli1321
+          </p>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+
+  </form>
+</div>
+
+<footer class="footer d-flex align-items-center">
+  <nav class="nav">
+    <a class="nav-link" href="#">Student Profiles</a>
+    <a class="nav-link" href="#">Services</a>
+    <a class="nav-link" href="#">Our Vision</a>
+    <a class="nav-link" href="#">Contact Us</a>
+  </nav>
+</footer>
+
+{% endblock %}

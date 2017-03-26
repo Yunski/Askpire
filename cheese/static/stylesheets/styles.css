@@ -251,6 +251,35 @@ p {
  border: #cdcdcd medium solid;
 }
 
+/* contact page */
+
+.main-form {
+  margin-top: 4.5rem;
+}
+
+.main-form .main-image {
+position: relative;
+background-image: url('../img/princeton_students.jpg');
+background-size:cover;
+background-repeat: no-repeat;
+height: 15rem;
+}
+
+.main-form .main-text{
+position: absolute;
+font-size: 1rem;
+font-weight: bold;
+color: white;
+text-align: center;
+margin-top: 6rem;
+left: 30%;
+width: 40%;
+}
+
+.main-form .main-container{
+  margin-top: 2rem;
+}
+
 /* footer */
 
 .footer {
