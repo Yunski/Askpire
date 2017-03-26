@@ -1,6 +1,7 @@
 body {
+  font-family: "Open Sans", sans-serif;
   font-size: 16px;
-  color: #1B2F43;
+  color: #333333;
 }
 
 /* Bootstrap Overrides */
@@ -10,11 +11,15 @@ body {
 }
 
 .navbar-light {
-  background: #1B2F43;
+  background: #3c6d9e;
 }
 
 .navbar-light .navbar-nav .nav-link {
   color: #f4f4f4;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+  color: white;
 }
 
 .navbar-light .navbar-brand, .navbar-light .navbar-toggler {
@@ -59,26 +64,32 @@ body {
 }
 
 .shrink .navbar-brand {
-  color: #1B2F43;
+  color: #3c6d9e;
 }
 
 .shrink .navbar-nav .nav-link {
-  color: #1B2F43;
+  color: #3c6d9e;
   padding-left: 1rem;
 }
 
 .shrink .navbar-nav .nav-link.active {
-  border-bottom: 3px solid #1B2F43;
+  border-bottom: 3px solid #3c6d9e;
 }
 
 /* custom layout */
 
 .section {
-  width: 100%;
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 .section h1 {
   padding-bottom: 2rem;
+}
+
+.section p {
+  font-weight: 200;
 }
 
 /* index apge */
@@ -118,6 +129,16 @@ body {
   padding-bottom: 8rem;
 }
 
+#main-content .hero hr {
+  margin-left: 10rem;
+  margin-right: 10rem;
+  border-top: 0.2rem solid #333333;
+}
+
+#main-content .hero .lead {
+  font-size: 2rem;
+}
+
 #main-content .jumbotron {
   background-color: rgba(0, 0, 0, 0);
 }
@@ -130,6 +151,8 @@ body {
 #main-content .card {
   border: none;
   background-color: none;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
 }
 
 #main-content .card img {
@@ -142,7 +165,7 @@ body {
 }
 
 #main-content .card-link {
-  color: #1B2F43;
+  color: #3c6d9e;
   font-size: bold;
 }
 
@@ -176,10 +199,6 @@ body {
   font-size: 10px;
 }
 
-.studentprofmain {
-  margin-top: 4.5rem;
-}
-
 .studentprofmain .card {
   border: none;
   border-radius: 0;
@@ -202,11 +221,44 @@ body {
   background-size: cover;
 }
 
+.middlecomp {
+  right: 10px;
+}
+
+#profilecards img {
+ max-width: 100%;
+ min-width: 20%;
+ height: 22.5rem;
+ background-position: 50% 50%;
+ background-repeat:   no-repeat;
+ background-size:     cover;
+}
+
+#bottomcomp .first_activity {
+ padding-left: 4rem;
+ padding-right: 4rem;
+ border: #cdcdcd medium solid;
+}
+
+
+#bottomcomp .second_activity {
+ padding-left: 4rem;
+ padding-right: 4rem;
+ border: #cdcdcd medium solid;
+}
+
+
+#bottomcomp .third_activity {
+ padding-left: 4rem;
+ padding-right: 4rem;
+ border: #cdcdcd medium solid;
+}
+
 /* footer */
 
 .footer {
   height: 20rem;
-  background: #1B2F43;
+  background: #3c6d9e;
   color: white;
 }
 

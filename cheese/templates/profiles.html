@@ -2,7 +2,7 @@
 {% block navbar %}
 
 <!--Change Navbar accordingly-->
-<nav class="navbar fixed-top navbar-toggleable-md navbar-light navbar-custom navbar-fixed">
+<nav class="navbar navbar-toggleable-md navbar-light navbar-custom navbar-fixed">
   <a class="navbar-brand" href="/">Logo</a>
   <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -12,7 +12,7 @@
     <!--  <a class="nav-item nav-link active" href="/">Home</a> -->
       <a class="nav-item nav-link" href="/profiles">Student Profiles</a>
       <a class="nav-item nav-link" href="/services">Services</a>
-      <a class="nav-item nav-link" href="#">Our Vision</a>
+      <a class="nav-item nav-link" href="/vision">Our Vision</a>
       <a class="nav-item nav-link" href="/contact">Contact Us</a>
     <!--  <a class="nav-item nav-link" href="/login">Login</a> -->
     </div>
@@ -36,7 +36,7 @@
       </div>
     </div>
 
-    <div class="bottomcomp">
+    <div class="middlecomp">
       <div class = "row">
         <div class="col-md-7">
           <h3>
@@ -66,18 +66,78 @@
           </p>
           <div>
             <h3>
-              <br>CURRENT INVESTMENTS
+              <br>Scores
             </h3>
+            <h6>
+              SAT score: 2400
+            </h6>
             <p>
-              SINGLE LINE PLEASE
+              [Breakdown: Math - 800, Writing - 800, Reading - 800]
+            </p>
+            <h6>
+              ACT scores:
+            </h6>
+            <p>
+              36
             </p>
           </div>
         </div>
       </div>
     </div>
+
+    <div id ="bottomcomp">
+      <h3>Main Extracurricular Activities</h3>
+      <div class = "gridplacement ">
+        <div class = "row justify-content-center">
+
+          <div class="col-md-4">
+            <div class= "first_activity">
+              <img src="static/icons/football-game.svg">
+              <h3> Soccer Captain</h3>
+            </div>
+          </div>
+
+        <div class="col-md-4">
+          <div class= "second_activity">
+            <img src="static/icons/justice-hammer.svg">
+            <h3>MUN Conference</h3>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class= "third_activity">
+            <img src="static/icons/music-player.svg">
+            <h3>Piano for 12 years</h3>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
   </div>
 </div>
-
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="row">
+      <div class="col-md-8 footer-left">
+        <nav class="nav">
+          <a class="nav-link" href="#">Student Profiles</a>
+          <a class="nav-link" href="#">Services</a>
+          <a class="nav-link" href="#">Our Vision</a>
+          <a class="nav-link" href="#">Contact Us</a>
+        </nav>
+        <div class="copyright">© 2017 Willie's Site</div>
+      </div>
+      <div class="col-md-4 footer-right">
+        <div class="icons">
+          <i class="fa fa-lg fa-3x fa-weixin" aria-hidden="true"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
 
 
 
