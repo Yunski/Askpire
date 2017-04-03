@@ -2,6 +2,16 @@ $(window).on("load", function() {
     AOS.init();
 });
 
+
+$(function(){
+
+  $.stellar({
+    horizontalScrolling: false,
+    verticalOffset: 40
+  });
+});
+
+
 $(".parallax").scroll(function() {
     if ($(".parallax").scrollTop() > 96) {
         $(".navbar-custom").addClass("shrink");

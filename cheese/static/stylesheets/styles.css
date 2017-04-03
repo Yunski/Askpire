@@ -68,6 +68,7 @@ p {
 
 .jumbotron {
   background-color: rgba(0, 0, 0, 0);
+  padding: 0;
 }
 
 /* navbar */
@@ -257,12 +258,19 @@ p {
   margin-top: 4.5rem;
 }
 
+
 .main-form .main-image {
 position: relative;
-background-image: url('../img/princeton_students.jpg');
+background: url('../img/princeton_students.jpg') no-repeat center center fixed;
+
 background-size:cover;
 background-repeat: no-repeat;
 height: 15rem;
+position: relative;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
 }
 
 .main-form .main-text{
@@ -324,4 +332,58 @@ width: 40%;
 
 .footer-right .icons {
   padding-top: 1rem;
+}
+
+
+/* EXTREME TESTING */
+
+#testing .photo {
+  background-attachment: fixed;
+  background-position: 50% 0;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+
+#testing .summer {
+  height: 25rem;
+  width: 100%;
+  background-image: url("../img/Whitman_1.jpg");
+    background-size:cover;
+
+}
+
+#maintitle .title{
+  width: 40%;
+  height: 40%;
+  position: absolute;
+  left: 30%;
+  top: 30%;
+}
+
+.overlay{
+  position: absolute;
+  background-color: black;
+  opacity: 0.4;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+
+#section4{
+  position: relative;
+  background: url('../img/princeton_students.jpg') no-repeat center  fixed;
+  background-size:cover;
+  background-repeat: no-repeat;
+  height: 20rem;
+  position: relative;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }

@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block navbar %}
-<nav class="navbar fixed-top navbar-toggleable-md navbar-light navbar-custom" data-aos="fade">
+<nav class="navbar navbar-toggleable-md navbar-light navbar-custom" data-aos="fade">
   <a class="navbar-brand" href="/">Logo</a>
   <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -10,7 +10,7 @@
     <!--  <a class="nav-item nav-link active" href="/">Home</a> -->
       <a class="nav-item nav-link" href="/profiles">Student Profiles</a>
       <a class="nav-item nav-link" href="/services">Services</a>
-      <a class="nav-item nav-link" href="/vision">Our Vision</a>
+      <a class="nav-item nav-link" href="#">Our Vision</a>
       <a class="nav-item nav-link" href="/contact">Contact Us</a>
     <!--  <a class="nav-item nav-link" href="/login">Login</a> -->
     </div>
@@ -18,145 +18,157 @@
 </nav>
 {% endblock %}
 {% block content %}
-<div id="main-content" class="parallax">
-  <div class="parallax-layer parallax-layer-background"></div>
-  <div class="parallax-layer parallax-layer-content">
-    <div class="parallax-content">
-      <div class="jumbotron hero">
-        <h1 class="display-1">有问必答</h1>
-        <hr class="my-4">
-        <p class="lead">有问必答咨询平台是高水准、最实用的申请美国大学的辅助平台</p>
+
+
+
+
+<div id = "main-content">
+
+  <div id ="testing">
+    <div class="jumbotron">
+        <div class="photo summer" data-stellar-background-ratio="0.5">
+                  <div class = "overlay"></div>
       </div>
-      <div id="vision" class="row text-center">
-        <div class="jumbotron section">
-          <h1 class="display-4">咨询平台简介</h1>
-          <p class="lead">有问必答咨询平台是应国内急需解决的标化考试成绩和所申学校不对应、
-            难于确定专业方向和如何选择独特的课外活动等申学及实习难题而创立的辅助性平台。
-            有问必答意在通过美国名校学生用自己亲身经历针对每一个国内学生的问题量身定做出最适合的个性化答案。
-            平台成立的目的是回馈社会，提升国内学生在申学过程中的竞争力。
-            平台由美国本科排名第一的普林斯顿大学学生刘威廉携十位普林斯顿大学学生创立。</p>
-        </div>
-        <div class="jumbotron section">
-          <h1 class="display-4">咨询平台的由来</h1>
-          <p class="lead">刘威廉是良好交流互动的最大受惠者。
-            从六年级开始陆续和多位美国名校的学长们交谈，在八年级就确定了主修经济金融的专业方向。
-            同时受学长的激励，在学习和课外活动上自我驱动，不怕辛苦。
-            与君一席话胜读十年书，因此深知高人指路的潜在优势，尤其避免了到大学转换专业的弯路。</p>
-        </div>
-        <div class="jumbotron section">
-          <h1 class="display-4">咨询平台的具体操作方式</h1>
-          <p class="lead">有问必答咨询平台是用微信或Skype一对一或一对多的交流方式。
-            国内的学生预先准备出他们提问的大纲，双方各持一份。
-            在一个小时的时间内根据大纲的提示，国内的学生可以就他们所关心的任何问题提问，
-            名校学生将根据自己的经历给出回答和进一步的申学建议。
-            有问必答服务方向就是激励学生学习的热情并尽早确定未来的专业方向。</p>
-        </div>
-        <div class="jumbotron section">
-          <h1 class="display-4">咨询平台创始人刘威廉</h1>
-          <p class="lead">有问必答的创始人刘威廉曾在2015年到贵校和各省前五的十六所省重点高中国际部进行中美文化交流。
-            刘威廉所有标化考试成绩满分，在校成绩全优，美国国家奖学金获得者，美国最大的商科竞赛FBLA全美个人冠军，三次入围高尔夫球少年世界杯，钢琴CM十级证书。
-            美国学生运行的最大杂志Business Today执行主编。
-            大二就得到了纽约华尔街对冲基金实习的机会并应英国名牌杂志《经济学家》纽约分部最高主管的邀请去纽约分部四个星期为杂志撰写文章。</p>
-        </div>
+
+      <div id = "maintitle">
+        <h1 class="title">Insider</h1>
+        <p class="lead">College Consulting, reinvented</p> </span>
       </div>
-      <div id="services" class="row section">
-        <div class="col-md-4">
-          <a href="#">
-            <div class="card">
-              <img class="card-img-top" src="/static/icons/football-game.svg" alt="Card image cap">
-              <div class="card-block">
-                <h4 class="card-title">咨询平台的由来</h4>
-                <p class="card-text">刘威廉是良好交流互动的最大受惠者。
-                  从六年级开始陆续和多位美国名校的学长们交谈，在八年级就确定了主修经济金融的专业方向。
-                  同时受学长的激励，在学习和课外活动上自我驱动，不怕辛苦。
-                  与君一席话胜读十年书，因此深知高人指路的潜在优势，尤其避免了到大学转换专业的弯路。</p>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="col-md-4">
-          <a href="#">
-            <div class="card">
-              <img class="card-img-top" src="/static/icons/justice-hammer.svg" alt="Card image cap">
-              <div class="card-block">
-                <h4 class="card-title">咨询平台的具体操作方式</h4>
-                <p class="card-text">有问必答咨询平台是用微信或Skype一对一或一对多的交流方式。
-                  国内的学生预先准备出他们提问的大纲，双方各持一份。
-                  在一个小时的时间内根据大纲的提示，国内的学生可以就他们所关心的任何问题提问，
-                  名校学生将根据自己的经历给出回答和进一步的申学建议。
-                  有问必答服务方向就是激励学生学习的热情并尽早确定未来的专业方向。</p>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="col-md-4">
-          <a href="#">
-            <div class="card">
-                <img class="card-img-top" src="/static/icons/microphone.svg" alt="Card image cap">
-                <div class="card-block">
-                  <h4 class="card-title">咨询平台创始人刘威廉</h4>
-                  <p class="card-text">有问必答的创始人刘威廉曾在2015年到贵校和各省前五的十六所省重点高中国际部进行中美文化交流。
-                    刘威廉所有标化考试成绩满分，在校成绩全优，美国国家奖学金获得者，美国最大的商科竞赛FBLA全美个人冠军，三次入围高尔夫球少年世界杯，钢琴CM十级证书。
-                    美国学生运行的最大杂志Business Today执行主编。
-                    大二就得到了纽约华尔街对冲基金实习的机会并应英国名牌杂志《经济学家》纽约分部最高主管的邀请去纽约分部四个星期为杂志撰写文章。</p>
-                </div>
-            </div>
-          </a>
-        </div>
+
       </div>
-      <div id="profiles" class="row section">
-        <div class="col-md-4">
+    </div>
+
+    <div id="vision" class="row text-center">
+      <div class="jumbotron section1">
+        <h1 class="display-4">咨询平台简介</h1>
+        <p class="lead">有问必答咨询平台是应国内急需解决的标化考试成绩和所申学校不对应、
+          难于确定专业方向和如何选择独特的课外活动等申学及实习难题而创立的辅助性平台。
+          有问必答意在通过美国名校学生用自己亲身经历针对每一个国内学生的问题量身定做出最适合的个性化答案。
+          平台成立的目的是回馈社会，提升国内学生在申学过程中的竞争力。
+          平台由美国本科排名第一的普林斯顿大学学生刘威廉携十位普林斯顿大学学生创立。</p>
+      </div>
+      <div class="jumbotron section2">
+        <h1 class="display-4">咨询平台的由来</h1>
+        <p class="lead">刘威廉是良好交流互动的最大受惠者。
+          从六年级开始陆续和多位美国名校的学长们交谈，在八年级就确定了主修经济金融的专业方向。
+          同时受学长的激励，在学习和课外活动上自我驱动，不怕辛苦。
+          与君一席话胜读十年书，因此深知高人指路的潜在优势，尤其避免了到大学转换专业的弯路。</p>
+      </div>
+      <div class="jumbotron section3">
+        <h1 class="display-4">咨询平台的具体操作方式</h1>
+        <p class="lead">有问必答咨询平台是用微信或Skype一对一或一对多的交流方式。
+          国内的学生预先准备出他们提问的大纲，双方各持一份。
+          在一个小时的时间内根据大纲的提示，国内的学生可以就他们所关心的任何问题提问，
+          名校学生将根据自己的经历给出回答和进一步的申学建议。
+          有问必答服务方向就是激励学生学习的热情并尽早确定未来的专业方向。</p>
+      </div>
+      <div id ="section4" class="jumbotron">
+        <h1 class="display-4">咨询平台创始人刘威廉</h1>
+        <p class="lead">有问必答的创始人刘威廉曾在2015年到贵校和各省前五的十六所省重点高中国际部进行中美文化交流。
+          刘威廉所有标化考试成绩满分，在校成绩全优，美国国家奖学金获得者，美国最大的商科竞赛FBLA全美个人冠军，三次入围高尔夫球少年世界杯，钢琴CM十级证书。
+          美国学生运行的最大杂志Business Today执行主编。
+          大二就得到了纽约华尔街对冲基金实习的机会并应英国名牌杂志《经济学家》纽约分部最高主管的邀请去纽约分部四个星期为杂志撰写文章。</p>
+      </div>
+    </div>
+
+    <div id="services" class="row section">
+      <div class="col-md-4">
+        <a href="#">
           <div class="card">
-            <img class="card-img-top" src="/static/img/pic1.png" alt="Card image cap">
+            <img class="card-img-top" src="/static/icons/football-game.svg" alt="Card image cap">
             <div class="card-block">
-              <h4 class="card-title">Elijah Ash</h4>
-              <p class="card-text">Major: Physics</p>
-              <a href="#" class="card-link">See Profile<span><i class="fa fa-angle-right" aria-hidden="true"></i></span></a>
+              <h4 class="card-title">咨询平台的由来</h4>
+              <p class="card-text">刘威廉是良好交流互动的最大受惠者。
+                从六年级开始陆续和多位美国名校的学长们交谈，在八年级就确定了主修经济金融的专业方向。
+                同时受学长的激励，在学习和课外活动上自我驱动，不怕辛苦。
+                与君一席话胜读十年书，因此深知高人指路的潜在优势，尤其避免了到大学转换专业的弯路。</p>
             </div>
           </div>
-        </div>
-        <div class="col-md-4">
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="#">
           <div class="card">
-            <img class="card-img-top" src="/static/img/pic2.png" alt="Card image cap">
+            <img class="card-img-top" src="/static/icons/justice-hammer.svg" alt="Card image cap">
             <div class="card-block">
-              <h4 class="card-title">Jasper Gebhardt</h4>
-              <p class="card-text">Major: Mechanical Engineering</p>
-              <a href="#" class="card-link">See Profile<span><i class="fa fa-angle-right" aria-hidden="true"></i></span></a>
+              <h4 class="card-title">咨询平台的具体操作方式</h4>
+              <p class="card-text">有问必答咨询平台是用微信或Skype一对一或一对多的交流方式。
+                国内的学生预先准备出他们提问的大纲，双方各持一份。
+                在一个小时的时间内根据大纲的提示，国内的学生可以就他们所关心的任何问题提问，
+                名校学生将根据自己的经历给出回答和进一步的申学建议。
+                有问必答服务方向就是激励学生学习的热情并尽早确定未来的专业方向。</p>
             </div>
           </div>
-        </div>
-        <div class="col-md-4">
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="#">
           <div class="card">
-            <img class="card-img-top" src="/static/img/pic3.jpg" alt="Card image cap">
-            <div class="card-block">
-              <h4 class="card-title">Liz DiGennero</h4>
-              <p class="card-text">Major: International Relations</p>
-              <a href="#" class="card-link">See Profile<span><i class="fa fa-angle-right" aria-hidden="true"></i></span></a>
-            </div>
+              <img class="card-img-top" src="/static/icons/microphone.svg" alt="Card image cap">
+              <div class="card-block">
+                <h4 class="card-title">咨询平台创始人刘威廉</h4>
+                <p class="card-text">有问必答的创始人刘威廉曾在2015年到贵校和各省前五的十六所省重点高中国际部进行中美文化交流。
+                  刘威廉所有标化考试成绩满分，在校成绩全优，美国国家奖学金获得者，美国最大的商科竞赛FBLA全美个人冠军，三次入围高尔夫球少年世界杯，钢琴CM十级证书。
+                  美国学生运行的最大杂志Business Today执行主编。
+                  大二就得到了纽约华尔街对冲基金实习的机会并应英国名牌杂志《经济学家》纽约分部最高主管的邀请去纽约分部四个星期为杂志撰写文章。</p>
+              </div>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div id="profiles" class="row section">
+      <div class="col-md-4">
+        <div class="card">
+          <img class="card-img-top" src="/static/img/pic1.png" alt="Card image cap">
+          <div class="card-block">
+            <h4 class="card-title">Elijah Ash</h4>
+            <p class="card-text">Major: Physics</p>
+            <a href="#" class="card-link">See Profile<span><i class="fa fa-angle-right" aria-hidden="true"></i></span></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img class="card-img-top" src="/static/img/pic2.png" alt="Card image cap">
+          <div class="card-block">
+            <h4 class="card-title">Jasper Gebhardt</h4>
+            <p class="card-text">Major: Mechanical Engineering</p>
+            <a href="#" class="card-link">See Profile<span><i class="fa fa-angle-right" aria-hidden="true"></i></span></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img class="card-img-top" src="/static/img/pic3.jpg" alt="Card image cap">
+          <div class="card-block">
+            <h4 class="card-title">Liz DiGennero</h4>
+            <p class="card-text">Major: International Relations</p>
+            <a href="#" class="card-link">See Profile<span><i class="fa fa-angle-right" aria-hidden="true"></i></span></a>
           </div>
         </div>
       </div>
     </div>
-    <footer class="footer">
-      <div class="footer-inner">
-        <div class="row">
-          <div class="col-md-8 footer-left">
-            <nav class="nav">
-              <a class="nav-link" href="#">Student Profiles</a>
-              <a class="nav-link" href="#">Services</a>
-              <a class="nav-link" href="#">Our Vision</a>
-              <a class="nav-link" href="#">Contact Us</a>
-            </nav>
-            <div class="copyright">© 2017 Willie's Site</div>
-          </div>
-          <div class="col-md-4 footer-right">
-            <div class="icons">
-              <i class="fa fa-lg fa-3x fa-weixin" aria-hidden="true"></i>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
+
+  <div class="parallax-windo" data-parallax="scroll" data-bleed="10" data-speed="0.2"
+  data-image-src="/static/img/pic3.jpg" data-natural-width="1400" data-natural-height="1400" style="height: 590px;">
   </div>
 </div>
+
+
+
+
+
+    {% endblock %}
+    {% block footer %}
+
+    <footer class="footer d-flex align-items-center">
+      <nav class="nav">
+        <a class="nav-link" href="#">Student Profiles</a>
+        <a class="nav-link" href="#">Services</a>
+        <a class="nav-link" href="#">Our Vision</a>
+        <a class="nav-link" href="#">Contact Us</a>
+      </nav>
+    </footer>
+
 {% endblock %}
