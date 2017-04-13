@@ -29,7 +29,8 @@ p {
 }
 
 .navbar-light {
-  background: #3c6d9e;
+  background: black;
+  font: blue;
 }
 
 .navbar-light .navbar-nav .nav-link {
@@ -74,7 +75,7 @@ p {
 /* navbar */
 
 .navbar-custom {
-  height: 4.5rem;
+  height: 10%;
 }
 
 .shrink {
@@ -112,7 +113,7 @@ p {
   font-size: 5rem;
 }
 
-/* index apge */
+/* index page */
 
 .parallax {
   height: 100vh;
@@ -143,6 +144,7 @@ p {
   -webkit-transform: translateZ(-1px) scale(2);
   transform: translateZ(-1px) scale(2);
 }
+
 
 #main-content .hero {
   text-align: center;
@@ -284,9 +286,6 @@ left: 30%;
 width: 40%;
 }
 
-.main-form .main-container{
-  margin-top: 2rem;
-}
 
 /* footer */
 
@@ -337,7 +336,11 @@ width: 40%;
 
 /* EXTREME TESTING */
 
-#testing .photo {
+#parallax-effect {
+  height:100%;
+}
+
+#parallax-effect .photo {
   background-attachment: fixed;
   background-position: 50% 0;
   background-repeat: no-repeat;
@@ -347,21 +350,23 @@ width: 40%;
 }
 
 
-#testing .summer {
-  height: 25rem;
+#parallax-effect .summer {
+  height: 100%;
   width: 100%;
   background-image: url("../img/Whitman_1.jpg");
-    background-size:cover;
-
+  background-size:cover;
 }
 
-#maintitle .title{
-  width: 40%;
-  height: 40%;
+#maintitle .title {
   position: absolute;
+  width: 40%;
+  height: 30%;
   left: 30%;
-  top: 30%;
+  top: 35%;
+  color: #f2f5f9;
 }
+
+
 
 .overlay{
   position: absolute;
@@ -386,4 +391,56 @@ width: 40%;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+
+
+#section03 p{
+  position: absolute;
+	top: 87%;
+	left: 50%;
+	width: 24px;
+	height: 24px;
+  	margin-left: -20px;
+    color: white;
+}
+
+#section03 a {
+	padding-top: 70px;
+}
+#section03 a span {
+	position: absolute;
+	top: 90%;
+	left: 50%;
+	width: 24px;
+	height: 24px;
+	margin-left: -12px;
+	border-left: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+	-webkit-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+	-webkit-animation: sdb03 2s infinite;
+	animation: sdb03 2s infinite;
+	box-sizing: border-box;
+}
+@-webkit-keyframes sdb03 {
+	0% {
+		-webkit-transform: rotate(-45deg) translate(0, 0);
+	}
+	20% {
+		-webkit-transform: rotate(-45deg) translate(-10px, 10px);
+	}
+	40% {
+		-webkit-transform: rotate(-45deg) translate(0, 0);
+	}
+}
+@keyframes sdb03 {
+	0% {
+		transform: rotate(-45deg) translate(0, 0);
+	}
+	20% {
+		transform: rotate(-45deg) translate(-10px, 10px);
+	}
+	40% {
+		transform: rotate(-45deg) translate(0, 0);
+	}
 }

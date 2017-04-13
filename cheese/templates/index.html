@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% block navbar %}
-<nav class="navbar navbar-toggleable-md navbar-light navbar-custom" data-aos="fade">
+
+<nav class="navbar navbar-toggleable-md navbar-light navbar-custom">
   <a class="navbar-brand" href="/">Logo</a>
   <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -16,38 +17,48 @@
     </div>
   </div>
 </nav>
-{% endblock %}
-{% block content %}
-
-
-
 
 <div id = "main-content">
-
-  <div id ="testing">
+  <div id ="parallax-effect">
     <div class="jumbotron">
         <div class="photo summer" data-stellar-background-ratio="0.5">
                   <div class = "overlay"></div>
       </div>
 
       <div id = "maintitle">
-        <h1 class="title">Insider</h1>
-        <p class="lead">College Consulting, reinvented</p> </span>
+        <h1 class = "title">Insider: <br> College Consulting, Reinvented </h1>
       </div>
+
+      <div class = "main_button">
+        <section id="section03" class="thisisaclick demo">
+        	<a href="#section04"><span></span></a>
+        </section>
 
       </div>
     </div>
+  </div>
+{% endblock %}
+{% block content %}
 
-    <div id="vision" class="row text-center">
-      <div class="jumbotron section1">
-        <h1 class="display-4">咨询平台简介</h1>
-        <p class="lead">有问必答咨询平台是应国内急需解决的标化考试成绩和所申学校不对应、
-          难于确定专业方向和如何选择独特的课外活动等申学及实习难题而创立的辅助性平台。
-          有问必答意在通过美国名校学生用自己亲身经历针对每一个国内学生的问题量身定做出最适合的个性化答案。
-          平台成立的目的是回馈社会，提升国内学生在申学过程中的竞争力。
-          平台由美国本科排名第一的普林斯顿大学学生刘威廉携十位普林斯顿大学学生创立。</p>
-      </div>
-      <div class="jumbotron section2">
+
+
+
+
+
+
+
+      <div id="vision" class="row text-center">
+      <section id="section04" class="demo thisisaclick">
+        <div class="jumbotron section1">
+          <h1 class="display-4">咨询平台简介</h1>
+          <p class="lead">有问必答咨询平台是应国内急需解决的标化考试成绩和所申学校不对应、
+            难于确定专业方向和如何选择独特的课外活动等申学及实习难题而创立的辅助性平台。
+            有问必答意在通过美国名校学生用自己亲身经历针对每一个国内学生的问题量身定做出最适合的个性化答案。
+            平台成立的目的是回馈社会，提升国内学生在申学过程中的竞争力。
+            平台由美国本科排名第一的普林斯顿大学学生刘威廉携十位普林斯顿大学学生创立。</p>
+        <section id="section04" class="demo thisisaclick">
+        </div>
+        <div class="jumbotron section2">
         <h1 class="display-4">咨询平台的由来</h1>
         <p class="lead">刘威廉是良好交流互动的最大受惠者。
           从六年级开始陆续和多位美国名校的学长们交谈，在八年级就确定了主修经济金融的专业方向。
@@ -149,14 +160,6 @@
         </div>
       </div>
     </div>
-
-  <div class="parallax-windo" data-parallax="scroll" data-bleed="10" data-speed="0.2"
-  data-image-src="/static/img/pic3.jpg" data-natural-width="1400" data-natural-height="1400" style="height: 590px;">
-  </div>
-</div>
-
-
-
 
 
     {% endblock %}
