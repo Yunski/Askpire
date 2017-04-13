@@ -1,0 +1,56 @@
+/* profile page */
+
+.studentprofmain .card {
+  border: none;
+  border-radius: 0;
+}
+
+.studentprofmain .card-img-top {
+  border-radius: 0;
+}
+
+.bottomcomp{
+  right: 10px;
+}
+
+#profilecards img {
+  max-width: 100%;
+  min-width: 20%;
+  height: 22.5rem;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.middlecomp {
+  right: 10px;
+}
+
+#profilecards img {
+ max-width: 100%;
+ min-width: 20%;
+ height: 22.5rem;
+ background-position: 50% 50%;
+ background-repeat:   no-repeat;
+ background-size:     cover;
+}
+
+#bottomcomp .first_activity {
+ padding-left: 4rem;
+ padding-right: 4rem;
+ border: #cdcdcd medium solid;
+}
+
+
+#bottomcomp .second_activity {
+ padding-left: 4rem;
+ padding-right: 4rem;
+ border: #cdcdcd medium solid;
+}
+
+
+#bottomcomp .third_activity {
+ padding-left: 4rem;
+ padding-right: 4rem;
+ border: #cdcdcd medium solid;
+}

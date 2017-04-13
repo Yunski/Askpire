@@ -12,8 +12,8 @@ $(function(){
 
 
 $(window).scroll(function() {
-    if ($(document).scrollTop() > $(".summer").height()) {
-        $(".navbar-custom").addClass("shrink fixed-top");
+    if ($(document).scrollTop() > $(".parallax-image").height()) {
+        $(".navbar-custom").addClass("shrink");
         //$(".navbar").addClass("fixed-top");
     } else {
         $(".navbar-custom").removeClass("shrink");
@@ -21,7 +21,6 @@ $(window).scroll(function() {
         $(".navbar-custom").css("-moz-transition", "height 300ms ease-in-out");
         $(".navbar-custom").css("-o-transition", "height 300ms ease-in-out");
         $(".navbar-custom").css("transition", "height 300ms ease-in-out");
-        $(".navbar").removeClass("fixed-top");
     }
 });
 

@@ -1,0 +1,31 @@
+/* contact page */
+
+.main-form {
+  margin-top: 4.5rem;
+}
+
+
+.main-form .main-image {
+position: relative;
+background: url('../img/princeton_students.jpg') no-repeat center center fixed;
+
+background-size:cover;
+background-repeat: no-repeat;
+height: 15rem;
+position: relative;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+}
+
+.main-form .main-text{
+position: absolute;
+font-size: 1rem;
+font-weight: bold;
+color: white;
+text-align: center;
+margin-top: 6rem;
+left: 30%;
+width: 40%;
+}

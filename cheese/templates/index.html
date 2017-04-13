@@ -1,177 +1,163 @@
 {% extends "base.html" %}
 {% block navbar %}
 
-<nav class="navbar navbar-toggleable-md navbar-light navbar-custom">
-  <a class="navbar-brand" href="/">Logo</a>
-  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
-    <div class="navbar-nav">
-    <!--  <a class="nav-item nav-link active" href="/">Home</a> -->
-      <a class="nav-item nav-link" href="/profiles">Student Profiles</a>
-      <a class="nav-item nav-link" href="/services">Services</a>
-      <a class="nav-item nav-link" href="#">Our Vision</a>
-      <a class="nav-item nav-link" href="/contact">Contact Us</a>
-    <!--  <a class="nav-item nav-link" href="/login">Login</a> -->
-    </div>
-  </div>
-</nav>
-
-<div id = "main-content">
-  <div id ="parallax-effect">
-    <div class="jumbotron">
-        <div class="photo summer" data-stellar-background-ratio="0.5">
-                  <div class = "overlay"></div>
-      </div>
-
-      <div id = "maintitle">
-        <h1 class = "title">Insider: <br> College Consulting, Reinvented </h1>
-      </div>
-
-      <div class = "main_button">
-        <section id="section03" class="thisisaclick demo">
-        	<a href="#section04"><span></span></a>
-        </section>
-
+<div id="landing">
+  <nav class="navbar navbar-toggleable-md navbar-light navbar-custom">
+    <a class="navbar-brand" href="/">Logo</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+      <!--  <a class="nav-item nav-link active" href="/">Home</a> -->
+        <a class="nav-item nav-link" href="/profiles">Student Profiles</a>
+        <a class="nav-item nav-link" href="/services">Services</a>
+        <a class="nav-item nav-link" href="#">Our Vision</a>
+        <a class="nav-item nav-link" href="/contact">Contact Us</a>
+      <!--  <a class="nav-item nav-link" href="/login">Login</a> -->
       </div>
     </div>
+  </nav>
+  <div id="parallax-effect">
+    <div class="parallax-image" data-stellar-background-ratio="0.5">
+      <div class="overlay"></div>
+      <div id="main-title" class="card">
+        <div class="card-block">
+          <h4 class="card-title">Insider</h4>
+          <h6 class="card-subtitle">College Consulting, Reinvented</h6>
+        </div>
+      </div>
+    </div>
+    <div id="scroll-button">
+      <a href="#main-content"><span></span></a>
+    </div>
   </div>
+</div>
 {% endblock %}
 {% block content %}
-
-
-
-
-
-
-
-
-      <div id="vision" class="row text-center">
-      <section id="section04" class="demo thisisaclick">
-        <div class="jumbotron section1">
-          <h1 class="display-4">咨询平台简介</h1>
-          <p class="lead">有问必答咨询平台是应国内急需解决的标化考试成绩和所申学校不对应、
-            难于确定专业方向和如何选择独特的课外活动等申学及实习难题而创立的辅助性平台。
-            有问必答意在通过美国名校学生用自己亲身经历针对每一个国内学生的问题量身定做出最适合的个性化答案。
-            平台成立的目的是回馈社会，提升国内学生在申学过程中的竞争力。
-            平台由美国本科排名第一的普林斯顿大学学生刘威廉携十位普林斯顿大学学生创立。</p>
-        <section id="section04" class="demo thisisaclick">
+<div id="main-content">
+  <section class="section section-inverse">
+    <div class="row">
+      <div class="col-md-4"></div>
+      <div class="col-md-8">
+        <div class="jumbotron">
+          <h1 class="display-5">An Integrated Experience</h1>
+          <p class="lead">In either a 1-on-1 or group setting, our clients will have the opportunity to ask questions during an hour-long consultation session with an Ivy League student mentor, asking any questions about high school planning, college application, or any other concerns they may have. The typical session involves discussions on standardized testing, high school course selection advice, academic competitions and summer programs, choosing a college major, application essay topics, and interview preparation.</p>
         </div>
-        <div class="jumbotron section2">
-        <h1 class="display-4">咨询平台的由来</h1>
-        <p class="lead">刘威廉是良好交流互动的最大受惠者。
-          从六年级开始陆续和多位美国名校的学长们交谈，在八年级就确定了主修经济金融的专业方向。
-          同时受学长的激励，在学习和课外活动上自我驱动，不怕辛苦。
-          与君一席话胜读十年书，因此深知高人指路的潜在优势，尤其避免了到大学转换专业的弯路。</p>
-      </div>
-      <div class="jumbotron section3">
-        <h1 class="display-4">咨询平台的具体操作方式</h1>
-        <p class="lead">有问必答咨询平台是用微信或Skype一对一或一对多的交流方式。
-          国内的学生预先准备出他们提问的大纲，双方各持一份。
-          在一个小时的时间内根据大纲的提示，国内的学生可以就他们所关心的任何问题提问，
-          名校学生将根据自己的经历给出回答和进一步的申学建议。
-          有问必答服务方向就是激励学生学习的热情并尽早确定未来的专业方向。</p>
-      </div>
-      <div id ="section4" class="jumbotron">
-        <h1 class="display-4">咨询平台创始人刘威廉</h1>
-        <p class="lead">有问必答的创始人刘威廉曾在2015年到贵校和各省前五的十六所省重点高中国际部进行中美文化交流。
-          刘威廉所有标化考试成绩满分，在校成绩全优，美国国家奖学金获得者，美国最大的商科竞赛FBLA全美个人冠军，三次入围高尔夫球少年世界杯，钢琴CM十级证书。
-          美国学生运行的最大杂志Business Today执行主编。
-          大二就得到了纽约华尔街对冲基金实习的机会并应英国名牌杂志《经济学家》纽约分部最高主管的邀请去纽约分部四个星期为杂志撰写文章。</p>
       </div>
     </div>
-
-    <div id="services" class="row section">
-      <div class="col-md-4">
-        <a href="#">
-          <div class="card">
-            <img class="card-img-top" src="/static/icons/football-game.svg" alt="Card image cap">
-            <div class="card-block">
-              <h4 class="card-title">咨询平台的由来</h4>
-              <p class="card-text">刘威廉是良好交流互动的最大受惠者。
-                从六年级开始陆续和多位美国名校的学长们交谈，在八年级就确定了主修经济金融的专业方向。
-                同时受学长的激励，在学习和课外活动上自我驱动，不怕辛苦。
-                与君一席话胜读十年书，因此深知高人指路的潜在优势，尤其避免了到大学转换专业的弯路。</p>
-            </div>
-          </div>
-        </a>
+  </section>
+  <section class="section section-light">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="jumbotron">
+          <h1 class="display-5">An Integrated Experience</h1>
+          <p class="lead">In either a 1-on-1 or group setting, our clients will have the opportunity to ask questions during an hour-long consultation session with an Ivy League student mentor, asking any questions about high school planning.</p>
+        </div>
       </div>
-      <div class="col-md-4">
-        <a href="#">
-          <div class="card">
-            <img class="card-img-top" src="/static/icons/justice-hammer.svg" alt="Card image cap">
-            <div class="card-block">
-              <h4 class="card-title">咨询平台的具体操作方式</h4>
-              <p class="card-text">有问必答咨询平台是用微信或Skype一对一或一对多的交流方式。
-                国内的学生预先准备出他们提问的大纲，双方各持一份。
-                在一个小时的时间内根据大纲的提示，国内的学生可以就他们所关心的任何问题提问，
-                名校学生将根据自己的经历给出回答和进一步的申学建议。
-                有问必答服务方向就是激励学生学习的热情并尽早确定未来的专业方向。</p>
-            </div>
-          </div>
-        </a>
+      <div class="col-md-6">
       </div>
-      <div class="col-md-4">
-        <a href="#">
-          <div class="card">
-              <img class="card-img-top" src="/static/icons/microphone.svg" alt="Card image cap">
+    </div>
+  </section>
+  <section class="section section-inverse">
+    <div class="row">
+      <div class="col-md-4"></div>
+      <div class="col-md-8">
+        <div class="jumbotron">
+          <h1 class="display-5">An Integrated Experience</h1>
+          <p class="lead">In either a 1-on-1 or group setting, our clients will have the opportunity to ask questions during an hour-long consultation session with an Ivy League student mentor, asking any questions about high school planning, college application, or any other concerns they may have. The typical session involves discussions on standardized testing, high school course selection advice, academic competitions and summer programs, choosing a college major, application essay topics, and interview preparation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section section-light">
+    <div class="row p-10">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="row">
+            <div class="col-md-4">
+              <img class="card-img-top" src="/static/img/pic1.png"></img>
+            </div>
+            <div class="col-md-8">
               <div class="card-block">
-                <h4 class="card-title">咨询平台创始人刘威廉</h4>
-                <p class="card-text">有问必答的创始人刘威廉曾在2015年到贵校和各省前五的十六所省重点高中国际部进行中美文化交流。
-                  刘威廉所有标化考试成绩满分，在校成绩全优，美国国家奖学金获得者，美国最大的商科竞赛FBLA全美个人冠军，三次入围高尔夫球少年世界杯，钢琴CM十级证书。
-                  美国学生运行的最大杂志Business Today执行主编。
-                  大二就得到了纽约华尔街对冲基金实习的机会并应英国名牌杂志《经济学家》纽约分部最高主管的邀请去纽约分部四个星期为杂志撰写文章。</p>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
               </div>
-          </div>
-        </a>
-      </div>
-    </div>
-
-    <div id="profiles" class="row section">
-      <div class="col-md-4">
-        <div class="card">
-          <img class="card-img-top" src="/static/img/pic1.png" alt="Card image cap">
-          <div class="card-block">
-            <h4 class="card-title">Elijah Ash</h4>
-            <p class="card-text">Major: Physics</p>
-            <a href="#" class="card-link">See Profile<span><i class="fa fa-angle-right" aria-hidden="true"></i></span></a>
+            </div>
           </div>
         </div>
       </div>
-      <div class="col-md-4">
+      <div class="col-md-6">
         <div class="card">
-          <img class="card-img-top" src="/static/img/pic2.png" alt="Card image cap">
-          <div class="card-block">
-            <h4 class="card-title">Jasper Gebhardt</h4>
-            <p class="card-text">Major: Mechanical Engineering</p>
-            <a href="#" class="card-link">See Profile<span><i class="fa fa-angle-right" aria-hidden="true"></i></span></a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card">
-          <img class="card-img-top" src="/static/img/pic3.jpg" alt="Card image cap">
-          <div class="card-block">
-            <h4 class="card-title">Liz DiGennero</h4>
-            <p class="card-text">Major: International Relations</p>
-            <a href="#" class="card-link">See Profile<span><i class="fa fa-angle-right" aria-hidden="true"></i></span></a>
+          <div class="row">
+            <div class="col-md-4">
+              <img class="card-img-top" src="/static/img/pic2.png"></img>
+            </div>
+            <div class="col-md-8">
+              <div class="card-block">
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-
-
-    {% endblock %}
-    {% block footer %}
-
-    <footer class="footer d-flex align-items-center">
-      <nav class="nav">
-        <a class="nav-link" href="#">Student Profiles</a>
-        <a class="nav-link" href="#">Services</a>
-        <a class="nav-link" href="#">Our Vision</a>
-        <a class="nav-link" href="#">Contact Us</a>
-      </nav>
-    </footer>
-
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="row">
+            <div class="col-md-4">
+              <img class="card-img-top" src="/static/img/pic6.png"></img>
+            </div>
+            <div class="col-md-8">
+              <div class="card-block">
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card">
+          <div class="row">
+            <div class="col-md-4">
+              <img class="card-img-top" src="/static/img/pic8.png"></img>
+            </div>
+            <div class="col-md-8">
+              <div class="card-block">
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section section-inverse">
+    <blockquote class="blockquote mb-5">
+      <p>This platform is excellent, as it provides the opportunity for Ivy League students
+        to help Chinese students in their college applications.
+        I am more than happy to introduce this program to my students
+        and have them use this program to communicate directly with Princeton students!</p>
+      <footer class="blockquote-footer">Ms. Yu, Vice-Principal of Chongqing Bashu High School</footer>
+    </blockquote>
+    <blockquote class="blockquote-reverse mb-5">
+      <p>I am so glad to hear of this project, and I’m very proud of your innovation! I feel this platform is an excellent idea. </p>
+      <footer class="blockquote-footer">Ms. Gao, Vice-Principal of Shenzhen High School</footer>
+    </blockquote>
+    <blockquote class="blockquote">
+      <p>Having heard your explanations and used the program personally, I realized that this program is an excellent idea. I fully support this youth program, and would be interested in investing in this business model in the future.</p>
+      <footer class="blockquote-footer">Mr. Wang, Xi’an Gaoxin YiZhong High School parent</footer>
+    </blockquote>
+  </section>
+</div>
+{% endblock %}
+{% block footer %}
+<footer class="footer d-flex align-items-center">
+  <nav class="nav">
+    <a class="nav-link" href="#">Student Profiles</a>
+    <a class="nav-link" href="#">Services</a>
+    <a class="nav-link" href="#">Our Vision</a>
+    <a class="nav-link" href="#">Contact Us</a>
+  </nav>
+</footer>
 {% endblock %}
