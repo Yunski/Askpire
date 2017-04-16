@@ -1,16 +1,3 @@
-$(window).on("load", function() {
-    AOS.init();
-});
-
-
-$(function(){
-  $.stellar({
-    horizontalScrolling: false,
-    verticalOffset: 40
-  });
-});
-
-
 $(window).scroll(function() {
     if ($(document).scrollTop() > $(".parallax-image").height()) {
         $(".navbar-custom").addClass("shrink");
