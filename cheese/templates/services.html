@@ -1,44 +1,179 @@
 {% extends "base_services.html" %}
 {% block navbar %}
-<!--Change Navbar accordingly-->
-<nav class="navbar navbar-toggleable-md navbar-light navbar-custom navbar-fixed">
-  <a class="navbar-brand" href="/">Logo</a>
-  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
-    <div class="navbar-nav">
-    <!--  <a class="nav-item nav-link active" href="/">Home</a> -->
-      <a class="nav-item nav-link" href="/profiles">Student Profiles</a>
-      <a class="nav-item nav-link" href="/services">Services</a>
-      <a class="nav-item nav-link" href="/vision">Our Vision</a>
-      <a class="nav-item nav-link" href="/contact">Contact Us</a>
-    <!--  <a class="nav-item nav-link" href="/login">Login</a> -->
+<div id="landing">
+  <nav class="navbar navbar-toggleable-md navbar-light navbar-custom">
+    <a class="navbar-brand" href="/">Logo</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+      <!--  <a class="nav-item nav-link active" href="/">Home</a> -->
+        <a class="nav-item nav-link" href="/profiles">Student Profiles</a>
+        <a class="nav-item nav-link" href="/services">Services</a>
+        <a class="nav-item nav-link" href="#">Our Vision</a>
+        <a class="nav-item nav-link" href="/contact">Contact Us</a>
+      <!--  <a class="nav-item nav-link" href="/login">Login</a> -->
+      </div>
+    </div>
+  </nav>
+  <div id="parallax-effect">
+    <div class="parallax-image" data-stellar-background-ratio="0.5">
+      <div class="overlay"></div>
+      <div id="main-title" class="card">
+        <div class="card-block">
+          <h4 class="card-title">Insider</h4>
+          <h6 class="card-subtitle">College Consulting, Reinvented</h6>
+        </div>
+      </div>
+    </div>
+    <div id="scroll-button">
+      <a href="#main-content"><span></span></a>
     </div>
   </div>
-</nav>
+</div>
+
 {% endblock %}
 {% block content %}
-<div class="row text-center">
-  <div class="title"><h1>咨询平台具体服务范围</h1></div>
-  <div class="jumbotron section">
-    <h1 class="display-4">一小时应答</h1>
-    <p class="lead">美国名校学生以自己的亲身经历详细解答国内学生单项或多项申学问题。
-      可以是一对一，也可以一对多人提问。在一个小时的时间，
-      国内的学生可以就他们关心的任何未来美国留学问题、
-      大学专业选择、大学校园生活以及申请大学中遇到的具体问题,比如标化考试、高中选课、AP选课、
-      校内校外课外活动、竞赛、美国夏校、申学文书和面试等国内学生关心的问题提问,
-      国内学生每次可以选专项或多项提问，美国名校的学生会以自己亲身经历详细解答。
-      请看我们的实例样板。</p>
-  </div>
-  <div class="jumbotron section">
-    <h1 class="display-4">模拟申学或实习面试</h1>
-    <p class="lead">美国名校的学生根据自己申学时的面试经验模拟招生官或公司面试并给出最佳面试回答的答案。</p>
-  </div>
-  <div class="jumbotron section">
-    <h1 class="display-4">修改申学文书</h1>
-    <p class="lead">美国名校的学生指导并修改国内学生的文书。
-国内学生在完成最后一稿文书的草稿后，美国名校的学生可以针对立意、语法、句式和文笔上指导和修改申学文书。</p>
-  </div>
+
+
+
+
+
+<div id="services-main">
+
+  <section class="section section-inverse">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="jumbotron jumbo-main">
+          <h1 class="display-5">Insider provides you with all the tools needed to achieve your dreams</h1>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-inverse">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="jumbotron jumbo-main">
+          <img class="card-img-top" src="/static/img/essay.svg">
+          <h4 class="display-5">AbleTo helps to solve the four key behavioral </h4>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="jumbotron jumbo-main">
+          <img class="card-img-top" src="/static/img/essay.svg">
+          <h4 class="display-5">AbleTo helps to solve the four key behavioral </h4>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="jumbotron jumbo-main">
+          <img class="card-img-top" src="/static/img/essay.svg">
+          <h4 class="display-5">AbleTo helps to solve the four key behavioral </h4>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="jumbotron jumbo-main">
+          <img class="card-img-top" src="/static/img/essay.svg">
+          <h4 class="display-5">AbleTo helps to solve the four key behavioral </h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section section-light">
+    <div class="row">
+      <div class="col-md-4"></div>
+      <div class="col-md-8">
+        <div class="jumbotron">
+          <h1 class="display-5">An Integrated Experience</h1>
+          <p class="lead">In either a 1-on-1 or group setting, our clients will have the opportunity to ask questions during an hour-long consultation session with an Ivy League student mentor, asking any questions about high school planning, college application, or any other concerns they may have. The typical session involves discussions on standardized testing, high school course selection advice, academic competitions and summer programs, choosing a college major, application essay topics, and interview preparation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-inverse">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="jumbotron">
+          <h1 class="display-5">An Integrated Experience</h1>
+          <p class="lead">In either a 1-on-1 or group setting, our clients will have the opportunity to ask questions during an hour-long consultation session with an Ivy League student mentor, asking any questions about high school planning.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-inverse">
+    <div class="row">
+      <div class="col-md">
+        <div class="card">
+          <img class="card-img-top" src="/static/img/essay.svg">
+          <div class="card-block">
+            <h4 class="card-title">Essay Editing</h4>
+            <p class="card-text">Physics and Geoscience</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">ACT: 35</li>
+            <li class="list-group-item">SAT II Math: 780</li>
+            <li class="list-group-item">SAT II US History: 790</li>
+            <li class="list-group-item">SAT II Physics: 750</li>
+          </ul>
+          <div class="card-block">
+            <a href="#" class="card-link">See Details <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md">
+        <div class="card">
+          <img class="card-img-top" src="/static/img/videocall.svg">
+          <div class="card-block">
+            <h4 class="card-title">Video-Conferencing</h4>
+            <p class="card-text"></p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Talk to Princeton Students</li>
+            <li class="list-group-item">Bla Bla Bla</li>
+            <li class="list-group-item">Bla Bla Bla</li>
+          </ul>
+          <div class="card-block">
+            <a href="#" class="card-link">See Details <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md">
+        <div class="card">
+          <img class="card-img-top" src="/static/img/meeting.svg">
+          <div class="card-block">
+            <h4 class="card-title">Interview Preps</h4>
+            <p class="card-text"></p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">SAT: 2400</li>
+            <li class="list-group-item">SAT II Chemistry: 800</li>
+            <li class="list-group-item">Bla Bla Bla</li>
+            <li class="list-group-item">Bla Bla Bla</li>
+          </ul>
+          <div class="card-block">
+            <a href="#" class="card-link">See Details <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </div>
+
+{% endblock %}
+{% block footer %}
+<footer class="footer d-flex align-items-center">
+  <nav class="nav">
+    <a class="nav-link" href="#">Student Profiles</a>
+    <a class="nav-link" href="#">Services</a>
+    <a class="nav-link" href="#">Our Vision</a>
+    <a class="nav-link" href="#">Contact Us</a>
+  </nav>
+</footer>
 {% endblock %}

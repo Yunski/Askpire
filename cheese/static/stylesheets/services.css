@@ -1,0 +1,20 @@
+
+#main-content .card {
+  border: none;
+}
+
+#services-main .card-img-top {
+  width: 40%;
+  position: center;
+  margin-left: 30%;
+  margin-top: 10px;
+}
+
+#services-main .col-md-12{
+  text-align: center;
+}
+
+#services-main .display-5 {
+  margin-top: 1rem;
+  text-align: center;
+}

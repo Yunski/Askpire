@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "base_contact.html" %}
 {% block navbar %}
 
 <nav class="navbar fixed-top navbar-toggleable-md navbar-light navbar-custom" data-aos="fade">
@@ -23,6 +23,17 @@
 
 
 <div class="main-form">
+
+  <div id="overlay">
+      <div id="title"><h1>Parallaxelicious</h1></div>
+      <video class="visible-desktop" id="hero-vid" poster="http://www.markhillard.com/sandbox/media/polina.jpg" autoplay loop muted>
+          <source type="video/webm" src="http://www.markhillard.com/sandbox/media/polina.webm"></source>
+          <source type="video/mp4" src="http://www.markhillard.com/sandbox/media/polina.mp4"></source>
+      </video>
+      <div id="state" class="visible-desktop"><span class="iconicfill-pause"></span></div>
+      <img id="hero-pic" class="hidden-desktop" src="http://www.markhillard.com/sandbox/media/polina.jpg" alt="">
+  </div>
+
   <form>
     <div class = "main-image">
     <div class = "main-text">
@@ -49,22 +60,20 @@
             <button type="submit" class="btn btn-primary">Submit</button>
         </div>
         <div class="col-md-6">
-
           <p>
-            Contact Details
-            <br> <i class="fa fa-envelope" aria-hidden="true"></i> Email Address: hlee_84@yahoo.com
-            <br> <i class="fa fa-skype" aria-hidden="true"></i> Skype: haiyanli84
-            <br> <i class="fa fa-weixin" aria-hidden="true"></i> WeChat: wliu978 | haiyanli1321
+          Contact Details
+          <br> <i class="fa fa-envelope" aria-hidden="true"></i> Email Address: hlee_84@yahoo.com
+          <br> <i class="fa fa-skype" aria-hidden="true"></i> Skype: haiyanli84
+          <br> <i class="fa fa-weixin" aria-hidden="true"></i> WeChat: wliu978 | haiyanli1321
           </p>
+          </div>
         </div>
       </div>
     </div>
-</div>
-
-
-
   </form>
-</div>
+  </div>
+
+
 
 <footer class="footer d-flex align-items-center">
   <nav class="nav">
