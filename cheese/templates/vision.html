@@ -1,46 +1,87 @@
-{% extends "base.html" %}
+{% extends "base_vision.html" %}
 {% block navbar %}
-<!--Change Navbar accordingly-->
-<nav class="navbar navbar-toggleable-md navbar-light navbar-custom navbar-fixed">
-  <a class="navbar-brand" href="/">Logo</a>
-  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
-    <div class="navbar-nav">
-    <!--  <a class="nav-item nav-link active" href="/">Home</a> -->
-      <a class="nav-item nav-link" href="/profiles">Student Profiles</a>
-      <a class="nav-item nav-link" href="/services">Services</a>
-      <a class="nav-item nav-link" href="/vision">Our Vision</a>
-      <a class="nav-item nav-link" href="/contact">Contact Us</a>
-    <!--  <a class="nav-item nav-link" href="/login">Login</a> -->
+<div id="landing">
+  <nav class="navbar navbar-toggleable-md navbar-light navbar-custom">
+    <a class="navbar-brand" href="/">Logo</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+      <!--  <a class="nav-item nav-link active" href="/">Home</a> -->
+        <a class="nav-item nav-link" href="/profiles">Student Profiles</a>
+        <a class="nav-item nav-link" href="/services">Services</a>
+        <a class="nav-item nav-link" href="#">Our Vision</a>
+        <a class="nav-item nav-link" href="/contact">Contact Us</a>
+      <!--  <a class="nav-item nav-link" href="/login">Login</a> -->
+      </div>
+    </div>
+  </nav>
+  <div id="parallax-effect">
+    <div class="parallax-image" data-stellar-background-ratio="0.5">
+      <div class="overlay"></div>
+      <div id="main-title" class="card">
+        <div class="card-block">
+          <h4 class="card-title">Insider</h4>
+          <h6 class="card-subtitle">College Consulting, Reinvented</h6>
+        </div>
+      </div>
+    </div>
+    <div id="scroll-button">
+      <a href="#main-content"><span></span></a>
     </div>
   </div>
-</nav>
+</div>
 {% endblock %}
 {% block content %}
-<div class="row text-center">
-  <div class="jumbotron section">
-    <h1 class="display-4">咨询平台的由来</h1>
-    <p class="lead">刘威廉是良好交流互动的最大受惠者。
-      从六年级开始陆续和多位美国名校的学长们交谈，在八年级就确定了主修经济金融的专业方向。
-      同时受学长的激励，在学习和课外活动上自我驱动，不怕辛苦。
-      与君一席话胜读十年书，因此深知高人指路的潜在优势，尤其避免了到大学转换专业的弯路。</p>
-  </div>
-  <div class="jumbotron section">
-    <h1 class="display-4">咨询平台的具体操作方式</h1>
-    <p class="lead">有问必答咨询平台是用微信或Skype一对一或一对多的交流方式。
-      国内的学生预先准备出他们提问的大纲，双方各持一份。
-      在一个小时的时间内根据大纲的提示，国内的学生可以就他们所关心的任何问题提问，
-      名校学生将根据自己的经历给出回答和进一步的申学建议。
-      有问必答服务方向就是激励学生学习的热情并尽早确定未来的专业方向。</p>
-  </div>
-  <div class="jumbotron section">
-    <h1 class="display-4">咨询平台创始人刘威廉</h1>
-    <p class="lead">有问必答的创始人刘威廉曾在2015年到贵校和各省前五的十六所省重点高中国际部进行中美文化交流。
-      刘威廉所有标化考试成绩满分，在校成绩全优，美国国家奖学金获得者，美国最大的商科竞赛FBLA全美个人冠军，三次入围高尔夫球少年世界杯，钢琴CM十级证书。
-      美国学生运行的最大杂志Business Today执行主编。
-      大二就得到了纽约华尔街对冲基金实习的机会并应英国名牌杂志《经济学家》纽约分部最高主管的邀请去纽约分部四个星期为杂志撰写文章。</p>
-  </div>
+<div id="main-content">
+  <section class="section section-inverse">
+    <div class="row">
+      <div class="col-md-4"></div>
+      <div class="col-md-8">
+        <div class="jumbotron">
+          <h1 class="display-5">Background</h1>
+          <p class="lead">有问必答 is the solution to navigating the college application process, getting direct answers to the most pressing questions you may have. This platform will allow students from Ivy League Universities to contribute their knowledge and experience from applying to and attending college, directly connecting them to applicants who would like to gain an insider view of higher education in America. The platform was founded and built exclusively by current Princeton University students.</p>
+          <p class="lead">
+            Starting from middle school, William would visit family friends and talk to several Ivy League college students about the choices that led them to pursue their respective interests. Through this early start, William was able to decide that he was more interested in a career in Economics and Business rather than medicine, leaving the Science Olympiad team that his high school was best known for and instead becoming the president of his high school’s FBLA chapter (Business Club). Through these experiences, William was able to find an optimal major to pursue, allowing him to develop his extra-curricular activities and academics in economics early on, avoiding the difficulties of changing majors later on.
+          </p>
+          <p class="lead">After speaking at sixteen of China’s top international high schools across 10 cities in 2015 and talking to individual students and administrators there, he discovered that most students were largely undecided on the path they wanted to pursue, aside from attending college in the US. This platform was designed to give the same opportunity to other students who want to learn more about their potential activities, colleges, and majors before committing to these choices.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section section-light">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="jumbotron">
+          <h1 class="display-5">Operations</h1>
+          <p class="lead">有问必答currently operates through WeChat and Skype, with a proprietary system coming soon. Once a mentor that best fits your potential major and extra-curricular activities is chosen, students will prepare an outline of question they would like answered to their mentor at least 24 hours before the scheduled discussion. At the time of the discussion, both parties will be linked for a 1 hour discussion, during which the mentor will be able to answer questions and give feedback based off their own experiences. The goal of this platform is to allow students to gain a better understanding of what colleges expect of their applicants, and help students discover the best way to frame their interests and passion into a unique path for high school and college success. </p>
+        </div>
+      </div>
+      <div class="col-md-6">
+      </div>
+    </div>
+  </section>
+  <section class="section section-inverse">
+    <div class="row">
+      <div class="col-md-4"></div>
+      <div class="col-md-8">
+        <div class="jumbotron">
+          <h1 class="display-5">An Integrated Experience</h1>
+          <p class="lead">In either a 1-on-1 or group setting, our clients will have the opportunity to ask questions during an hour-long consultation session with an Ivy League student mentor, asking any questions about high school planning, college application, or any other concerns they may have. The typical session involves discussions on standardized testing, high school course selection advice, academic competitions and summer programs, choosing a college major, application essay topics, and interview preparation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 </div>
+{% endblock %}
+{% block footer %}
+<footer class="footer d-flex align-items-center">
+  <nav class="nav">
+    <a class="nav-link" href="#">Student Profiles</a>
+    <a class="nav-link" href="#">Services</a>
+    <a class="nav-link" href="#">Our Vision</a>
+    <a class="nav-link" href="#">Contact Us</a>
+  </nav>
+</footer>
 {% endblock %}

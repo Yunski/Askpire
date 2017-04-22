@@ -7,5 +7,7 @@
 #main-content .card-img-top {
   width: 10rem;
   height: 10rem;
+  border: 0.2rem solid black;
   border-radius: 50%;
+  margin: 0 auto;
 }
