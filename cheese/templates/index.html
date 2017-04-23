@@ -9,103 +9,180 @@
     <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
       <div class="navbar-nav">
       <!--  <a class="nav-item nav-link active" href="/">Home</a> -->
-        <a class="nav-item nav-link" href="/profiles">Student Profiles</a>
-        <a class="nav-item nav-link" href="/services">Services</a>
-        <a class="nav-item nav-link" href="/vision">Our Vision</a>
-        <a class="nav-item nav-link" href="/contact">Contact Us</a>
+        <a class="nav-item nav-link" href="/services">SERVICES</a>
+        <a class="nav-item nav-link" href="/profiles">TEAM</a>
+        <a class="nav-item nav-link" href="/vision">OUR VISION</a>
+        <a class="nav-item nav-link" href="/contact">CONTACT</a>
+        <a class="nav-item nav-link" href="/contact">LOGIN</a>
       <!--  <a class="nav-item nav-link" href="/login">Login</a> -->
       </div>
     </div>
   </nav>
   <div id="parallax-effect">
-    <div class="parallax-image" data-stellar-background-ratio="0.5">
-      <div class="overlay"></div>
-      <div id="main-title" class="card">
-        <div class="card-block">
-          <h4 class="card-title">Insider</h4>
-          <h6 class="card-subtitle">College Consulting, Reinvented</h6>
+      <div id="overlay">
+        <video class="visible-desktop" id="hero-vid" poster="http://www.markhillard.com/sandbox/media/polina.jpg" autoplay loop muted>
+          <source type="video/webm" src="http://www.markhillard.com/sandbox/media/polina.webm"></source>
+          <source type="video/mp4" src="http://www.markhillard.com/sandbox/media/polina.mp4"></source>
+        </video>
+        <div id="state" class="visible-desktop"><span class="iconicfill-pause"></span></div>
+        <img id="hero-pic" class="hidden-desktop" src="http://www.markhillard.com/sandbox/media/polina.jpg" alt="">
+      </div>
+      <div id="main-title">
+        <div class="jumbotron">
+          <h1 class="display-4">Askpire</h1>
+          <p class="lead">
+            The leading peer to peer college consulting platform providing high school students with
+            an insider view of prestigious education in America.
+          </p>
+          <p class="lead">
+            <a href="#main-content" class="btn btn-primary btn-lg" href="#" role="button">Get Started</a>
+          </p>
         </div>
       </div>
-    </div>
     <div id="scroll-button">
-      <a href="#main-content"><span></span></a>
     </div>
   </div>
 </div>
 {% endblock %}
 {% block content %}
 <div id="main-content">
-  <section class="section section-inverse">
-    <div class="row">
-      <div class="col-md-4"></div>
-      <div class="col-md-8">
-        <div class="jumbotron">
-          <h1 class="display-5">An Integrated Experience</h1>
-          <p class="lead">In either a 1-on-1 or group setting, our clients will have the opportunity to ask questions during an hour-long consultation session with an Ivy League student mentor, asking any questions about high school planning, college application, or any other concerns they may have. The typical session involves discussions on standardized testing, high school course selection advice, academic competitions and summer programs, choosing a college major, application essay topics, and interview preparation.</p>
+  <section class="section section-white">
+    <div class="jumbotron section-panel">
+      <h1 class="text-center">Our Services</h1>
+      <div class="row section-panel-block">
+        <div class="col-md d-flex justify-content-end">
+          <img class="section-panel-img" src="/static/icons/video-conference.svg"/>
+        </div>
+        <div class="col-md">
+          <div class="card">
+            <div class="card-block">
+              <h4 class="card-title">Video Conferencing</h4>
+              <p class="card-text">In either a 1-on-1 or group setting, our clients will have the opportunity to ask questions during an hour-long consultation session with an Ivy League student mentor, asking any questions about high school planning, college application, or any other concerns they may have. The typical session involves discussions on standardized testing, high school course selection advice, academic competitions and summer programs, choosing a college major, application essay topics, and interview preparation.</p>
+              <a href="#" class="btn btn-primary">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <ul class="nav nav-pills justify-content-center">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Video Conferencing</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Essay Workshop</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Interview Prep</a>
+        </li>
+      </ul>
+  </section>
+  <section class="section section-gray">
+    <div class="jumbotron section-panel">
+      <h1 class="text-center">Meet the Team</h1>
+      <div id="profiles" class="section-inner-block">
+        <div class="row">
+          <div class="col-md">
+            <div class="card">
+              <img class="card-img-top profile-img" src="/static/img/example_headshot1.jpg">
+              <ul class="list-group profile-stats">
+                <li class="list-group-item">ACT 33</li>
+                <li class="list-group-item">SAT II Chemistry: 730</li>
+                <li class="list-group-item">SAT II Math: 710</li>
+              </ul>
+              <div class="profile-block">
+                <div class="card-title">Elijah Ash</div>
+                <div class="card-subtitle">Major: Geoscience</div>
+                <div class="card-block">Blah Blah Blah Blah Blah</div>
+              </div>
+              <div class="card-details"><a class="card-link"><i class="fa fa-link" aria-hidden="true"></i>See Full Profile</a></div>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="card">
+              <img class="card-img-top profile-img" src="/static/img/example_headshot2.jpg">
+              <ul class="list-group profile-stats">
+                <li class="list-group-item">ACT 33</li>
+                <li class="list-group-item">SAT II Chemistry: 730</li>
+                <li class="list-group-item">SAT II Math: 710</li>
+              </ul>
+              <div class="profile-block">
+                <div class="card-title">Elijah Ash</div>
+                <div class="card-subtitle">Major: Geoscience</div>
+                <div class="card-block">Blah Blah Blah Blah Blah</div>
+              </div>
+              <div class="card-details"><a class="card-link"><i class="fa fa-link" aria-hidden="true"></i>See Full Profile</a></div>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="card">
+              <img class="card-img-top profile-img" src="/static/img/example_headshot3.jpg">
+              <ul class="list-group profile-stats">
+                <li class="list-group-item">ACT 33</li>
+                <li class="list-group-item">SAT II Chemistry: 730</li>
+                <li class="list-group-item">SAT II Math: 710</li>
+              </ul>
+              <div class="profile-block">
+                <div class="card-title">Elijah Ash</div>
+                <div class="card-subtitle">Major: Geoscience</div>
+                <div class="card-block">Blah Blah Blah Blah Blah</div>
+              </div>
+              <div class="card-details"><a class="card-link"><i class="fa fa-link" aria-hidden="true"></i>See Full Profile</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md">
+            <div class="card">
+              <img class="card-img-top profile-img" src="/static/img/example_headshot4.jpg">
+              <ul class="list-group profile-stats">
+                <li class="list-group-item">ACT 33</li>
+                <li class="list-group-item">SAT II Chemistry: 730</li>
+                <li class="list-group-item">SAT II Math: 710</li>
+              </ul>
+              <div class="profile-block">
+                <div class="card-title">Elijah Ash</div>
+                <div class="card-subtitle">Major: Geoscience</div>
+                <div class="card-block">Blah Blah Blah Blah Blah</div>
+              </div>
+              <div class="card-details"><a class="card-link"><i class="fa fa-link" aria-hidden="true"></i>See Full Profile</a></div>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="card">
+              <img class="card-img-top profile-img" src="/static/img/example_headshot5.jpg">
+              <ul class="list-group profile-stats">
+                <li class="list-group-item">ACT 33</li>
+                <li class="list-group-item">SAT II Chemistry: 730</li>
+                <li class="list-group-item">SAT II Math: 710</li>
+              </ul>
+              <div class="profile-block">
+                <div class="card-title">Elijah Ash</div>
+                <div class="card-subtitle">Major: Geoscience</div>
+                <div class="card-block">Blah Blah Blah Blah Blah</div>
+              </div>
+              <div class="card-details"><a class="card-link"><i class="fa fa-link" aria-hidden="true"></i>See Full Profile</a></div>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="card">
+              <img class="card-img-top profile-img" src="/static/img/example_headshot6.jpg">
+              <ul class="list-group profile-stats">
+                <li class="list-group-item">ACT 33</li>
+                <li class="list-group-item">SAT II Chemistry: 730</li>
+                <li class="list-group-item">SAT II Math: 710</li>
+              </ul>
+              <div class="profile-block">
+                <div class="card-title">Elijah Ash</div>
+                <div class="card-subtitle">Major: Geoscience</div>
+                <div class="card-block">Blah Blah Blah Blah Blah</div>
+              </div>
+              <div class="card-details"><a class="card-link"><i class="fa fa-link" aria-hidden="true"></i>See Full Profile</a></div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
-  <section class="section section-light">
-    <div class="row">
-      <div class="col-md-6">
-        <div class="jumbotron">
-          <h1 class="display-5">An Integrated Experience</h1>
-          <p class="lead">In either a 1-on-1 or group setting, our clients will have the opportunity to ask questions during an hour-long consultation session with an Ivy League student mentor, asking any questions about high school planning.</p>
-        </div>
-      </div>
-      <div class="col-md-6">
-      </div>
-    </div>
-  </section>
-  <section class="section section-inverse">
-    <div class="row">
-      <div class="col-md-4"></div>
-      <div class="col-md-8">
-        <div class="jumbotron">
-          <h1 class="display-5">An Integrated Experience</h1>
-          <p class="lead">In either a 1-on-1 or group setting, our clients will have the opportunity to ask questions during an hour-long consultation session with an Ivy League student mentor, asking any questions about high school planning, college application, or any other concerns they may have. The typical session involves discussions on standardized testing, high school course selection advice, academic competitions and summer programs, choosing a college major, application essay topics, and interview preparation.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="section section-light">
-    <div class="row">
-      <div class="col-md">
-        <div class="card">
-          <img class="card-img-top" src="/static/img/pic1.png"></img>
-          <div class="card-block">
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md">
-        <div class="card">
-          <img class="card-img-top" src="/static/img/pic2.png"></img>
-          <div class="card-block">
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md">
-        <div class="card">
-          <img class="card-img-top" src="/static/img/pic3.jpg"></img>
-          <div class="card-block">
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md">
-        <div class="card">
-          <img class="card-img-top" src="/static/img/pic4.jpg"></img>
-          <div class="card-block">
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="section section-inverse">
+  <section class="section">
     <blockquote class="blockquote mb-5">
       <p>This platform is excellent, as it provides the opportunity for Ivy League students
         to help Chinese students in their college applications.
