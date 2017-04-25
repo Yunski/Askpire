@@ -1,6 +1,7 @@
 {% extends "base_contact.html" %}
 {% block navbar %}
 <div id="landing">
+  <div class="overlay"></div>
   <nav class="navbar navbar-toggleable-md navbar-light navbar-custom">
     <a class="navbar-brand" href="/">Logo</a>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -19,72 +20,51 @@
   <div id="parallax-effect">
     <div class="parallax-image" data-stellar-background-ratio="0.5">
       <div class="overlay"></div>
-      <div id="hero" class="card">
-        <div class="jumbotron text-center">
-          <h1 class="display-5">Begin Your College Journey Now</h1>
-          <p class="lead">
-            <a href="#main-content" class="btn btn-primary btn-lg" href="#" role="button">Get Started</a>
-          </p>
-        </div>
+      <div id="contact-form">
+        <h1 class="animated fadeInUp">Contact Us</h1>
+        <form>
+          <div class="main-container">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-md">
+                  <p>Thank you for considering Askpire. If you'd like more information, please fill out the form and we will reach out to you as soon as possible.</p>
+                  <p>
+                  Contact Details
+                  <br> <i class="fa fa-envelope" aria-hidden="true"></i> Email Address: hlee_84@yahoo.com
+                  <br> <i class="fa fa-skype" aria-hidden="true"></i> Skype: haiyanli84
+                  <br> <i class="fa fa-weixin" aria-hidden="true"></i> WeChat: wliu978 | haiyanli1321
+                  </p>
+                </div>
+                <div class="col-md">
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Please enter your email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Email here">
+                    <small id="emailHelp" class="form-text">We'll never share your email with anyone else.</small>
+                  </div>
+                  <div class="form-group">
+                    <label for="subjectline">Please a subject line</label>
+                    <input type="subject" class="form-control" id="subjectlineinput" placeholder="Enter Subject here">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleTextarea">Enter your message below, please</label>
+                    <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+                  </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
       </div>
     </div>
+    <footer class="footer d-flex align-items-center">
+      <nav class="nav">
+        <a class="nav-link" href="#">Student Profiles</a>
+        <a class="nav-link" href="#">Services</a>
+        <a class="nav-link" href="#">Our Vision</a>
+        <a class="nav-link" href="#">Contact Us</a>
+      </nav>
+    </footer>
   </div>
 </div>
-{% endblock %}
-{% block content %}
-
-
-
-<div class="main-form">
-
-  <form>
-    <div class = "main-image">
-    <div class = "main-text">
-    <h1> CONTACT US </h1>
-    </div>
-    </div>
-  <div class = "main-container">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="form-group">
-            <label for="exampleInputEmail1">Please enter your email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Email here">
-            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-          </div>
-          <div class="form-group">
-            <label for="subjectline">Please a subject line</label>
-            <input type="subject" class="form-control" id="subjectlineinput" placeholder="Enter Subject here">
-          </div>
-          <div class="form-group">
-            <label for="exampleTextarea">Enter your message below, please</label>
-            <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
-          </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </div>
-        <div class="col-md-6">
-          <p>
-          Contact Details
-          <br> <i class="fa fa-envelope" aria-hidden="true"></i> Email Address: hlee_84@yahoo.com
-          <br> <i class="fa fa-skype" aria-hidden="true"></i> Skype: haiyanli84
-          <br> <i class="fa fa-weixin" aria-hidden="true"></i> WeChat: wliu978 | haiyanli1321
-          </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </form>
-  </div>
-
-
-
-<footer class="footer d-flex align-items-center">
-  <nav class="nav">
-    <a class="nav-link" href="#">Student Profiles</a>
-    <a class="nav-link" href="#">Services</a>
-    <a class="nav-link" href="#">Our Vision</a>
-    <a class="nav-link" href="#">Contact Us</a>
-  </nav>
-</footer>
-
 {% endblock %}

@@ -1,149 +1,32 @@
 /* contact page */
 
-.main-form {
-  margin-top: 4.5rem;
+form {
+    color: white;
+    font-weight: 300;
 }
 
-
-.main-form .main-image {
-position: relative;
-background: url('../img/princeton_students.jpg') no-repeat center center fixed;
-
-background-size:cover;
-background-repeat: no-repeat;
-height: 15rem;
-position: relative;
--webkit-background-size: cover;
--moz-background-size: cover;
--o-background-size: cover;
-background-size: cover;
+#parallax-effect {
+  height: 100%;
 }
 
-.main-form .main-text{
-position: absolute;
-font-size: 1rem;
-font-weight: bold;
-color: white;
-text-align: center;
-margin-top: 6rem;
-left: 30%;
-width: 40%;
+#parallax-effect .parallax-image {
+  background-attachment: fixed;
+  background-position: 50% 0;
+  background-repeat: no-repeat;
+  background-image: url("../img/princeton_students.jpg");
+  background-size:cover;
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
 
-/* Potential code */
-/* Global Styles */
-
-@import url("//fonts.googleapis.com/css?family=Poiret+One|Josefin+Sans");
-@import url("//www.weloveiconfonts.com/api/?family=iconicfill");
-
-[class*="iconicfill-"]::before { font-family:"iconicfill", sans-serif; }
-
-html,body {
-color:#fddaec;
-font-family:"Josefin Sans", sans-serif;
-font-size:100%;
-height:100%;
-line-height:1.45;
+#contact-form {
+  padding: 3rem;
 }
 
-
-/* Video Overlay */
-
-#overlay {
-background-color:rgba(0,0,0,.65);
-height:100%;
-left:0;
-position:relative;
-top:0;
-transition:background-color 300ms ease;
-width:100%;
-}
-
-.fade { background-color:rgba(0,0,0,.85) !important; }
-
-
-/* Hero Video + Fallback */
-
-#hero-vid {
-backface-visibility:hidden;
-background:url("http://www.markhillard.com/sandbox/media/polina.jpg") no-repeat scroll 0 0 #000;
-background-size:cover;
-bottom:0;
-height:auto;
-min-height:100%;
-min-width:100%;
-perspective:1000;
-position:fixed;
-right:0;
-width:auto;
-z-index:-1;
-}
-
-#hero-pic {
-display:block;
-height:auto;
-width:100%;
-}
-
-#state {
-background-color:rgba(0,0,0,.5);
-bottom:0;
-cursor:pointer;
-font-size:2.25em;
-left:0;
-padding:0.55em 1.05em 0.35em 1em;
-position:absolute;
-}
-
-
-/* Content Styles */
-
-#title {
-backface-visibility:hidden;
-left:0;
-perspective:1000;
-position:fixed;
-width:100%;
-}
-
-#title h1 {
-background-color:rgba(0,0,0,.5);
-font-family:"Poiret One", sans-serif;
-font-size:2.5em;
-padding:.5em .725em;
-}
-
-#content {
-background-color:#151515;
-padding:2em;
-position:relative;
-z-index:1;
-}
-
-#content p {
-font-size:1.25em;
-letter-spacing:.02em;
-margin-bottom:1.3em;
-}
-
-
-/* Media Queries */
-
-@media only screen and (max-width:768px) {
-    #overlay { height:auto; }
-}
-
-
-/* Visibility Helpers */
-
-@media only screen and (min-width:769px) {
-    .visible-mobile,.visible-tablet,.hidden-desktop { display:none !important; }
-}
-
-@media only screen and (min-width:480px) and (max-width:768px) {
-    .visible-mobile,.hidden-tablet,.visible-desktop { display:none !important; }
-}
-
-@media only screen and (max-width:479px) {
-    .hidden-mobile,.visible-tablet,.visible-desktop { display:none !important; }
+h1 {
+  font-weight: 300;
+  color: white;
+  text-align: center;
+  padding: 3rem;
 }
