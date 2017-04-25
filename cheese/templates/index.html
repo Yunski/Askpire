@@ -8,13 +8,18 @@
     </button>
     <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-      <!--  <a class="nav-item nav-link active" href="/">Home</a> -->
-        <a class="nav-item nav-link" href="/services">SERVICES</a>
+        <div class="dropdown">
+          <a class="nav-item nav-link dropdown-toggle" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">SERVICES</a>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <a class="dropdown-item" href="">Video Conferencing</a>
+            <a class="dropdown-item" href="/interview-prep">Interview Prep</a>
+            <a class="dropdown-item" href="">Essay Workshop</a>
+          </div>
+        </div>
         <a class="nav-item nav-link" href="/profiles">TEAM</a>
         <a class="nav-item nav-link" href="/vision">OUR VISION</a>
         <a class="nav-item nav-link" href="/contact">CONTACT</a>
         <a class="nav-item nav-link" href="/contact">LOGIN</a>
-      <!--  <a class="nav-item nav-link" href="/login">Login</a> -->
       </div>
     </div>
   </nav>
@@ -27,7 +32,7 @@
         <div id="state" class="visible-desktop"><span class="iconicfill-pause"></span></div>
         <img id="hero-pic" class="hidden-desktop" src="http://www.markhillard.com/sandbox/media/polina.jpg" alt="">
       </div>
-      <div id="main-title">
+      <div id="hero">
         <div class="jumbotron">
           <h1 class="display-4">Askpire</h1>
           <p class="lead">
@@ -39,8 +44,6 @@
           </p>
         </div>
       </div>
-    <div id="scroll-button">
-    </div>
   </div>
 </div>
 {% endblock %}
@@ -182,7 +185,7 @@
       </div>
     </div>
   </section>
-  <section class="section">
+  <section class="section section-white">
     <blockquote class="blockquote mb-5">
       <p>This platform is excellent, as it provides the opportunity for Ivy League students
         to help Chinese students in their college applications.

@@ -1,0 +1,67 @@
+{% extends "base_services.html" %}
+{% block navbar %}
+<div id="landing">
+  <nav class="navbar navbar-toggleable-md navbar-light navbar-custom">
+    <a class="navbar-brand" href="/">Logo</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <div class="dropdown">
+          <a class="nav-item nav-link dropdown-toggle" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">SERVICES</a>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <a class="dropdown-item" href="">Video Conferencing</a>
+            <a class="dropdown-item" href="/interview-prep">Interview Prep</a>
+            <a class="dropdown-item" href="">Essay Workshop</a>
+          </div>
+        </div>
+        <a class="nav-item nav-link" href="/profiles">TEAM</a>
+        <a class="nav-item nav-link" href="/vision">OUR VISION</a>
+        <a class="nav-item nav-link" href="/contact">CONTACT</a>
+        <a class="nav-item nav-link" href="/contact">LOGIN</a>
+      </div>
+    </div>
+  </nav>
+  <div id="parallax-effect">
+    <div class="parallax-image" data-stellar-background-ratio="0.5">
+      <div class="overlay"></div>
+      <div id="hero" class="card">
+        <div class="jumbotron text-center animated fadeInUp">
+          <h1 class="display-5">Interview Prep</h1>
+          <p class="lead">
+            <a href="#main-content" class="btn btn-primary btn-lg" href="#" role="button">Try It Now</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+{% block content %}
+<div id="main-content">
+  <section class="section section-white">
+    <div class="jumbotron section-panel">
+      <div class="row section-text-block">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+          <h4>Improve your Interview Skills with Princeton Students</h4>
+          <p>Our Ivy League mentors have all gone through countless rounds of interviews, both with University alumni for their college interviews and with major corporations for internship applications. Students interested in gaining more insight into the interview process and gain feedback from our mentors will have the opportunity to attend a mock interview session.</p>
+          <p>Our mentors will simulate the college or internship interview process and ask real interview questions for 40 minutes, followed by a 20-minute feedback session on advice for optimizing the interview based on the mentor’s own experiences. This will include general advice on dress, posture, speech, etc. as well as advice on how to best answer certain questions and how to outline their experiences to match what college look for most in their applicants.</p>
+        </div>
+        <div class="col-md-2"></div>
+      </div>
+    </div>
+  </section>
+</div>
+{% endblock %}
+{% block footer %}
+<footer class="footer d-flex align-items-center">
+  <nav class="nav">
+    <a class="nav-link" href="#">Student Profiles</a>
+    <a class="nav-link" href="#">Services</a>
+    <a class="nav-link" href="#">Our Vision</a>
+    <a class="nav-link" href="#">Contact Us</a>
+  </nav>
+</footer>
+{% endblock %}

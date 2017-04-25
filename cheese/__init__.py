@@ -37,9 +37,9 @@ def create_app(config, debug=False, testing=False, config_overrides=None):
         return render_template('profiles.html')
 
 
-    @app.route('/services')
+    @app.route('/interview-prep')
     def services():
-        return render_template('services.html')
+        return render_template('interview-prep.html')
 
 
     @app.route('/vision')

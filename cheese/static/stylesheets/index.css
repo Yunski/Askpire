@@ -19,7 +19,6 @@
 
 .fade { background-color:rgba(0,0,0,.85) !important; }
 
-
 /* Hero Video + Fallback */
 
 #hero-vid {
@@ -53,7 +52,6 @@
   position:absolute;
 }
 
-
 /* Content Styles */
 
 #title {
@@ -84,13 +82,11 @@
   margin-bottom:1.3em;
 }
 
-
 /* Media Queries */
 
 @media only screen and (max-width:768px) {
   #overlay { height:auto; }
 }
-
 
 /* Visibility Helpers */
 
@@ -106,63 +102,9 @@
   .hidden-mobile,.visible-tablet,.visible-desktop { display:none !important; }
 }
 
-
-#main-content {
-  padding: 1rem;
-  background-color: #eeeeee;
-}
-
-#main-content .card {
-  border: none;
-  border-radius: 0;
-}
-
-#main-content .card-link {
-  cursor: pointer;
-}
-
-#main-title {
-  position: absolute;
-  width: 60%;
-  height: 50%;
-  top: 35%;
-  background: transparent;
-  border: none;
-}
-
-#main-title .jumbotron {
-  width: 50%;
-  margin: 0 auto;
-  margin-top: 20%;
-  color: white;
-}
-
-#main-title .lead {
-  font-size: 1rem;
-}
-
-#profiles .card {
-  cursor: pointer;
-}
-
 .card-img-top {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
-}
-
-.jumbotron h1 {
-  font-size: 4rem;
-}
-
-.section h1 {
-  padding-bottom: 3rem;
-}
-
-.section-panel .card {
-  position: relative;
-  height: 20rem;
-  max-height: 20rem;
-  overflow: hidden;
 }
 
 .section-panel .card-details {
@@ -200,14 +142,6 @@
   padding: 0;
 }
 
-.section-panel-block {
-  padding: 1rem;
-}
-
-.section-panel-block .card {
-  font-weight: 300;
-}
-
 .section-panel-img {
   margin: 2rem;
   max-width: 15rem;
@@ -234,12 +168,6 @@
 
 .section-panel .nav {
   padding: 1rem;
-}
-
-.section-inner-block {
-  position: relative;
-  background-color: rgba(40,40,40,0.5);
-  box-shadow: 0rem 0rem 3rem #404040;
 }
 
 .profile-img {
@@ -274,6 +202,37 @@
 
 .profile-block .card-block {
   padding: 0.5rem;
+}
+
+/* parallax */
+
+#parallax-effect {
+  height: 100%;
+}
+
+#parallax-effect .parallax-image {
+  background-attachment: fixed;
+  background-position: 50% 0;
+  background-repeat: no-repeat;
+  background-image: url("../img/Whitman_1.jpg");
+  background-size:cover;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+#hero .jumbotron {
+  width: 40%;
+  margin: 0 auto;
+  color: white;
+}
+
+#hero .jumbotron h1 {
+  font-size: 3rem;
+}
+
+#profiles .card {
+  cursor: pointer;
 }
 
 #scroll-button a {

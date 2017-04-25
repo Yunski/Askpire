@@ -1,22 +1,35 @@
 {% extends "base_contact.html" %}
 {% block navbar %}
-
-<nav class="navbar fixed-top navbar-toggleable-md navbar-light navbar-custom" data-aos="fade">
-  <a class="navbar-brand" href="/">Logo</a>
-  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
-    <div class="navbar-nav">
-    <!--  <a class="nav-item nav-link active" href="/">Home</a> -->
-      <a class="nav-item nav-link" href="/profiles">Student Profiles</a>
-      <a class="nav-item nav-link" href="/services">Services</a>
-      <a class="nav-item nav-link" href="/vision">Our Vision</a>
-      <a class="nav-item nav-link" href="/contact">Contact Us</a>
-    <!--  <a class="nav-item nav-link" href="/login">Login</a> -->
+<div id="landing">
+  <nav class="navbar navbar-toggleable-md navbar-light navbar-custom">
+    <a class="navbar-brand" href="/">Logo</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link" href="/services">SERVICES</a>
+        <a class="nav-item nav-link" href="/profiles">TEAM</a>
+        <a class="nav-item nav-link" href="/vision">OUR VISION</a>
+        <a class="nav-item nav-link" href="/contact">CONTACT</a>
+        <a class="nav-item nav-link" href="/contact">LOGIN</a>
+      </div>
+    </div>
+  </nav>
+  <div id="parallax-effect">
+    <div class="parallax-image" data-stellar-background-ratio="0.5">
+      <div class="overlay"></div>
+      <div id="hero" class="card">
+        <div class="jumbotron text-center">
+          <h1 class="display-5">Begin Your College Journey Now</h1>
+          <p class="lead">
+            <a href="#main-content" class="btn btn-primary btn-lg" href="#" role="button">Get Started</a>
+          </p>
+        </div>
+      </div>
     </div>
   </div>
-</nav>
+</div>
 {% endblock %}
 {% block content %}
 
