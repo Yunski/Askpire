@@ -1,20 +1,24 @@
 {% extends "base.html" %}
 {% block navbar %}
-
-<!--Change Navbar accordingly-->
-<nav class="navbar navbar-toggleable-md navbar-light navbar-custom navbar-fixed">
+<nav class="navbar navbar-toggleable-md navbar-light navbar-custom">
   <a class="navbar-brand" href="/">Logo</a>
   <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
     <div class="navbar-nav">
-    <!--  <a class="nav-item nav-link active" href="/">Home</a> -->
-      <a class="nav-item nav-link" href="/profiles">Student Profiles</a>
-      <a class="nav-item nav-link" href="/services">Services</a>
-      <a class="nav-item nav-link" href="/vision">Our Vision</a>
-      <a class="nav-item nav-link" href="/contact">Contact Us</a>
-    <!--  <a class="nav-item nav-link" href="/login">Login</a> -->
+      <div class="dropdown">
+        <a class="nav-item nav-link dropdown-toggle" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">SERVICES</a>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+          <a class="dropdown-item" href="">Video Conferencing</a>
+          <a class="dropdown-item" href="/interview-prep">Interview Prep</a>
+          <a class="dropdown-item" href="">Essay Workshop</a>
+        </div>
+      </div>
+      <a class="nav-item nav-link" href="/profiles">TEAM</a>
+      <a class="nav-item nav-link" href="/vision">OUR VISION</a>
+      <a class="nav-item nav-link" href="/contact">CONTACT</a>
+      <a class="nav-item nav-link" href="">LOGIN</a>
     </div>
   </div>
 </nav>

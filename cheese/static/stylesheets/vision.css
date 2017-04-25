@@ -1,0 +1,23 @@
+#parallax-effect {
+  height: 80%;
+}
+
+#parallax-effect .parallax-image {
+  background-attachment: fixed;
+  background-position: 50% 0;
+  background-repeat: no-repeat;
+  background-image: url("../img/graduation.jpg");
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+#hero .jumbotron {
+  width: 100%;
+  color: white;
+}
+
+#hero .jumbotron h1 {
+  font-size: 2.5rem;
+}

@@ -9,19 +9,26 @@
     </button>
     <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-        <a class="nav-item nav-link" href="/services">SERVICES</a>
+        <div class="dropdown">
+          <a class="nav-item nav-link dropdown-toggle" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">SERVICES</a>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <a class="dropdown-item" href="">Video Conferencing</a>
+            <a class="dropdown-item" href="/interview-prep">Interview Prep</a>
+            <a class="dropdown-item" href="">Essay Workshop</a>
+          </div>
+        </div>
         <a class="nav-item nav-link" href="/profiles">TEAM</a>
         <a class="nav-item nav-link" href="/vision">OUR VISION</a>
         <a class="nav-item nav-link" href="/contact">CONTACT</a>
-        <a class="nav-item nav-link" href="/contact">LOGIN</a>
+        <a class="nav-item nav-link" href="">LOGIN</a>
       </div>
     </div>
   </nav>
   <div id="parallax-effect">
     <div class="parallax-image" data-stellar-background-ratio="0.5">
       <div class="overlay"></div>
-      <div id="contact-form">
-        <h1 class="animated fadeInUp">Contact Us</h1>
+      <div id="contact-form" class="animated fadeInUp">
+        <h1>Contact Us</h1>
         <form>
           <div class="main-container">
             <div class="container-fluid">
