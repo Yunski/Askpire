@@ -1,0 +1,7 @@
+web:
+  image: yunski/askpire-ui
+  ports:
+    - "5000:5000"
+  restart: always
+  labels:
+    aliyun.routing.port_5000: web
