@@ -46,6 +46,10 @@ def create_app(config, debug=False, testing=False, config_overrides=None):
     def vision():
         return render_template('vision.html')
 
+    @app.route('/dashboard')
+    def dashboard():
+        return render_template('dashboard.html')
+
     # Add an error handler. This is useful for debugging the live application,
     # however, you should disable the output of the exception for production
     # applications.

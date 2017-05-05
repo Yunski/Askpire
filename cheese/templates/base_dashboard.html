@@ -12,11 +12,10 @@
       rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto:200,300,400,700">
     <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="/static/stylesheets/animate.css"  />
-    <link rel="stylesheet" type="text/css" href="/static/stylesheets/layout.css"  />
-    <link rel="stylesheet" type="text/css" href="/static/stylesheets/vision.css"  />
+    <link rel="stylesheet" type="text/css" href="/static/stylesheets/dashboard.css"  />
   </head>
   <body>
+    {% block sidebar %}{% endblock %}
     {% block navbar %}{% endblock %}
     {% block content %}{% endblock %}
     {% block footer %}{% endblock %}
@@ -25,10 +24,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
     <!-- Custom scripts -->
-    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
-    <script src="static/js/jquery.stellar.min.js"></script>
-    <script src="static/js/stellar-init.js"></script>
-    <script src="static/js/navbar.js"></script>
   </body>
 </html>
