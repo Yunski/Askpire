@@ -28,32 +28,67 @@
 {% endblock %}
 {% block content %}
 <div id="main-content">
-  <section class="section section-white">
+  <section class="section section-white" ng-app="content-switcher">
     <div class="jumbotron section-panel">
       <h1 class="text-center">Our Services</h1>
-      <div class="row section-panel-block">
-        <div class="col-md d-flex justify-content-end">
-          <img class="section-panel-img" src="/static/icons/video-conference.svg"/>
-        </div>
-        <div class="col-md">
-          <div class="card">
-            <div class="card-block">
-              <h4 class="card-title">Video Conferencing</h4>
-              <p class="card-text">In either a 1-on-1 or group setting, our clients will have the opportunity to ask questions during an hour-long consultation session with an Ivy League student mentor, asking any questions about high school planning, college application, or any other concerns they may have. The typical session involves discussions on standardized testing, high school course selection advice, academic competitions and summer programs, choosing a college major, application essay topics, and interview preparation.</p>
-              <a href="#" class="btn btn-primary">Learn More</a>
+      <ng-include src="template"></ng-include>
+      <script type="text/ng-template" id="page1">
+        <div class="row section-panel-block animated fadeIn">
+          <div class="col-md d-flex justify-content-end">
+            <img class="section-panel-img" src="/static/img/interview-prep-main.jpg"/>
+          </div>
+          <div class="col-md">
+            <div class="card">
+              <div class="card-block">
+                <h4 class="card-title">Interview Prep</h4>
+                <p class="card-text">In either a 1-on-1 or group setting, our clients will have the opportunity to ask questions during an hour-long consultation session with an Ivy League student mentor, asking any questions about high school planning, college application, or any other concerns they may have. The typical session involves discussions on standardized testing, high school course selection advice, academic competitions and summer programs, choosing a college major, application essay topics, and interview preparation.</p>
+                <a href="#" class="btn btn-primary">Learn More</a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <ul class="nav nav-pills justify-content-center">
-        <li class="nav-item">
-          <a class="nav-link active" href="#">Video Conferencing</a>
+      </script>
+      <script type="text/ng-template" id="page2">
+        <div class="row section-panel-block animated fadeIn">
+          <div class="col-md d-flex justify-content-end">
+            <img class="section-panel-img" src="/static/img/essay-editing-main.jpg"/>
+          </div>
+          <div class="col-md">
+            <div class="card">
+              <div class="card-block">
+                <h4 class="card-title">Essay Editing</h4>
+                <p class="card-text">Button 2 In either a 1-on-1 or group setting, our clients will have the opportunity to ask questions during an hour-long consultation session with an Ivy League student mentor, asking any questions about high school planning, college application, or any other concerns they may have. The typical session involves discussions on standardized testing, high school course selection advice, academic competitions and summer programs, choosing a college major, application essay topics, and interview preparation.</p>
+                <a href="#" class="btn btn-primary">Learn More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </script>
+      <script type="text/ng-template" id="page3">
+        <div class="row section-panel-block animated fadeIn">
+          <div class="col-md d-flex justify-content-end">
+            <img class="section-panel-img" src="/static/img/high-school-planning-main.jpg"/>
+          </div>
+          <div class="col-md">
+            <div class="card">
+              <div class="card-block">
+                <h4 class="card-title">High School Planning</h4>
+                <p class="card-text">Button 3 either a 1-on-1 or group setting, our clients will have the opportunity to ask questions during an hour-long consultation session with an Ivy League student mentor, asking any questions about high school planning, college application, or any other concerns they may have. The typical session involves discussions on standardized testing, high school course selection advice, academic competitions and summer programs, choosing a college major, application essay topics, and interview preparation.</p>
+                <a href="#" class="btn btn-primary">Learn More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </script>
+      <ul class="nav nav-pills justify-content-center" ng-model="template">
+        <li class="nav-item" ng-click="template='page1'">
+          <a id = "Button1" class="nav-link active" href="#" value="page1">Video Conferencing</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Essay Workshop</a>
+        <li class="nav-item" ng-click="template='page2'">
+          <a id = "Button2" class="nav-link" href="#" value="page2">Essay Workshop</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Interview Prep</a>
+        <li class="nav-item" ng-click="template='page3'">
+          <a id = "Button3"class="nav-link" href="#" value="page3">Interview Prep</a>
         </li>
       </ul>
   </section>

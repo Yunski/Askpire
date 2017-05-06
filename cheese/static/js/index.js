@@ -36,4 +36,28 @@ $(document).ready(function () {
         $(".card-details", this).removeClass("expand");
     });
 
+
+    var app = angular.module('content-switcher', []);
+
+    $('#Button1').click(function(){
+      $(this).addClass("active");
+      $('#Button2').removeClass("active")
+      $('#Button3').removeClass("active")
+    });
+
+    $('#Button2').click(function(){
+      $(this).addClass("active");
+      $('#Button1').removeClass("active")
+      $('#Button3').removeClass("active")
+    });
+
+    $('#Button3').click(function(){
+      $(this).addClass("active");
+      $('#Button2').removeClass("active")
+      $('#Button1').removeClass("active")
+    });
+
+    $(window).on('load', function () {
+      $("#Button1").click();
+    });
 });

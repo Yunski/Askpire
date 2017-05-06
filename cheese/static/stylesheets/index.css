@@ -144,8 +144,8 @@
 
 .section-panel-img {
   margin: 2rem;
-  max-width: 15rem;
-  max-height: 15rem;
+  width: 60%;
+  max-height: 28%;
 }
 
 .section-panel .nav-item {
