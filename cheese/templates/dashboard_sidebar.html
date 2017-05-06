@@ -5,27 +5,27 @@
           ASKPIRE
       </a>
     </div>
-    <ul class="nav">
-      <li class="active">
-        <a href="/dashboard">
+    <ul class="nav" ng-init="selectedTab = 0">
+      <li ng-class="{ active: selectedTab == 0 }">
+        <a href="#" ng-click="selectedTab = 0">
           <span><i class="fa fa-dashboard fa-lg fa-2x"></i></span>
           <p>DASHBOARD</p>
         </a>
       </li>
-      <li>
-        <a href="/dashboard">
+      <li ng-class="{ active: selectedTab == 1 }">
+        <a href="#" ng-click="selectedTab = 1">
           <span><i class="fa fa-user fa-lg fa-2x"></i></span>
           <p>USER PROFILE</p>
         </a>
       </li>
-      <li>
-        <a href="/schedule">
+      <li ng-class="{ active : selectedTab == 2 }">
+        <a href="#" ng-click="selectedTab = 2">
           <span><i class="fa fa-calendar fa-lg fa-2x"></i></span>
           <p>SCHEDULE</p>
         </a>
       </li>
-      <li>
-        <a href="/dashboard">
+      <li ng-class="{ active: selectedTab == 3 }">
+        <a href="#" ng-click="selectedTab = 3">
           <span><i class="fa fa-bell fa-lg fa-2x"></i></span>
           <p>NOTIFICATIONS</p>
         </a>

@@ -25,13 +25,14 @@ def create_app(config, debug=False, testing=False, config_overrides=None):
 
     @app.route('/')
     def index():
+        user = session.get('user')
+        if user is not None:
+            return redirect(url_for('dashboard'))
         return render_template('index.html')
-
 
     @app.route('/contact')
     def contact():
         return render_template('contact.html')
-
 
     @app.route('/profiles')
     def profiles():
