@@ -1,11 +1,13 @@
+import base64
 import logging
 import json
 
-from flask import current_app, Flask, request, redirect, url_for, render_template, session
+from flask import abort, current_app, Flask, request, redirect, url_for, render_template, session
 from flask_api import status
 from werkzeug.security import generate_password_hash, check_password_hash
 
 from . import models
+from . import timekit_api
 
 def create_app(config, debug=False, testing=False, config_overrides=None):
     app = Flask(__name__)
@@ -25,39 +27,70 @@ def create_app(config, debug=False, testing=False, config_overrides=None):
 
     @app.route('/')
     def index():
-        user = session.get('user')
-        if user is not None:
+        email = session.get('email')
+        if email is not None:
             return redirect(url_for('dashboard'))
         return render_template('index.html')
 
     @app.route('/contact')
     def contact():
+        email = session.get('email')
+        if email is not None:
+            return redirect(url_for('dashboard'))
         return render_template('contact.html')
 
     @app.route('/profiles')
     def profiles():
+        email = session.get('email')
+        if email is not None:
+            return redirect(url_for('dashboard'))
         return render_template('profiles.html')
-
 
     @app.route('/interview-prep')
     def services():
+        email = session.get('email')
+        if email is not None:
+            return redirect(url_for('dashboard'))
         return render_template('interview-prep.html')
-
 
     @app.route('/vision')
     def vision():
+        email = session.get('email')
+        if email is not None:
+            return redirect(url_for('dashboard'))
         return render_template('vision.html')
 
     @app.route('/dashboard')
     def dashboard():
-        user = session.get('user')
-        if user is None:
+        email = session.get('email')
+        if email is None:
             return redirect(url_for('login'))
+        user = models.User.query.filter_by(email=email).first()
         return render_template('dashboard.html', user=user)
 
     @app.route('/schedule')
     def schedule():
-        return render_template('schedule.html')
+        email = session.get('email')
+        if email is None:
+            return redirect(url_for('login'))
+        user = models.User.query.filter_by(email=email).first()
+        consultants = { consultant.user for consultant in models.Consultant.query.all() }
+        return render_template('schedule.html', user=user, consultants=consultants)
+
+    @app.route('/calendar/<int:user_id>')
+    def calendar(user_id):
+        email = session.get('email')
+        if email is None:
+            return redirect(url_for('login'))
+        user = models.User.query.get(user_id)
+        if user is None:
+            abort(404)
+        calendar = user.calendar
+        if calendar is None:
+            calendar, success = timekit_api.create_calendar(user)
+            if not success:
+                abort(500)
+        return render_template('calendar.html', user=user, app_slug=calendar.app_slug, calendar_id=calendar.timekit_id)
 
     @app.route('/create', methods=['POST', 'GET'])
     def create():
@@ -65,8 +98,16 @@ def create_app(config, debug=False, testing=False, config_overrides=None):
             name = request.form["name"]
             email = request.form["email"]
             password = request.form["password"]
+            user_type = request.form["type"]
+            try:
+                user_type = int(user_type)
+            except ValueError:
+                return json.dumps({ 'success': 'false' }), 400
             if name is None or email is None or password is None:
                 return json.dumps({ 'success': 'false' }), 400
+            user = models.User.query.filter_by(email=email).first()
+            if user is not None:
+                return json.dumps({ 'success': 'false'}), 200
             name = name.split(' ')
             first_name = name[0]
             if len(name) > 1:
@@ -79,14 +120,35 @@ def create_app(config, debug=False, testing=False, config_overrides=None):
                                email=email,
                                password=password,
                                pw_hash=pw_hash)
+            timekit_token = timekit_api.get_api_token(user)
+            if timekit_token is None:
+                timekit_token, success = timekit_api.create_user(user)
+                if not success:
+                    return json.dumps({ 'success': 'false' }), 201
+            user.timekit_token = timekit_token
             models.db.session.add(user)
             models.db.session.commit()
-            session['user'] = user.first_name
+            if user_type == 0:
+                consultant = models.Consultant(user=user)
+                models.db.session.add(consultant)
+                models.db.session.commit()
+            else:
+                client = models.Client(user=user)
+                models.db.session.add(client)
+                models.db.session.commit()
+            session['email'] = user.email
             return json.dumps({ 'success': 'true' }), 201
+
+        email = session.get('email')
+        if email is not None:
+            return redirect(url_for("dashboard"))
         return render_template('create.html')
 
     @app.route('/login', methods=['POST', 'GET'])
     def login():
+        email = session.get("email")
+        if email is not None:
+            return redirect(url_for("dashboard"))
         if request.method == 'POST':
             email = request.form["email"]
             password = request.form["password"]
@@ -94,27 +156,20 @@ def create_app(config, debug=False, testing=False, config_overrides=None):
                 return json.dumps({ 'success': 'false' }), 400
             user = models.User.query.filter_by(email=email).first()
             if user is None:
-                return json.dumps({ 'success': 'false' }), 201
+                return json.dumps({ 'success': 'false' }), 200
             if not check_password_hash(user.pw_hash, password):
-                return json.dumps({ 'success': 'false' }), 201
-            session['user'] = user.first_name
-            return json.dumps({ 'success': 'true' }), 201
+                return json.dumps({ 'success': 'false' }), 200
+            success = timekit_api.authenticate(user)
+            if not success:
+                return json.dumps({ 'success': 'false' }), 200
+            session['email'] = user.email
+            return json.dumps({ 'success': 'true' }), 200
         return render_template('login.html')
 
     @app.route('/logout', methods=['POST'])
     def logout():
-        session.pop('user', None)
-        return json.dumps({ 'success': 'true' }), 201
-
-    @app.route('/api/user', methods=['GET'])
-    def get_user():
-        email = request.args.get('email')
-        if email is None:
-            return json.dumps({ 'user_exists': 'false'}), 400
-        user = models.User.query.filter_by(email=email).first()
-        if user is None:
-            return json.dumps({ 'user_exists': 'false'}), 201
-        return json.dumps({ 'user_exists': 'true' }), 201
+        session.pop('email', None)
+        return json.dumps({ 'success': 'true' }), 200
 
     # Add an error handler. This is useful for debugging the live application,
     # however, you should disable the output of the exception for production

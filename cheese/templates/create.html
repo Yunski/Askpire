@@ -30,6 +30,21 @@
               <label for="password">Password</label>
               <input type="password" class="form-control" id="password">
             </div>
+            <fieldset class="form-group">
+              <legend>I am a:</legend>
+              <div class="form-check">
+                <label class="form-check-label">
+                  <input type="radio" class="form-check-input" name="optionsRadios" id="option1" value="option1" checked>
+                    Consultant
+                </label>
+              </div>
+              <div class="form-check">
+                <label class="form-check-label">
+                  <input type="radio" class="form-check-input" name="optionsRadios" id="option2" value="option2">
+                    Client
+                </label>
+              </div>
+            </fieldset>
             <button type="submit" class="btn btn-secondary" id="create-submit">Sign Up</button>
             <div class="alert alert-danger" role="alert">
               <strong>User already exists with this email!</strong> Click <a href="/login">here</a> to sign in.
