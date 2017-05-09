@@ -10,6 +10,12 @@ def init_app(app):
 
 # [START model]
 
+class Calendar(db.Model):
+    id = db.Column(db.Integer, index=True, unique=True, primary_key=True)
+    app_slug = db.Column(db.UnicodeText())
+    timekit_id = db.Column(db.UnicodeText())
+    user = db.relationship("User", backref="calendar", uselist=False)
+
 class User(db.Model):
     id = db.Column(db.Integer, index=True, unique=True, primary_key=True)
     first_name = db.Column(db.UnicodeText())
@@ -18,6 +24,17 @@ class User(db.Model):
     password = db.Column(db.UnicodeText())
     pw_hash = db.Column(db.UnicodeText())
     timekit_token = db.Column(db.UnicodeText())
+    calendar_id = db.Column(db.Integer, db.ForeignKey('calendar.id'))
+
+class Consultant(db.Model):
+    id = db.Column(db.Integer, index=True, unique=True, primary_key=True)
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
+    user = db.relationship('User', backref="consultant", uselist=False)
+
+class Client(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
+    user = db.relationship('User', backref="client", uselist=False)
 
 # [END model]
 

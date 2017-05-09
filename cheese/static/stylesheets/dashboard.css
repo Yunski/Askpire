@@ -129,4 +129,83 @@ a, a:link, a:active, a:visited {
 /* Dashboard content */
 #content {
   margin-left: 16rem;
+  padding: 1rem;
+  max-height: calc(100% - 4rem);
+}
+
+#booking-js {
+  padding: 0rem 2rem;
+}
+
+/* Schedule */
+
+#consultant-directory .row {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 1rem;
+  max-width: 100%;
+}
+
+#consultant-directory .col-sm {
+  padding: 0;
+}
+
+#consultant-directory a {
+  color: #9a9a9a;
+}
+
+#consultant-directory a:hover {
+  color: #909090;
+}
+
+#consultant-directory .card {
+  width: 100%;
+}
+
+#consultant-directory .card:hover {
+  -ms-transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+#consultant-directory .card-img-top {
+  max-width: 100%;
+}
+
+#consultant-directory .card-block {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  text-align: center;
+}
+
+#consultant-directory .card-title {
+  font-size: 1rem;
+  margin-bottom: 0rem;
+}
+
+#consultant-directory .card-link {
+  font-size: 0.8rem;
+}
+
+/* booking-js overrides */
+
+.fc-event {
+  border-left-color: #21cff2 !important;
+}
+
+.fc-event:hover {
+  background-color: #21cff2 !important;
+}
+
+.bookingjs-form-button {
+  background-color: #77e8ff !important;
+}
+
+.bookingjs-form-button:hover {
+  background-color: #21cff2 !important;
+}
+
+.bookingjs-bookpage-time {
+  margin-bottom: 10px !important;
 }

@@ -3,18 +3,31 @@
 {% include "dashboard_navbar.html" %}
 {% block content %}
 <div id="content">
-  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script type="text/javascript" src="//cdn.timekit.io/booking-js/v1/booking.min.js" defer></script>
-    <script type="text/javascript">
-      window.timekitBookingConfig = {
-        app:      'askpire-877',
-        email:    'marty.mcfly@timekit.io',
-        apiToken: 'bNpbFHRmrfZbtS5nEtCVl8sY5vUkOFCL',
-        calendar: '8687f058-5b52-4fa4-885c-9294e52ab7d4',
-        name:     'Marty McFly',
-        avatar:   '../misc/avatar-mcfly.png'
-      };
-    </script>
+  <div id="consultant-directory">
+    {% for consultant in consultants %}
+    {% if loop.index0 % 5 == 0 %}
+    <div class="row">
+    {% endif %}
+      <div class="col">
+        <a href="/calendar/{{ consultant.id }}">
+          <div class="card">
+            <img class="card-img-top" src="/static/img/example_headshot1.jpg">
+            <div class="card-block">
+              <h4 class="card-title">{{ consultant.first_name}} {{ consultant.last_name }}</h4>
+            </div>
+          </div>
+        </a>
+      </div>
+      {% if loop.index0 == consultants|length - 1 and consultants|length % 5 != 0 %}
+      {% for i in range(0, 5 - consultants|length % 5) %}
+      <div class="col"></div>
+      {% endfor %}
+      {% endif %}
+    {% if loop.index0 % 5 == 0 or loop.index0 == consultants|length - 1 %}
+    </div>
+    {% endif %}
+    {% endfor %}
+  </div>
 </div>
 {% endblock %}
 {% block footer %}

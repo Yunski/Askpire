@@ -24,15 +24,17 @@ $(document).ready(function () {
 
     $(".section-panel .card").mouseover(function() {
         $(".profile-img", this).css("width", "50%");
-        $(".profile-img", this).css("height", "10rem");
+        $(".profile-img", this).css("height", "50%");
         $(".profile-stats", this).css("width", "50%");
+        $(".profile-stats", this).css("height", "50%");
         $(".card-details", this).addClass("expand");
     });
 
     $(".section-panel .card").mouseleave(function() {
         $(".profile-img", this).css("width", "100%");
-        $(".profile-img", this).css("height", "20rem");
+        $(".profile-img", this).css("height", "100%");
         $(".profile-stats", this).css("width", "0%");
+        $(".profile-stats", this).css("height", "0%");
         $(".card-details", this).removeClass("expand");
     });
 
