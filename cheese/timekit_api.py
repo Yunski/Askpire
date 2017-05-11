@@ -6,8 +6,6 @@ base_url = "https://api.timekit.io/v2/"
 app_slug = "askpire-877"
 
 def authenticate(user):
-    if user.timekit_token is not None:
-        return True
     data = {
         'email': user.email,
         'password': user.password
@@ -15,8 +13,13 @@ def authenticate(user):
     r = requests.post(base_url + "auth", json=data)
     if r.status_code != 200:
         return False
-    api_token = r.json()['data']['api_token']
-    user.timekit_token = api_token
+    data = r.json()['data']
+    if user.timekit_token is None:
+        user.timekit_token = data['api_token']
+    if data['image'] is None:
+        user.image = "/static/img/camera.png"
+    else:
+        user.image = data['image']
     models.db.session.commit()
     return True
 
@@ -79,3 +82,14 @@ def get_api_token(user):
         return None
     api_token = r.json()['data']['api_token']
     return api_token
+
+def get_events(user, start, end):
+    headers = {'Timekit-App': app_slug}
+    r = requests.get(base_url + "events?start={}&end={}".format(start, end),
+                      headers=headers,
+                      auth=HTTPBasicAuth(user.email, user.timekit_token))
+    if r.status_code != 200:
+        print(r.text)
+        return None, False
+    events = r.json()['data']
+    return events, True

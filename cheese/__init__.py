@@ -1,7 +1,9 @@
 import base64
+import datetime
 import logging
 import json
 
+from dateutil.relativedelta import relativedelta
 from flask import abort, current_app, Flask, request, redirect, url_for, render_template, session
 from flask_api import status
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -66,7 +68,19 @@ def create_app(config, debug=False, testing=False, config_overrides=None):
         if email is None:
             return redirect(url_for('login'))
         user = models.User.query.filter_by(email=email).first()
-        return render_template('dashboard.html', user=user)
+        start = datetime.datetime.utcnow()
+        end = start + relativedelta(months=1)
+        events = timekit_api.get_events(user, start.strftime("%Y%m%d"), end.strftime("%Y%m%d"))
+        print(events)
+        return render_template('dashboard.html', user=user, events=events)
+
+    @app.route('/profile')
+    def my_profile():
+        email = session.get('email')
+        if email is None:
+            return redirect(url_for('login'))
+        user = models.User.query.filter_by(email=email).first()
+        return render_template('my_profile.html', user=user)
 
     @app.route('/schedule')
     def schedule():

@@ -25,6 +25,8 @@ class User(db.Model):
     pw_hash = db.Column(db.UnicodeText())
     timekit_token = db.Column(db.UnicodeText())
     calendar_id = db.Column(db.Integer, db.ForeignKey('calendar.id'))
+    image = db.Column(db.UnicodeText())
+    school = db.Column(db.UnicodeText())
 
 class Consultant(db.Model):
     id = db.Column(db.Integer, index=True, unique=True, primary_key=True)

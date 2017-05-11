@@ -2,7 +2,14 @@
 {% include "dashboard_sidebar.html" %}
 {% include "dashboard_navbar.html" %}
 {% block content %}
-<div id="content" ng-view="timekit">
+<div id="content">
+  {% for event in events %}
+  <div>{{ event.start }}</div>
+  <div>{{ event.end }}</div>
+  <div>{{ event.what }}</div>
+  <div>{{ event.where }}</div>
+  <div>{{ event.description }}</div>
+  {% endfor %}
 </div>
 {% endblock %}
 {% block footer %}

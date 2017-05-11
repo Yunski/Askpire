@@ -1,0 +1,132 @@
+{% extends "base_dashboard.html" %}
+{% include "dashboard_sidebar.html" %}
+{% include "dashboard_navbar.html" %}
+{% block content %}
+<div id="content">
+<div id="my-profile" class="container-fluid">
+  <div class="row">
+    <div class="col-md-8">
+      <div class="card">
+        <div class="card-header">
+          <h4 class="card-title">My Profile</h4>
+        </div>
+        <div class="card-block">
+          <form>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label>First Name</label>
+                  <input type="text" class="form-control" value="{{ user.first_name }}">
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label>Last Name</label>
+                  <input type="text" class="form-control" value="{{ user.last_name }}">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-5">
+                <div class="form-group">
+                  <label>School</label>
+                  <input type="text" class="form-control" value="{{ user.school }}">
+                </div>
+              </div>
+              <div class="col-md-7">
+                <div class="form-group">
+                  <label for="email">Email address</label>
+                  <input type="email" class="form-control" value="{{ user.email }}">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-7">
+                <div class="form-group">
+                  <label>Major</label>
+                  <input type="text" class="form-control" value="{{ user.major }}">
+                </div>
+              </div>
+              <div class="col-md-5">
+                <div class="form-group">
+                  <label>Year</label>
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-4">
+                <div class="form-group">
+                  <label>SAT (MATH)</label>
+                  <input type="number" class="form-control">
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="form-group">
+                  <label>SAT (READING)</label>
+                  <input type="number" class="form-control">
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="form-group">
+                  <label>SAT (WRITING)</label>
+                  <input type="number" class="form-control">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-4">
+                <div class="form-group">
+                  <label>ACT</label>
+                  <input type="number" class="form-control">
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="form-group">
+                  <label>SAT II </label>
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="form-group">
+                  <label>SAT II</label>
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label>About Me</label>
+                  <textarea rows="5" class="form-control" placeholder="Write about yourself."></textarea>
+                </div>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-fill pull-right">Update Profile</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div id="user-card" class="card">
+        <img class="card-img-top" src="https://ununsplash.imgix.net/photo-1431578500526-4d9613015464?fit=crop&fm=jpg&h=300&q=75&w=400" alt="..."/>
+        <div class="card-block">
+          <div class="profile-pic">
+            <img class="border-circle" src="{{ user.image }}"/>
+            <h4 class="card-title">{{ user.first_name }} {{ user.last_name }}</h4>
+          </div>
+          <p class="text-center">
+            Insert user description here <br />
+            placeholder content <br />
+          </p>
+        </div>
+        <hr />
+        <div class="card-footer">
+          <span><i class="fa fa-weixin fa-lg fa-fw" aria-hidden="true"></i></span>
+          <span><i class="fa fa-skype fa-lg fa-fw" aria-hidden="true"></i></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
