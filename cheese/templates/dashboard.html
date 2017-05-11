@@ -3,13 +3,25 @@
 {% include "dashboard_navbar.html" %}
 {% block content %}
 <div id="content">
-  {% for event in events %}
-  <div>{{ event.start }}</div>
-  <div>{{ event.end }}</div>
-  <div>{{ event.what }}</div>
-  <div>{{ event.where }}</div>
-  <div>{{ event.description }}</div>
-  {% endfor %}
+  <div id="events">
+    <ul class="list-group">
+      {% for event in events %}
+      <li class="list-group-item">
+        <div class="card">
+          <div class="card-header">{{ event.title }}</div>
+          <div class="card-block">
+            <span class="icon"><i class="fa fa-clock-o fa-lg" aria-hidden="true"></i></span>
+            {{ event.date }} {{ event.start_time}} - {{ event.end_time}} ({{ event.status }})
+          </div>
+          <div class="card-block">
+            <span class="icon"><i class="fa fa-skype fa-lg" aria-hidden="true"></i></span>
+            {{ event.skype }}
+          </div>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
 </div>
 {% endblock %}
 {% block footer %}

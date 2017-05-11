@@ -1,10 +1,12 @@
-from . import models
+import arrow
 import requests
+
 from requests.auth import HTTPBasicAuth
+from . import models
 
 base_url = "https://api.timekit.io/v2/"
 app_slug = "askpire-877"
-
+utc_format = "YYYY-MM-DDTHH:mm:ssZZ"
 def authenticate(user):
     data = {
         'email': user.email,
@@ -83,13 +85,34 @@ def get_api_token(user):
     api_token = r.json()['data']['api_token']
     return api_token
 
-def get_events(user, start, end):
+def get_events(user):
     headers = {'Timekit-App': app_slug}
+    start = arrow.utcnow()
+    end = start.shift(months=1)
+    start = start.format(utc_format)
+    end = end.format(utc_format)
+    start = start.replace("+", "%2B");
+    end = end.replace("+", "%2B");
     r = requests.get(base_url + "events?start={}&end={}".format(start, end),
-                      headers=headers,
-                      auth=HTTPBasicAuth(user.email, user.timekit_token))
+                     headers=headers,
+                     auth=HTTPBasicAuth(user.email, user.timekit_token))
     if r.status_code != 200:
         print(r.text)
         return None, False
-    events = r.json()['data']
+    data = r.json()['data']
+    events = []
+    for e in data:
+        event = {}
+        if models.Consultant.query.filter_by(user_id=user.id).first() is None:
+            event['title'] = "Meeting with {}".format(e['what'].split(" x ")[0])
+        else:
+            event['title'] = "Meeting with {}".format(e['what'].split(" x ")[1])
+        start = arrow.get(e['start'], utc_format)
+        end = arrow.get(e['end'], utc_format)
+        event['date'] = start.format("MM/DD/YYYY")
+        event['start_time'] = start.format("HH:mm")
+        event['end_time'] = end.format("HH:mm")
+        event['status'] = arrow.get(e['start'], utc_format).humanize(arrow.utcnow())
+        event['skype'] = e['description'].split("Skype username: ")[1]
+        events.append(event)
     return events, True

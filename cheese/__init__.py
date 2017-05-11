@@ -1,9 +1,7 @@
 import base64
-import datetime
 import logging
 import json
 
-from dateutil.relativedelta import relativedelta
 from flask import abort, current_app, Flask, request, redirect, url_for, render_template, session
 from flask_api import status
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -68,10 +66,9 @@ def create_app(config, debug=False, testing=False, config_overrides=None):
         if email is None:
             return redirect(url_for('login'))
         user = models.User.query.filter_by(email=email).first()
-        start = datetime.datetime.utcnow()
-        end = start + relativedelta(months=1)
-        events = timekit_api.get_events(user, start.strftime("%Y%m%d"), end.strftime("%Y%m%d"))
-        print(events)
+        events, success = timekit_api.get_events(user)
+        if not success:
+            events = []
         return render_template('dashboard.html', user=user, events=events)
 
     @app.route('/profile')
@@ -110,6 +107,7 @@ def create_app(config, debug=False, testing=False, config_overrides=None):
     def create():
         if request.method == 'POST':
             name = request.form["name"]
+            skype = request.form["skype"]
             email = request.form["email"]
             password = request.form["password"]
             user_type = request.form["type"]
@@ -117,7 +115,7 @@ def create_app(config, debug=False, testing=False, config_overrides=None):
                 user_type = int(user_type)
             except ValueError:
                 return json.dumps({ 'success': 'false' }), 400
-            if name is None or email is None or password is None:
+            if name is None or skype is None or email is None or password is None:
                 return json.dumps({ 'success': 'false' }), 400
             user = models.User.query.filter_by(email=email).first()
             if user is not None:
@@ -132,6 +130,7 @@ def create_app(config, debug=False, testing=False, config_overrides=None):
             user = models.User(first_name=first_name,
                                last_name=last_name,
                                email=email,
+                               skype_username=skype,
                                password=password,
                                pw_hash=pw_hash)
             timekit_token = timekit_api.get_api_token(user)

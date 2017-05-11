@@ -150,6 +150,11 @@ textarea {
   background-color: #21cff2;
 }
 
+.container-fluid {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
 /* Dashboard content */
 #content {
   margin-left: 16rem;
@@ -162,6 +167,34 @@ textarea {
   margin: 0rem 1rem !important;
 }
 
+#events .list-group {
+  width: 50%;
+  margin: 0 auto;
+}
+
+#events .list-group-item {
+  padding: 0;
+  margin-bottom: 1rem;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+}
+
+#events .card {
+  width: 100%;
+}
+
+#events .icon {
+  padding-right: 1rem;
+}
+
+#events .card-header {
+  text-align: center;
+  background-color: white;
+}
+
+#events .card-block {
+  padding: 0.5rem 1.25rem;
+}
 /* My Profile */
 
 #my-profile .card {
@@ -189,6 +222,11 @@ textarea {
 #my-profile .form-group input {
   font-weight: 200;
   font-size: 0.9rem;
+}
+
+#my-profile textarea::placeholder {
+  color: #9a9a9a;
+  font-weight: 200;
 }
 
 #user-card {

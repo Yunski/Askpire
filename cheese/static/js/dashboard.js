@@ -1,6 +1,8 @@
 $(document).ready(function () {
-    $("#create-form").submit(function(e) {
+    $("#profile-update-form").submit(function(e) {
         e.preventDefault();
+        console.log($(this).attr("action"));
+        /*
         var name = $("#name").val();
         var skype = $("#skype").val();
         var email = $("#email").val();
@@ -23,6 +25,6 @@ $(document).ready(function () {
                 $(".alert").show();
                 return;
             }
-        });
+        });*/
     });
 });
