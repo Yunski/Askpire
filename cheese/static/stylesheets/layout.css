@@ -8,8 +8,25 @@ a, a:link, a:active, a:visited {
   outline: none;
 }
 
+button:hover {
+  cursor: pointer;
+}
+
 h4 {
   color: black;
+}
+
+textarea {
+  resize: none;
+  font-weight: 200;
+}
+
+textarea::placeholder {
+  color: #9a9a9a;
+}
+
+input {
+  font-weight: 200;
 }
 
 /* Bootstrap Overrides */

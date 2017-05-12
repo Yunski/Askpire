@@ -1,12 +1,31 @@
+.card {
+  border: none;
+}
+
+.card span {
+  padding-right: 1rem;
+}
+
+.card-header {
+  background-color: white;
+  border-bottom: none;
+  padding-left: 0rem;
+}
+
+.card-block {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 0rem;
+}
+
 /* contact page */
 
 form {
-    color: white;
     font-weight: 300;
 }
 
 #parallax-effect {
-  height: 100%;
+  height: 40%;
 }
 
 #parallax-effect .parallax-image {
@@ -18,19 +37,4 @@ form {
   width: 100%;
   height: 100%;
   position: relative;
-}
-
-#contact-form {
-  padding: 3rem;
-}
-
-h1 {
-  font-weight: 300;
-  color: white;
-  text-align: center;
-  padding: 3rem;
-}
-
-footer{
-margin-top: 10rem; 
 }
