@@ -144,8 +144,8 @@
 }
 
 .section-panel-img {
-  width: 100%;
-  height: 60%;
+  max-width: 100%;
+  height: 20rem;
 }
 
 .section-panel .nav-item {
@@ -256,90 +256,18 @@
   box-sizing: border-box;
 }
 
-.image-main img {
-  height: 60%;
-  width: 100%;
-  position: relative;
-  background-repeat: no-repeat;
-  background-size:contain;
-}
-
 /* Partners */
-.school{
-  border: 2px solid #a1a1a1;
-  padding: 10px 40px;
-  width: 300px;
-  border-radius: 25px;
+
+.school {
+  width: 6rem;
+  border-radius: 0.25rem;
+  margin: 0rem 1rem;
+  box-shadow: 0px 0px 0.2rem #404040;
 }
-.school img{
+
+.school img {
   height: 10rem;
   margin: auto;
   width: 100%;
-  padding-bottom: 1rem;
-}
-
-#partners .school {
-  margin-right: 1.5rem;
-  box-shadow: 2px 2px 2px 2px #404040;
-}
-
-.school1 img{
-  height: 10rem;
-  margin: auto;
-  width: 100%;
-  padding-bottom: 1rem;
-
-}
-
-.school1 {
-  border: 2px solid #a1a1a1;
-  padding: 10px 40px;
-  width: 300px;
-  border-radius: 25px;
-  margin-right: 1.5rem;
-  box-shadow: 2px 2px 2px 2px #404040;
-  margin-left: 3rem;
-}
-
-
-/* Footer */
-
-.social-section .container-fluid{
-  width: 85%;
-}
-.social-section li{
-display: inline;
-list-style-type: none;
-padding-right: 20px;
-}
-
-.social-section {
-  padding-bottom: 2rem;
-}
-
-.footer-container {
-  width: 80%;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-}
-
-.footer-container li {
-  padding-top: 7px;
-  padding-bottom: 7px;
-}
-
-i {
-padding-left: 4rem;
-}
-
-.characters a {
-  font: 1px;
-}
-
-.footer-copyright {
-  margin-top: 1rem;
-}
-
-.fa-weixin{
-  padding-left: 25rem;
+  padding: 1rem 0.5rem;
 }

@@ -9,7 +9,7 @@
         <div class="jumbotron text-center animated fadeInUp">
           <h1 class="display-5">Begin Your College Journey With Us</h1>
           <p class="lead">
-            <a href="#main-content" class="btn btn-primary btn-lg" href="#" role="button">Get Started</a>
+            <a href="/login" class="btn btn-primary btn-lg" href="#" role="button">Get Started</a>
           </p>
         </div>
       </div>
@@ -49,12 +49,5 @@
 </div>
 {% endblock %}
 {% block footer %}
-<footer class="footer d-flex align-items-center">
-  <nav class="nav">
-    <a class="nav-link" href="#">Student Profiles</a>
-    <a class="nav-link" href="#">Services</a>
-    <a class="nav-link" href="#">Our Vision</a>
-    <a class="nav-link" href="#">Contact Us</a>
-  </nav>
-</footer>
+{% include "footer.html" %}
 {% endblock %}
