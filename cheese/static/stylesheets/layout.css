@@ -95,14 +95,25 @@ input {
 }
 
 .dropdown-menu {
-  border: none;
   margin: 0;
   padding: 0;
-  border-radius: 0;
+  overflow: hidden;
+  width: 30rem;
+  background: rgba(0, 0, 0, 0);
 }
 
 .dropdown-item {
-  padding: 0.5rem;
+  padding-right: 1rem;
+  display: inline-block;
+  width: 9.6rem;
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: white;
+}
+
+.dropdown-item:hover, .dropdown-item:focus {
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
 }
 /* navbar */
 

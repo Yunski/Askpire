@@ -23,7 +23,7 @@
       <div class="col"></div>
       {% endfor %}
       {% endif %}
-    {% if loop.index0 % 5 == 0 or loop.index0 == consultants|length - 1 %}
+    {% if loop.index0 != 0 and loop.index0 % 5 == 0 or loop.index0 == consultants|length - 1 %}
     </div>
     {% endif %}
     {% endfor %}

@@ -317,8 +317,8 @@ textarea {
   max-width: 100%;
 }
 
-#consultant-directory .col-sm {
-  padding: 0;
+#consultant-directory .col {
+  padding: 0rem 0.2rem;
 }
 
 #consultant-directory a {
