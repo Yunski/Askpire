@@ -51,7 +51,6 @@
           <div class="jumbotron">
             <div class="image-main">
               <img src="/static/img/essay-editing-main.jpg"/>
-              <div class = "overlay1"> this is it </div>
             </div>
           </div>
           <div class="col-md">
@@ -213,6 +212,7 @@
       </div>
     </div>
   </section>
+
   <section class="section section-white">
     <blockquote class="blockquote mb-5">
       <p>This platform is excellent, as it provides the opportunity for Ivy League students
@@ -230,6 +230,34 @@
       <footer class="blockquote-footer">Mr. Wang, Xi’an Gaoxin YiZhong High School parent</footer>
     </blockquote>
   </section>
+
+  <section class="section section-white">
+  <h1 class="text-center">Our Partners</h1>
+  <div id = "partners" class="row">
+    <div class= "col-md-2 offset-md text-center school1">
+      <img class="card-img-top" src="/static/schools/sch1.jpg">
+      <p>Hangsha No. 1 High School</p>
+    </div>
+    <div class= "col-md-2 offset-md text-center school">
+      <img class="card-img-top" src="/static/schools/sch2.jpg">
+      <p>Hunan Normal University attached High School</p>
+    </div>
+    <div class= "col-md-2 offset-md text-center school">
+      <img class="card-img-top" src="/static/schools/sch3.jpg">
+      <p>Changsha No. 15 High School</p>
+    </div>
+    <div class= "col-md-2 offset-md text-center school">
+      <img class="card-img-top" src="/static/schools/unnamed.jpg">
+      <p>Xian High School International Center</p>
+    </div>
+    <div class="col-md-2 offset-md text-center school">
+      <img class="card-img-top" src="/static/schools/sch5.jpg">
+    <p>Xian KDGX International School </p>
+    </div>
+  </div>
+  </div>
+  </section>
+
 </div>
 {% endblock %}
 {% block footer %}
@@ -238,10 +266,10 @@
 
 <!--Footer-->
 <footer class="page-footer center-on-small-only">
-  <div class="container-fluid">
+  <div class="container-fluid footer-container">
     <div class="row">
       <hr class="hidden-md-up">
-        <div class="col-md-2 offset-md-2">
+        <div class="col-md-3 offset-md">
         <h5 class="title">About</h5>
           <li><a href="#!">About Askpire.Inc</a></li>
           <li><a href="#!">Our Team</a></li>
@@ -249,23 +277,21 @@
         </div>
       </hr>
       <hr class="hidden-md-up">
-      <div class="col-md-2">
+      <div class="col-md-3">
       <h5 class="title">Our Services</h5>
                     <li><a href="#!">Essay Editing</a></li>
                     <li><a href="#!">Interview Prep</a></li>
                     <li><a href="#!">High-school Planning</a></li>
             </div>
             <hr class="hidden-md-up">
-            <div class="col-md-2">
-                <h5 class="title"> Our Vision </h5>
-                <ul>
+            <div class="col-md-3">
+                <h5 class="title">Our Vision</h5>
                     <li><a href="#!">Our Background</a></li>
                     <li><a href="#!">Our Operations</a></li>
                     <li><a href="#!">Succes Stories</a></li>
-                </ul>
               </div>
               <hr class="hidden-md-up">
-              <div class=" col-md-2">
+              <div class=" col-md-3">
                           <h5>Ready to Join Us</h5>
                           <a>Contact us today to get started</a>
                           <input type="email" class="form-control" id="email" required="" autocomplete="email" placeholder="email" name="email" data-reactid="630">
@@ -273,10 +299,8 @@
                           <a href="" class="btn btn-danger">Sign up!</a>
               </div>
             </div>
-
-            </div>
-        </div>
-    <hr>
+          </div>
+        <hr width="85%">
 
     <!--Social buttons-->
     <!--/.Social buttons-->
@@ -287,30 +311,14 @@
       <div class="footer-copyright">
           <div class="container-fluid">
               © 2017 Copyright: <a href="https://www.askpire.com"> Askpire.com </a>
+              <i class="fa fa-weixin fa-2x" aria-hidden="true"></i> <a class = "characters"> WeChat </a>
+              <i class="fa fa-skype fa-2x" aria-hidden="true"></i> <a class = "characters"> Skype </a>
+              <i class="fa fa-renren fa-2x" aria-hidden="true"></i> <a class = "characters"> RenRen </a>
+              <i class="fa fa-weibo fa-2x" aria-hidden="true"></i> <a class = "characters"> Weibo </a>
           </div>
-          <script type="text/javascript" src="https://secure.skypeassets.com/i/scom/js/skype-uri.js"></script>
-  <div id="SkypeButton_Call_yunskinator_1">
-   <script type="text/javascript">
-   Skype.ui({
-   "name": "dropdown",
-   "element": "SkypeButton_Call_yunskinator_1",
-   "participants": ["yunskinator"]
-   });
-   </script>
-  </div>
-  </div>
-</div>
-
-<script type="text/javascript" src="/static/js/skype.js"></script>
-<div id="SkypeButton_Call_yunskinator_1">
- <script type="text/javascript">
- Skype.ui({
- "name": "call",
- "element": "SkypeButton_Call_yunskinator_1",
- "participants": ["yunskinator"]
- });
- </script>
-</div>
+        </div>
+      </div>
+    </div>
     <!--/.Copyright-->
 
 </footer>

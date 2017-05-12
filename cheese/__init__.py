@@ -39,6 +39,13 @@ def create_app(config, debug=False, testing=False, config_overrides=None):
             return redirect(url_for('dashboard'))
         return render_template('contact.html')
 
+    @app.route('/yowan')
+    def yowan():
+        email = session.get('email')
+        if email is not None:
+            return redirect(url_for('dashboard'))
+        return render_template('profile.html')
+
     @app.route('/profiles')
     def profiles():
         email = session.get('email')
