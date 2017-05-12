@@ -111,7 +111,7 @@ input {
   display: inline-block;
   width: 9.6rem;
   font-size: 0.9rem;
-  font-weight: 300;
+  font-weight: 200;
   color: white;
 }
 
@@ -156,6 +156,7 @@ input {
 
 .scroll .dropdown-item {
   color: black;
+  font-weight: 200;
 }
 
 #hero {
@@ -274,10 +275,41 @@ input {
 
 .footer .nav-link {
   padding-left: 0;
-  padding-right: 3rem;
+  padding-right: 1rem;
   color: white;
 }
 
 .footer-right .icons {
   padding-top: 1rem;
+}
+
+.footer i {
+  padding-left: 4rem;
+}
+
+.footer-container {
+  width: 80%;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.footer-container li {
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+
+.characters a {
+  font: 1px;
+}
+
+.social-section {
+  margin: 0 auto;
+  width: 80%;
+  padding: 1rem 0rem;
+}
+
+.social-section li{
+  display: inline;
+  list-style-type: none;
+  padding-right: 20px;
 }
