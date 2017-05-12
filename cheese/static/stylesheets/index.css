@@ -144,9 +144,8 @@
 }
 
 .section-panel-img {
-  margin: 1rem;
-  width: 60%;
-  height: 40%;
+  width: 100%;
+  height: 60%;
 }
 
 .section-panel .nav-item {
@@ -257,13 +256,30 @@
   box-sizing: border-box;
 }
 
-#first-content {
-  width: 100%;
-  height: 60vh;
-}
-
 .social-section li{
-  display: inline;
+display: inline;
 list-style-type: none;
 padding-right: 20px;
+}
+
+.image-main {
+
+}
+
+.image-main img {
+  height: 60%;
+  width: 100%;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+
+.overlay1{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  color: #FFF;
 }

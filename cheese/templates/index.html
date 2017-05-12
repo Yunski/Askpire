@@ -29,14 +29,30 @@
 {% block content %}
 
 <div id="main-content">
+
   <section id="first-section" class="section section-white" ng-app="content-switcher">
     <div class="jumbotron section-panel">
       <h1 class="text-center">Our Services</h1>
+
+      <ul class="nav nav-pills justify-content-center" ng-model="template">
+        <li class="nav-item" ng-click="template='page1'">
+          <a id = "Button1" class="nav-link active" href="#" value="page1">Video Conferencing</a>
+        </li>
+        <li class="nav-item" ng-click="template='page2'">
+          <a id = "Button2" class="nav-link" href="#" value="page2">Essay Workshop</a>
+        </li>
+        <li class="nav-item" ng-click="template='page3'">
+          <a id = "Button3"class="nav-link" href="#" value="page3">Interview Prep</a>
+        </li>
+      </ul>
       <ng-include src="template"></ng-include>
       <script type="text/ng-template" id="page1">
         <div class="row section-panel-block animated fadeIn">
-          <div class="col-md d-flex justify-content-end">
-            <img class="section-panel-img" src="/static/img/interview-prep-main.jpg"/>
+          <div class="jumbotron">
+            <div class="image-main">
+              <img src="/static/img/essay-editing-main.jpg"/>
+              <div class = "overlay1"> this is it </div>
+            </div>
           </div>
           <div class="col-md">
             <div class="card">
@@ -51,7 +67,7 @@
       </script>
       <script type="text/ng-template" id="page2">
         <div class="row section-panel-block animated fadeIn">
-          <div class="col-md d-flex justify-content-end">
+          <div class="jumbotron">
             <img class="section-panel-img" src="/static/img/essay-editing-main.jpg"/>
           </div>
           <div class="col-md">
@@ -67,7 +83,7 @@
       </script>
       <script type="text/ng-template" id="page3">
         <div class="row section-panel-block animated fadeIn">
-          <div class="col-md d-flex justify-content-end">
+          <div class="jumbotron">
             <img class="section-panel-img" src="/static/img/high-school-planning-main.jpg"/>
           </div>
           <div class="col-md">
@@ -81,19 +97,14 @@
           </div>
         </div>
       </script>
-      <ul class="nav nav-pills justify-content-center" ng-model="template">
-        <li class="nav-item" ng-click="template='page1'">
-          <a id = "Button1" class="nav-link active" href="#" value="page1">Video Conferencing</a>
-        </li>
-        <li class="nav-item" ng-click="template='page2'">
-          <a id = "Button2" class="nav-link" href="#" value="page2">Essay Workshop</a>
-        </li>
-        <li class="nav-item" ng-click="template='page3'">
-          <a id = "Button3"class="nav-link" href="#" value="page3">Interview Prep</a>
-        </li>
-      </ul>
     </div>
   </section>
+
+
+
+
+
+
 
   <section class="section section-gray">
     <div class="jumbotron section-panel">
@@ -109,8 +120,8 @@
                 <li class="list-group-item">SAT II Math: 710</li>
               </ul>
               <div class="profile-block">
-                <div class="card-title">Elijah Ash</div>
-                <div class="card-subtitle">Major: Geoscience</div>
+                <div class="card-title">Yowan Ramchoreeeter</div>
+                <div class="card-subtitle">Major: Operations Research and Financial Engineering</div>
                 <div class="card-block">Blah Blah Blah Blah Blah</div>
               </div>
               <div class="card-details"><a class="card-link"><i class="fa fa-link" aria-hidden="true"></i>See Full Profile</a></div>
