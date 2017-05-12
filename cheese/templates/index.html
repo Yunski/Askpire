@@ -3,14 +3,11 @@
 <div id="landing">
   {% include "main_navbar.html" %}
   <div id="parallax-effect">
-      <div id="overlay">
-        <video class="visible-desktop" id="hero-vid" poster="http://www.markhillard.com/sandbox/media/polina.jpg" autoplay loop muted>
-          <source type="video/webm" src="http://www.markhillard.com/sandbox/media/polina.webm"></source>
-          <source type="video/mp4" src="http://www.markhillard.com/sandbox/media/polina.mp4"></source>
-        </video>
-        <div id="state" class="visible-desktop"><span class="iconicfill-pause"></span></div>
-        <img id="hero-pic" class="hidden-desktop" src="http://www.markhillard.com/sandbox/media/polina.jpg" alt="">
-      </div>
+      <video class="visible-desktop" id="hero-vid" poster="/static/img/timelapsescreen.png" autoplay loop muted>
+        <source type="video/mp4" src="/static/img/timelapse.mp4"></source>
+      </video>
+      <div id="state" class="visible-desktop"><span class="iconicfill-pause"></span></div>
+      <img id="hero-pic" class="hidden-desktop" src="/static/img/timelapsescreen.png" alt="">
       <div id="hero">
         <div class="jumbotron">
           <h1 class="display-4">Askpire</h1>
@@ -19,7 +16,7 @@
             an insider view of prestigious education in America.
           </p>
           <p class="lead">
-            <a href="#main-content" class="btn btn-primary btn-lg" href="#" role="button">Get Started</a>
+            <a href="/login" class="btn btn-primary btn-lg" href="#" role="button">Get Started</a>
           </p>
         </div>
       </div>
@@ -33,25 +30,11 @@
   <section id="first-section" class="section section-white" ng-app="content-switcher">
     <div class="jumbotron section-panel">
       <h1 class="text-center">Our Services</h1>
-
-      <ul class="nav nav-pills justify-content-center" ng-model="template">
-        <li class="nav-item" ng-click="template='page1'">
-          <a id = "Button1" class="nav-link active" href="#" value="page1">Video Conferencing</a>
-        </li>
-        <li class="nav-item" ng-click="template='page2'">
-          <a id = "Button2" class="nav-link" href="#" value="page2">Essay Workshop</a>
-        </li>
-        <li class="nav-item" ng-click="template='page3'">
-          <a id = "Button3"class="nav-link" href="#" value="page3">Interview Prep</a>
-        </li>
-      </ul>
       <ng-include src="template"></ng-include>
       <script type="text/ng-template" id="page1">
         <div class="row section-panel-block animated fadeIn">
-          <div class="jumbotron">
-            <div class="image-main">
-              <img src="/static/img/essay-editing-main.jpg"/>
-            </div>
+          <div class="col-md">
+            <img class="section-panel-img" src="/static/img/academic_planning.jpg"/>
           </div>
           <div class="col-md">
             <div class="card">
@@ -66,14 +49,14 @@
       </script>
       <script type="text/ng-template" id="page2">
         <div class="row section-panel-block animated fadeIn">
-          <div class="jumbotron">
+          <div class="col-md">
             <img class="section-panel-img" src="/static/img/essay-editing-main.jpg"/>
           </div>
           <div class="col-md">
             <div class="card">
               <div class="card-block">
                 <h4 class="card-title">Essay Editing</h4>
-                <p class="card-text">Button 2 In either a 1-on-1 or group setting, our clients will have the opportunity to ask questions during an hour-long consultation session with an Ivy League student mentor, asking any questions about high school planning, college application, or any other concerns they may have. The typical session involves discussions on standardized testing, high school course selection advice, academic competitions and summer programs, choosing a college major, application essay topics, and interview preparation.</p>
+                <p class="card-text">In either a 1-on-1 or group setting, our clients will have the opportunity to ask questions during an hour-long consultation session with an Ivy League student mentor, asking any questions about high school planning, college application, or any other concerns they may have. The typical session involves discussions on standardized testing, high school course selection advice, academic competitions and summer programs, choosing a college major, application essay topics, and interview preparation.</p>
                 <a href="#" class="btn btn-primary">Learn More</a>
               </div>
             </div>
@@ -82,20 +65,31 @@
       </script>
       <script type="text/ng-template" id="page3">
         <div class="row section-panel-block animated fadeIn">
-          <div class="jumbotron">
+          <div class="col-md">
             <img class="section-panel-img" src="/static/img/high-school-planning-main.jpg"/>
           </div>
           <div class="col-md">
             <div class="card">
               <div class="card-block">
                 <h4 class="card-title">High School Planning</h4>
-                <p class="card-text">Button 3 either a 1-on-1 or group setting, our clients will have the opportunity to ask questions during an hour-long consultation session with an Ivy League student mentor, asking any questions about high school planning, college application, or any other concerns they may have. The typical session involves discussions on standardized testing, high school course selection advice, academic competitions and summer programs, choosing a college major, application essay topics, and interview preparation.</p>
+                <p class="card-text">In either a 1-on-1 or group setting, our clients will have the opportunity to ask questions during an hour-long consultation session with an Ivy League student mentor, asking any questions about high school planning, college application, or any other concerns they may have. The typical session involves discussions on standardized testing, high school course selection advice, academic competitions and summer programs, choosing a college major, application essay topics, and interview preparation.</p>
                 <a href="#" class="btn btn-primary">Learn More</a>
               </div>
             </div>
           </div>
         </div>
       </script>
+      <ul class="nav nav-pills justify-content-center" ng-model="template">
+        <li class="nav-item" ng-click="template='page1'">
+          <a id = "Button1" class="nav-link active" href="#" value="page1">Life Planning</a>
+        </li>
+        <li class="nav-item" ng-click="template='page2'">
+          <a id = "Button2" class="nav-link" href="#" value="page2">Essay Workshop</a>
+        </li>
+        <li class="nav-item" ng-click="template='page3'">
+          <a id = "Button3"class="nav-link" href="#" value="page3">Interview Prep</a>
+        </li>
+      </ul>
     </div>
   </section>
 
@@ -121,39 +115,36 @@
               <div class="profile-block">
                 <div class="card-title">Yowan Ramchoreeeter</div>
                 <div class="card-subtitle">Major: Operations Research and Financial Engineering</div>
-                <div class="card-block">Blah Blah Blah Blah Blah</div>
               </div>
               <div class="card-details"><a class="card-link"><i class="fa fa-link" aria-hidden="true"></i>See Full Profile</a></div>
             </div>
           </div>
           <div class="col-md">
             <div class="card">
-              <img class="card-img-top profile-img" src="/static/img/example_headshot2.jpg">
+              <img class="card-img-top profile-img" src="/static/img/sample-main.jpg">
               <ul class="list-group profile-stats">
                 <li class="list-group-item">ACT 33</li>
                 <li class="list-group-item">SAT II Chemistry: 730</li>
                 <li class="list-group-item">SAT II Math: 710</li>
               </ul>
               <div class="profile-block">
-                <div class="card-title">Elijah Ash</div>
-                <div class="card-subtitle">Major: Geoscience</div>
-                <div class="card-block">Blah Blah Blah Blah Blah</div>
+                <div class="card-title">Yowan Ramchoreeeter</div>
+                <div class="card-subtitle">Major: Operations Research and Financial Engineering</div>
               </div>
               <div class="card-details"><a class="card-link"><i class="fa fa-link" aria-hidden="true"></i>See Full Profile</a></div>
             </div>
           </div>
           <div class="col-md">
             <div class="card">
-              <img class="card-img-top profile-img" src="/static/img/example_headshot3.jpg">
+              <img class="card-img-top profile-img" src="/static/img/sample-main.jpg">
               <ul class="list-group profile-stats">
                 <li class="list-group-item">ACT 33</li>
                 <li class="list-group-item">SAT II Chemistry: 730</li>
                 <li class="list-group-item">SAT II Math: 710</li>
               </ul>
               <div class="profile-block">
-                <div class="card-title">Elijah Ash</div>
-                <div class="card-subtitle">Major: Geoscience</div>
-                <div class="card-block">Blah Blah Blah Blah Blah</div>
+                <div class="card-title">Yowan Ramchoreeeter</div>
+                <div class="card-subtitle">Major: Operations Research and Financial Engineering</div>
               </div>
               <div class="card-details"><a class="card-link"><i class="fa fa-link" aria-hidden="true"></i>See Full Profile</a></div>
             </div>
@@ -161,52 +152,10 @@
         </div>
         <div class="row">
           <div class="col-md">
-            <div class="card">
-              <img class="card-img-top profile-img" src="/static/img/example_headshot4.jpg">
-              <ul class="list-group profile-stats">
-                <li class="list-group-item">ACT 33</li>
-                <li class="list-group-item">SAT II Chemistry: 730</li>
-                <li class="list-group-item">SAT II Math: 710</li>
-              </ul>
-              <div class="profile-block">
-                <div class="card-title">Elijah Ash</div>
-                <div class="card-subtitle">Major: Geoscience</div>
-                <div class="card-block">Blah Blah Blah Blah Blah</div>
-              </div>
-              <div class="card-details"><a class="card-link"><i class="fa fa-link" aria-hidden="true"></i>See Full Profile</a></div>
-            </div>
           </div>
           <div class="col-md">
-            <div class="card">
-              <img class="card-img-top profile-img" src="/static/img/example_headshot5.jpg">
-              <ul class="list-group profile-stats">
-                <li class="list-group-item">ACT 33</li>
-                <li class="list-group-item">SAT II Chemistry: 730</li>
-                <li class="list-group-item">SAT II Math: 710</li>
-              </ul>
-              <div class="profile-block">
-                <div class="card-title">Elijah Ash</div>
-                <div class="card-subtitle">Major: Geoscience</div>
-                <div class="card-block">Blah Blah Blah Blah Blah</div>
-              </div>
-              <div class="card-details"><a class="card-link"><i class="fa fa-link" aria-hidden="true"></i>See Full Profile</a></div>
-            </div>
           </div>
           <div class="col-md">
-            <div class="card">
-              <img class="card-img-top profile-img" src="/static/img/example_headshot6.jpg">
-              <ul class="list-group profile-stats">
-                <li class="list-group-item">ACT 33</li>
-                <li class="list-group-item">SAT II Chemistry: 730</li>
-                <li class="list-group-item">SAT II Math: 710</li>
-              </ul>
-              <div class="profile-block">
-                <div class="card-title">Elijah Ash</div>
-                <div class="card-subtitle">Major: Geoscience</div>
-                <div class="card-block">Blah Blah Blah Blah Blah</div>
-              </div>
-              <div class="card-details"><a class="card-link"><i class="fa fa-link" aria-hidden="true"></i>See Full Profile</a></div>
-            </div>
           </div>
         </div>
       </div>
@@ -234,95 +183,31 @@
   <section class="section section-white">
   <h1 class="text-center">Our Partners</h1>
   <div id = "partners" class="row">
-    <div class= "col-md-2 offset-md text-center school1">
+    <div class= "col-md-2 text-center school">
       <img class="card-img-top" src="/static/schools/sch1.jpg">
       <p>Hangsha No. 1 High School</p>
     </div>
-    <div class= "col-md-2 offset-md text-center school">
+    <div class= "col-md-2 text-center school">
       <img class="card-img-top" src="/static/schools/sch2.jpg">
       <p>Hunan Normal University attached High School</p>
     </div>
-    <div class= "col-md-2 offset-md text-center school">
+    <div class= "col-md-2 text-center school">
       <img class="card-img-top" src="/static/schools/sch3.jpg">
       <p>Changsha No. 15 High School</p>
     </div>
-    <div class= "col-md-2 offset-md text-center school">
+    <div class= "col-md-2 text-center school">
       <img class="card-img-top" src="/static/schools/unnamed.jpg">
       <p>Xian High School International Center</p>
     </div>
-    <div class="col-md-2 offset-md text-center school">
+    <div class="col-md-2 text-center school">
       <img class="card-img-top" src="/static/schools/sch5.jpg">
     <p>Xian KDGX International School </p>
     </div>
   </div>
   </div>
   </section>
-
 </div>
 {% endblock %}
 {% block footer %}
-
-
-
-<!--Footer-->
-<footer class="page-footer center-on-small-only">
-  <div class="container-fluid footer-container">
-    <div class="row">
-      <hr class="hidden-md-up">
-        <div class="col-md-3 offset-md">
-        <h5 class="title">About</h5>
-          <li><a href="#!">About Askpire.Inc</a></li>
-          <li><a href="#!">Our Team</a></li>
-          <li><a href="#!">Contact Us</a></li>
-        </div>
-      </hr>
-      <hr class="hidden-md-up">
-      <div class="col-md-3">
-      <h5 class="title">Our Services</h5>
-            <li><a href="#!">Essay Editing</a></li>
-            <li><a href="#!">Interview Prep</a></li>
-            <li><a href="#!">High-school Planning</a></li>
-            </div>
-            <hr class="hidden-md-up">
-            <div class="col-md-3">
-            <h5 class="title">Our Vision</h5>
-                <li><a href="#!">Our Background</a></li>
-                <li><a href="#!">Our Operations</a></li>
-                <li><a href="#!">Succes Stories</a></li>
-              </div>
-              <hr class="hidden-md-up">
-              <div class=" col-md-3">
-                <h5>Ready to Join Us</h5>
-                <a>Contact us today to get started</a>
-                <input type="email" class="form-control" id="email" required="" autocomplete="email" placeholder="email" name="email" data-reactid="630">
-                <br>
-                <a href="" class="btn btn-danger">Sign up!</a>
-              </div>
-            </div>
-          </div>
-        <hr width="85%">
-
-    <!--Social buttons-->
-    <!--/.Social buttons-->
-
-    <!--Copyright-->
-
-    <div class="social-section">
-      <div class="footer-copyright">
-          <div class="container-fluid">
-              © 2017 Copyright: <a href="https://www.askpire.com"> Askpire.com </a>
-              <i class="fa fa-weixin fa-2x" aria-hidden="true"></i> <a class = "characters"> WeChat </a>
-              <i class="fa fa-skype fa-2x" aria-hidden="true"></i> <a class = "characters"> Skype </a>
-              <i class="fa fa-renren fa-2x" aria-hidden="true"></i> <a class = "characters"> RenRen </a>
-              <i class="fa fa-weibo fa-2x" aria-hidden="true"></i> <a class = "characters"> Weibo </a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!--/.Copyright-->
-
-</footer>
-<!--/.Footer-->
-
-
+{% include "footer.html" %}
 {% endblock %}
