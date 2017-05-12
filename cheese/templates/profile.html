@@ -1,13 +1,84 @@
-{% extends "base.html" %}
+{% extends "base_profile.html" %}
 {% block navbar %}
-{% include "main_navbar.html" %}
+<div id="landing">
+  {% include "main_navbar.html" %}
+<div id = "profile-image">
+  <div class = "main-image">
+    <img src= "static/img/stockimage.jpg">
+  </div>
+</div>
+</div>
 {% endblock %}
 {% block content %}
+<section class="section section-gray">
+  <div class = "studentprofmain">
+    <div id = "profilecards">
+      <div class = "cardcomp">
+        <div class="card">
+            <div class="card-block">
+              <p class="card-text">Princeton Student - Class of 2019</p>
+              <h3>William Liu</h3>
+              <h5>San Diego, CA, United States | Economics </h5>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-<!--Student Profile -->
+<section class = "section section-gray">
+    <div class="jumbotron section-panel">
+      <div class = "row">
+        <div class="col-md-7">
+          <h3>
+            Husband, dad, technology obsessed geek turned VC, mountain biker,
+            rock music lover, part-time tech support, teller of jokes.
+          </h3>
+          <p>
+            David’s investment focus includes Infrastructure, SaaS, IoT and Cyber Security.
+            Prior to joining Flybridge in June 2005, David spent nearly a decade focusing
+            on early-stage investing at Greylock Partners and before that, held management
+            roles at Chipcom, a network equipment and software vendor. While working
+            full-time on his MBA, David was co-founder and COO of HappyPuppy.
+            <br>
+            Earlier in his career he held technical positions at Bell Labs where he developed secure
+            network software. David holds a BS in Computer Science from the University of Vermont,
+            cum laude and with college honors, an MS in Computer Engineering from the University of
+            Southern California, and an MBA with Distinction from Harvard Business School.
+          </p>
+        </div>
+        <div class="col-md-5">
+          <h3>
+            EXTRACURRICULAR ACTIVITIES
+          </h3>
+          <p>
+            IOS Developer Violinist Water-drinker
+            <br> College-Consultant
+          </p>
+          <div>
+            <h3>
+              <br>Scores
+            </h3>
+            <h6>
+              SAT score: 2400
+            </h6>
+            <p>
+              [Breakdown: Math - 800, Writing - 800, Reading - 800]
+            </p>
+            <h6>
+              ACT scores:
+            </h6>
+            <p>
+              36
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+<!--Student Profile
 <div class = "studentprofmain">
   <div id = "profilecards">
-
     <div class = "cardcomp">
       <div class="card">
         <img class="card-img-top" src="static/img/stockimage.jpg" alt="Card image cap">
@@ -100,8 +171,56 @@
   </div>
 
   </div>
-</div>
+</div> -->
 {% endblock %}
 {% block footer %}
-{% include "footer.html" %}
+<footer class="page-footer center-on-small-only">
+  <div class="container-fluid footer-container">
+    <div class="row">
+      <hr class="hidden-md-up">
+        <div class="col-md-3 offset-md">
+        <h5 class="title">About</h5>
+          <li><a href="#!">About Askpire.Inc</a></li>
+          <li><a href="#!">Our Team</a></li>
+          <li><a href="#!">Contact Us</a></li>
+        </div>
+      </hr>
+      <hr class="hidden-md-up">
+      <div class="col-md-3">
+      <h5 class="title">Our Services</h5>
+            <li><a href="#!">Essay Editing</a></li>
+            <li><a href="#!">Interview Prep</a></li>
+            <li><a href="#!">High-school Planning</a></li>
+            </div>
+            <hr class="hidden-md-up">
+            <div class="col-md-3">
+            <h5 class="title">Our Vision</h5>
+                <li><a href="#!">Our Background</a></li>
+                <li><a href="#!">Our Operations</a></li>
+                <li><a href="#!">Succes Stories</a></li>
+              </div>
+              <hr class="hidden-md-up">
+              <div class=" col-md-3">
+                <h5>Ready to Join Us</h5>
+                <a>Contact us today to get started</a>
+                <input type="email" class="form-control" id="email" required="" autocomplete="email" placeholder="email" name="email" data-reactid="630">
+                <br>
+                <a href="" class="btn btn-danger">Sign up!</a>
+              </div>
+            </div>
+          </div>
+        <hr width="85%">
+      <div class="social-section">
+        <div class="footer-copyright">
+          <div class="container-fluid">
+              © 2017 Copyright: <a href="https://www.askpire.com"> Askpire.com </a>
+              <i class="fa fa-weixin fa-2x" aria-hidden="true"></i> <a class = "characters"> WeChat </a>
+              <i class="fa fa-skype fa-2x" aria-hidden="true"></i> <a class = "characters"> Skype </a>
+              <i class="fa fa-renren fa-2x" aria-hidden="true"></i> <a class = "characters"> RenRen </a>
+              <i class="fa fa-weibo fa-2x" aria-hidden="true"></i> <a class = "characters"> Weibo </a>
+          </div>
+        </div>
+      </div>
+    </div>
+</footer>
 {% endblock %}
