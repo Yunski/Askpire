@@ -112,8 +112,9 @@ textarea {
   background-color: rgba(0, 0, 0, 0);
 }
 
-.navbar-light .navbar-brand, .navbar-light .navbar-brand:hover {
+.navbar-light .navbar-brand, .navbar-light .navbar-brand:hover, .navbar-light .navbar-brand:focus {
   color: #9a9a9a;
+  font-weight: 300;
 }
 
 .navbar-light .btn-secondary {
@@ -195,6 +196,22 @@ textarea {
 #events .card-block {
   padding: 0.5rem 1.25rem;
 }
+
+#events .card-footer {
+  background-color: white;
+}
+
+#events .call-button {
+  width: 100%;
+}
+
+#events h4 {
+  padding-bottom: 1rem;
+}
+
+#events a {
+  color: black;
+}
 /* My Profile */
 
 #my-profile .card {
@@ -217,6 +234,10 @@ textarea {
 #my-profile .card-title {
   margin-bottom: 0;
   font-weight: 200;
+}
+
+#my-profile .row {
+  max-width: 100%;
 }
 
 #my-profile .form-group input {

@@ -109,10 +109,11 @@ def get_events(user):
             event['title'] = "Meeting with {}".format(e['what'].split(" x ")[1])
         start = arrow.get(e['start'], utc_format)
         end = arrow.get(e['end'], utc_format)
+        event['id'] = e['id']
         event['date'] = start.format("MM/DD/YYYY")
         event['start_time'] = start.format("HH:mm")
         event['end_time'] = end.format("HH:mm")
         event['status'] = arrow.get(e['start'], utc_format).humanize(arrow.utcnow())
-        event['skype'] = e['description'].split("Skype username: ")[1]
+        event['skype'] = e['description'].split("Skype username: ")[1].rstrip()
         events.append(event)
     return events, True

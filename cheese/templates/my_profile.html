@@ -11,18 +11,18 @@
           <h4 class="card-title">My Profile</h4>
         </div>
         <div class="card-block">
-          <form action="/api/user" id="profile-update-form">
+          <form action="/profile" id="profile-update-form">
             <div class="row">
               <div class="col-md-6">
                 <div class="form-group">
                   <label>First Name</label>
-                  <input type="text" class="form-control" value="{{ user.first_name }}">
+                  <input id="first-name" type="text" class="form-control" value="{{ user.first_name }}">
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-group">
                   <label>Last Name</label>
-                  <input type="text" class="form-control" value="{{ user.last_name }}">
+                  <input id="last-name" type="text" class="form-control" value="{{ user.last_name }}">
                 </div>
               </div>
             </div>
@@ -30,27 +30,35 @@
               <div class="col-md-5">
                 <div class="form-group">
                   <label>School</label>
-                  <input type="text" class="form-control" value="{{ user.school }}">
+                  <input id="school" type="text" class="form-control" value="{{ user.school }}">
                 </div>
               </div>
               <div class="col-md-7">
                 <div class="form-group">
                   <label for="email">Email address</label>
-                  <input type="email" class="form-control" value="{{ user.email }}" disabled>
+                  <input id="email" type="email" class="form-control" value="{{ user.email }}" disabled>
                 </div>
               </div>
             </div>
             <div class="row">
-              <div class="col-md-7">
+              <div class="col-md-12">
                 <div class="form-group">
                   <label>Major</label>
-                  <input type="text" class="form-control" value="{{ user.major }}">
+                  <input id="major" type="text" class="form-control" value="{{ user.major }}">
                 </div>
               </div>
-              <div class="col-md-5">
+            </div>
+            <div class="row">
+              <div class="col-md-9">
+                <div class="form-group">
+                  <label>Skype</label>
+                  <input id="skype" type="text" class="form-control" value="{{ user.skype_username }}">
+                </div>
+              </div>
+              <div class="col-md-3">
                 <div class="form-group">
                   <label>Year</label>
-                  <input type="text" class="form-control">
+                  <input id="year" type="number" class="form-control" value="{{ user.year }}">
                 </div>
               </div>
             </div>
@@ -58,19 +66,19 @@
               <div class="col-md-4">
                 <div class="form-group">
                   <label>SAT (MATH)</label>
-                  <input type="number" class="form-control">
+                  <input id="sat-math" type="number" class="form-control" value="{{ user.sat_math }}">
                 </div>
               </div>
               <div class="col-md-4">
                 <div class="form-group">
                   <label>SAT (READING)</label>
-                  <input type="number" class="form-control">
+                  <input id="sat-reading" type="number" class="form-control" value="{{ user.sat_reading }}">
                 </div>
               </div>
               <div class="col-md-4">
                 <div class="form-group">
                   <label>SAT (WRITING)</label>
-                  <input type="number" class="form-control">
+                  <input id="sat-writing" type="number" class="form-control" value="{{ user.sat_writing }}">
                 </div>
               </div>
             </div>
@@ -78,19 +86,19 @@
               <div class="col-md-4">
                 <div class="form-group">
                   <label>ACT</label>
-                  <input type="number" class="form-control">
+                  <input id="act" type="number" class="form-control" value="{{ user.act }}">
                 </div>
               </div>
               <div class="col-md-4">
                 <div class="form-group">
                   <label>SAT II </label>
-                  <input type="text" class="form-control">
+                  <input type="text" class="form-control" disabled>
                 </div>
               </div>
               <div class="col-md-4">
                 <div class="form-group">
                   <label>SAT II</label>
-                  <input type="text" class="form-control">
+                  <input type="text" class="form-control" disabled>
                 </div>
               </div>
             </div>
@@ -98,7 +106,7 @@
               <div class="col-md-12">
                 <div class="form-group">
                   <label>About Me</label>
-                  <textarea rows="5" class="form-control" placeholder="Write about yourself."></textarea>
+                  <textarea id="description" rows="5" class="form-control" placeholder="Write about yourself.">{{ user.description }}</textarea>
                 </div>
               </div>
             </div>
@@ -116,8 +124,7 @@
             <h4 class="card-title">{{ user.first_name }} {{ user.last_name }}</h4>
           </div>
           <p class="text-center">
-            Insert user description here <br />
-            placeholder content <br />
+            {{ user.description }}
           </p>
         </div>
         <hr />

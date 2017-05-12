@@ -1,30 +1,40 @@
 $(document).ready(function () {
     $("#profile-update-form").submit(function(e) {
         e.preventDefault();
-        console.log($(this).attr("action"));
-        /*
-        var name = $("#name").val();
+        var firstName = $("#first-name").val();
+        var lastName = $("#last-name").val();
         var skype = $("#skype").val();
-        var email = $("#email").val();
-        var password = $("#password").val();
+        var school = $("#school").val();
+        var major = $("#major").val();
+        var year = $("#year").val();
+        var satMath = $("#sat-math").val();
+        var satReading = $("#sat-reading").val();
+        var satWriting = $("#sat-writing").val();
+        var act = $("#act").val();
+        var description = $("#description").val();
         var url = $(this).attr("action");
 
-        if (!name || !skype || !email || !password) return;
-
-        var option = 0;
-        if($('#option2').is(':checked')) {
-            option = 1;
-        }
-
-        var createUser = $.post(url, { name: name, skype: skype, email: email, password: password, type: option });
-        createUser.done(function(response) {
-            r = JSON.parse(response);
-            if (r.success === 'true') {
-                document.location.href = "/dashboard";
-            } else {
-                $(".alert").show();
-                return;
+        $.ajax({
+            url: url,
+            type: "PUT",
+            data: { first_name: firstName,
+                    last_name: lastName,
+                    skype: skype,
+                    school: school,
+                    major: major,
+                    year: year,
+                    sat_math: satMath,
+                    sat_reading: satReading,
+                    sat_writing: satWriting,
+                    act: act,
+                    description: description },
+            success: function(response) {
+                r = JSON.parse(response);
+                if (r.success === 'true') {
+                    console.log("success");
+                }
+                document.location.href = "/profile";
             }
-        });*/
+        });
     });
 });

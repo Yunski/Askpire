@@ -184,6 +184,55 @@ def create_app(config, debug=False, testing=False, config_overrides=None):
         session.pop('email', None)
         return json.dumps({ 'success': 'true' }), 200
 
+    @app.route('/profile', methods=['PUT'])
+    def update_user():
+        email = session.get("email")
+        if email is None:
+            return redirect(url_for("login"))
+        first_name = request.form["first_name"]
+        last_name = request.form["last_name"]
+        skype = request.form["skype"]
+        description = request.form["description"]
+        school = request.form["school"]
+        major = request.form["major"]
+        year = request.form["year"]
+        sat_math = request.form["sat_math"]
+        sat_reading = request.form["sat_reading"]
+        sat_writing = request.form["sat_writing"]
+        act = request.form["act"]
+
+        user = models.User.query.filter_by(email=email).first()
+        if user is None:
+            abort(404)
+        user.first_name = first_name
+        user.last_name = last_name
+        user.skype = skype
+        user.description = description
+        user.school = school
+        user.major = major
+        try:
+            user.year = int(year)
+        except ValueError:
+            pass
+        try:
+            user.sat_math = int(sat_math)
+        except ValueError:
+            pass
+        try:
+            user.sat_reading = int(sat_reading)
+        except ValueError:
+            pass
+        try:
+            user.sat_writing = int(sat_writing)
+        except ValueError:
+            pass
+        try:
+            user.act = int(act)
+        except ValueError:
+            pass
+
+        models.db.session.commit()
+        return json.dumps({ 'success': 'true' }), 200
     # Add an error handler. This is useful for debugging the live application,
     # however, you should disable the output of the exception for production
     # applications.
