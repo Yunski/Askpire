@@ -1,56 +1,81 @@
-/* profile page */
-
-.studentprofmain .card {
-  border: none;
-  border-radius: 0;
+.card {
+  text-align: center;
 }
 
-.studentprofmain .card-img-top {
-  border-radius: 0;
-}
-
-.bottomcomp{
-  right: 10px;
-}
-
-#profilecards img {
+.card img {
   max-width: 100%;
-  min-width: 20%;
-  height: 22.5rem;
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
-.middlecomp {
-  right: 10px;
+.card-block {
+  padding-left: 0;
+  padding-right: 0;
 }
 
-#profilecards img {
- max-width: 100%;
- min-width: 20%;
- height: 22.5rem;
- background-position: 50% 50%;
- background-repeat:   no-repeat;
- background-size:     cover;
+.list-group-item {
+  justify-content: center;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
 }
 
-#bottomcomp .first_activity {
- padding-left: 4rem;
- padding-right: 4rem;
- border: #cdcdcd medium solid;
+/* parallax */
+
+#profile-image {
+  height: 70%;
+}
+
+#profile-image img {
+    width: 100%;
+  height: 100%;
+}
+
+#hero .jumbotron {
+  width: 80%;
+  margin: 0 auto;
+  color: white;
+  text-align: center;
+}
+
+#hero .jumbotron h1 {
+  font-size: 3rem;
 }
 
 
-#bottomcomp .second_activity {
- padding-left: 4rem;
- padding-right: 4rem;
- border: #cdcdcd medium solid;
+.social-section .container-fluid{
+  width: 85%;
+}
+.social-section li{
+display: inline;
+list-style-type: none;
+padding-right: 20px;
 }
 
+.social-section {
+  padding-bottom: 2rem;
+}
 
-#bottomcomp .third_activity {
- padding-left: 4rem;
- padding-right: 4rem;
- border: #cdcdcd medium solid;
+.footer-container {
+  width: 80%;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.footer-container li {
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+
+i {
+padding-left: 4rem;
+}
+
+.characters a {
+  font: 1px;
+}
+
+.footer-copyright {
+  margin-top: 1rem;
+}
+
+.fa-weixin{
+  padding-left: 25rem;
 }
