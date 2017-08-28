@@ -1,0 +1,33 @@
+{% extends "base_dashboard.html" %}
+{% include "dashboard_sidebar.html" %}
+{% include "dashboard_navbar.html" %}
+{% block content %}
+<script src="/static/js/skype.js"></script>
+<div id="content">
+  <div id="events">
+    <h4 class="text-center">Upcoming Events</h4>
+    <ul class="list-group">
+      {% for event in events %}
+      <li class="list-group-item">
+        <div class="card">
+          <div class="card-header">{{ event.title }}</div>
+          <div class="card-block">
+            <span class="icon"><i class="fa fa-clock-o fa-lg" aria-hidden="true"></i></span>
+            {{ event.date }} {{ event.start_time}} - {{ event.end_time}} ({{ event.status }})
+          </div>
+          <div class="card-block">
+            <span class="icon"><i class="fa fa-skype fa-lg" aria-hidden="true"></i></span>
+            {{ event.skype }}
+          </div>
+          <div class="card-footer text-center">
+            <a href="skype:{{ event.skype }}?call"><div class="call-button"><i class="fa fa-phone fa-lg" aria-hidden="true"></i></div></a>
+          </div>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+{% endblock %}
+{% block footer %}
+{% endblock %}

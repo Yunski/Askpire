@@ -1,0 +1,39 @@
+{% extends "base_dashboard.html" %}
+{% include "dashboard_sidebar.html" %}
+{% include "dashboard_navbar.html" %}
+{% block content %}
+<div id="content">
+  <div id="bookingjs">
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdn.timekit.io/booking-js/v1/booking.min.js"></script>
+    <script type="text/javascript">
+      var widget = new TimekitBooking();
+      widget.init({
+        app:      "{{ app_slug }}",
+        email:    "{{ user.email }}",
+        apiToken: "{{ user.timekit_token }}",
+        calendar: "{{ calendar_id }}",
+        name:     "{{ user.first_name }} {{ user.last_name }}",
+        bookingGraph: 'confirm_decline',
+        bookingFields: {
+            voip: {
+                enabled: true,
+                placeholder: "Skype username",
+                prefilled: "{{ user.skype_username }}",
+                required: true,
+                locked: false
+            }
+        },
+        fullCalendar: {
+          minTime: "08:00:00",
+          maxTime: "22:00:00",
+          height: 450,
+          contentHeight: 450
+        }
+      });
+    </script>
+  </div>
+</div>
+{% endblock %}
+{% block footer %}
+{% endblock %}

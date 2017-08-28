@@ -1,0 +1,315 @@
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+}
+
+a, a:link, a:active, a:visited {
+  text-decoration: none;
+  outline: none;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+h4 {
+  color: black;
+}
+
+textarea {
+  resize: none;
+  font-weight: 200;
+}
+
+textarea::placeholder {
+  color: #9a9a9a;
+}
+
+input {
+  font-weight: 200;
+}
+
+/* Bootstrap Overrides */
+
+.navbar {
+  z-index: 1000;
+  padding: 0;
+  border-bottom: 1px;
+  border-bottom-color: black;
+
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: #f4f4f4;
+  font-weight: 200;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+  color: white;
+  cursor: pointer;
+}
+
+.navbar-light .navbar-nav .nav-link:focus {
+  color: white;
+}
+
+.navbar-light .navbar-brand, .navbar-light .navbar-toggler {
+  color: #f4f4f4;
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+.navbar-light .navbar-brand:hover {
+  color: white;
+}
+
+.navbar-nav {
+  padding-right: 1rem;
+}
+
+.navbar-toggleable-md .navbar-nav .nav-link {
+  text-align: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 0rem;
+}
+
+.row {
+  padding: 0;
+  margin: 0;
+  max-width: 100%;
+}
+
+.jumbotron {
+  background-color: rgba(0, 0, 0, 0);
+  padding: 0;
+  margin: 0;
+}
+
+.blockquote p, .blockquote-reverse p {
+  font-size: 1.2rem;
+}
+
+.blockquote-footer {
+  font-size: 1rem;
+  color: #444444;
+}
+
+.dropdown-menu {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  width: 30rem;
+  background: rgba(0, 0, 0, 0);
+  border: none;
+}
+
+.dropdown-item {
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
+  padding-right: 1rem;
+  display: inline-block;
+  width: 9.6rem;
+  font-size: 0.9rem;
+  font-weight: 200;
+  color: white;
+}
+
+.dropdown-item:hover, .dropdown-item:focus {
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+}
+/* navbar */
+
+.navbar-custom {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 5rem;
+  background-color: transparent;
+}
+
+.scroll {
+  position: fixed;
+  background-color: white;
+  box-shadow: 0 2px 2px 1px #eeeeee;
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
+.scroll .navbar-brand {
+  color: #404040;
+}
+
+.scroll .navbar-nav .nav-link {
+  color: #404040;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.scroll .navbar-nav .nav-link:hover {
+  color: black;
+}
+
+.scroll .dropdown-item {
+  color: black;
+  font-weight: 200;
+}
+
+#hero {
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  top: 35%;
+  background: transparent;
+  border: none;
+  color: white;
+}
+
+#hero .card {
+  border: none;
+  border-radius: 0;
+}
+
+#hero .card-link {
+  cursor: pointer;
+}
+
+#hero .display-4 {
+  font-weight: 500;
+}
+
+#hero .display-5 {
+  padding: 1rem;
+  font-weight: 400;
+}
+
+#hero .lead {
+  font-size: 1rem;
+}
+
+#main-content {
+  padding: 1rem;
+  background-color: #eeeeee;
+}
+
+/* custom layout */
+
+.overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.section {
+  color: #444444;
+  padding: 5rem;
+  margin-bottom: 1rem;
+}
+
+.section-white {
+  background-color: white;
+}
+
+.section-gray {
+  background-color: #fafafa;
+}
+
+.section h1, .section h2, .section h3 {
+  font-weight: 300;
+  padding-bottom: 2rem;
+}
+
+.section h4 {
+  padding-bottom: 2rem;
+}
+
+.section-panel .card {
+  position: relative;
+  height: 20rem;
+  max-height: 20rem;
+  overflow: hidden;
+  border: none;
+}
+
+.section-panel-block {
+  padding: 1rem;
+}
+
+.section-panel-block h4 {
+  padding: 0;
+}
+
+.section-panel-block .card {
+  font-weight: 300;
+}
+
+.section-text-block {
+  font-weight: 300;
+}
+
+.section-inner-block {
+  position: relative;
+  background-color: rgba(40,40,40,0.5);
+  box-shadow: 0rem 0rem 3rem #404040;
+}
+
+.p-10 {
+  margin-bottom: 10rem;
+}
+
+/* footer */
+
+.footer {
+  height: 10rem;
+  background: #3c6d9e;
+  color: white;
+  padding: 2rem;
+}
+
+.footer .nav-link {
+  padding-left: 0;
+  padding-right: 1rem;
+  color: white;
+}
+
+.footer-right .icons {
+  padding-top: 1rem;
+}
+
+.footer-container {
+  width: 80%;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.footer-container li {
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+
+.characters a {
+  font: 1px;
+}
+
+.social-section {
+  margin: 0 auto;
+  width: 80%;
+  padding: 1rem 0rem;
+}
+
+.social-section li{
+  display: inline;
+  list-style-type: none;
+  padding-right: 20px;
+}
+
+.social-section i {
+  padding-right: 0.5rem;
+}

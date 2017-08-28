@@ -1,8 +1,8 @@
-import cheese
+import askpire
 import config
 
 
-app = cheese.create_app(config)
+app = askpire.create_app(config)
 
 # This is only used when running locally. When running live, gunicorn runs
 # the application.

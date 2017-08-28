@@ -1,0 +1,63 @@
+{% extends "base_contact.html" %}
+{% block navbar %}
+<div id="landing">
+  {% include "main_navbar.html" %}
+  <div id="parallax-effect">
+    <div class="parallax-image" data-stellar-background-ratio="0.5">
+      <div class="overlay"></div>
+      <div id="hero" class="card">
+        <div class="jumbotron text-center animated fadeInUp">
+          <h1 class="display-5">Contact Us</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+{% block content %}
+<div id="main-content">
+  <section class="section section-white">
+    <form id="contact-form">
+      <div class="main-container">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-6">
+              <p>Thank you for considering 有问必答. If you'd like more information, please fill out the form and we will reach out to you as soon as possible.</p>
+              <div class="card">
+                <div class="card-block">
+                  <div class="card-header"><h5 class="card-title">Contact Details</h5></div>
+                  <span><i class="fa fa-envelope fa-lg fa-fw" aria-hidden="true"></i></span>Email Address: hlee_84@yahoo.com
+                </div>
+                <div class="card-block">
+                  <span><i class="fa fa-skype fa-lg fa-fw" aria-hidden="true"></i></span>Skype: haiyanli84
+                </div>
+                <div class="card-block">
+                  <span><i class="fa fa-weixin fa-lg fa-fw" aria-hidden="true"></i></span> WeChat: wliu978, haiyanli1321
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="exampleInputEmail1">Please enter your email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Email here">
+              </div>
+              <div class="form-group">
+                <label for="subjectline">Please a subject line</label>
+                <input type="subject" class="form-control" id="subjectlineinput" placeholder="Enter Subject here">
+              </div>
+              <div class="form-group">
+                <label for="exampleTextarea">Enter your message below, please</label>
+                <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </section>
+</div>
+{% endblock %}
+{% block footer %}
+{% include "footer.html" %}
+{% endblock %}

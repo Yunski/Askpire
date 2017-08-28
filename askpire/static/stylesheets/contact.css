@@ -1,0 +1,40 @@
+.card {
+  border: none;
+}
+
+.card span {
+  padding-right: 1rem;
+}
+
+.card-header {
+  background-color: white;
+  border-bottom: none;
+  padding-left: 0rem;
+}
+
+.card-block {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 0rem;
+}
+
+/* contact page */
+
+form {
+    font-weight: 300;
+}
+
+#parallax-effect {
+  height: 40%;
+}
+
+#parallax-effect .parallax-image {
+  background-attachment: fixed;
+  background-position: 50% 0;
+  background-repeat: no-repeat;
+  background-image: url("../img/princeton_students.jpg");
+  background-size:cover;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}

@@ -1,0 +1,178 @@
+{% extends "base_profile.html" %}
+{% block navbar %}
+<div id="landing">
+  {% include "main_navbar.html" %}
+<div id = "profile-image">
+  <div class = "main-image">
+    <img src= "static/img/stockimage.jpg">
+  </div>
+</div>
+</div>
+{% endblock %}
+{% block content %}
+<section class="section section-gray">
+  <div class = "studentprofmain">
+    <div id = "profilecards">
+      <div class = "cardcomp">
+        <div class="card">
+            <div class="card-block">
+              <p class="card-text">Princeton Student - Class of 2019</p>
+              <h3>William Liu</h3>
+              <h5>San Diego, CA, United States | Economics </h5>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class = "section section-gray">
+    <div class="jumbotron section-panel">
+      <div class = "row">
+        <div class="col-md-7">
+          <h3>
+            Husband, dad, technology obsessed geek turned VC, mountain biker,
+            rock music lover, part-time tech support, teller of jokes.
+          </h3>
+          <p>
+            David’s investment focus includes Infrastructure, SaaS, IoT and Cyber Security.
+            Prior to joining Flybridge in June 2005, David spent nearly a decade focusing
+            on early-stage investing at Greylock Partners and before that, held management
+            roles at Chipcom, a network equipment and software vendor. While working
+            full-time on his MBA, David was co-founder and COO of HappyPuppy.
+            <br>
+            Earlier in his career he held technical positions at Bell Labs where he developed secure
+            network software. David holds a BS in Computer Science from the University of Vermont,
+            cum laude and with college honors, an MS in Computer Engineering from the University of
+            Southern California, and an MBA with Distinction from Harvard Business School.
+          </p>
+        </div>
+        <div class="col-md-5">
+          <h3>
+            EXTRACURRICULAR ACTIVITIES
+          </h3>
+          <p>
+            IOS Developer Violinist Water-drinker
+            <br> College-Consultant
+          </p>
+          <div>
+            <h3>
+              <br>Scores
+            </h3>
+            <h6>
+              SAT score: 2400
+            </h6>
+            <p>
+              [Breakdown: Math - 800, Writing - 800, Reading - 800]
+            </p>
+            <h6>
+              ACT scores:
+            </h6>
+            <p>
+              36
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+<!--Student Profile
+<div class = "studentprofmain">
+  <div id = "profilecards">
+    <div class = "cardcomp">
+      <div class="card">
+        <img class="card-img-top" src="static/img/stockimage.jpg" alt="Card image cap">
+          <div class="card-block">
+            <p class="card-text">Princeton Student - Class of 2019</p>
+            <h3>William Liu</h3>
+            <h5>San Diego, CA, United States | Economics </h5>
+          </div>
+      </div>
+    </div>
+
+    <div class="middlecomp">
+      <div class = "row">
+        <div class="col-md-7">
+          <h3>
+            Husband, dad, technology obsessed geek turned VC, mountain biker,
+            rock music lover, part-time tech support, teller of jokes.
+          </h3>
+          <p>
+            David’s investment focus includes Infrastructure, SaaS, IoT and Cyber Security.
+            Prior to joining Flybridge in June 2005, David spent nearly a decade focusing
+            on early-stage investing at Greylock Partners and before that, held management
+            roles at Chipcom, a network equipment and software vendor. While working
+            full-time on his MBA, David was co-founder and COO of HappyPuppy.
+            <br>
+            Earlier in his career he held technical positions at Bell Labs where he developed secure
+            network software. David holds a BS in Computer Science from the University of Vermont,
+            cum laude and with college honors, an MS in Computer Engineering from the University of
+            Southern California, and an MBA with Distinction from Harvard Business School.
+          </p>
+        </div>
+        <div class="col-md-5">
+          <h3>
+            EXTRACURRICULAR ACTIVITIES
+          </h3>
+          <p>
+            IOS Developer Violinist Water-drinker
+            <br> College-Consultant
+          </p>
+          <div>
+            <h3>
+              <br>Scores
+            </h3>
+            <h6>
+              SAT score: 2400
+            </h6>
+            <p>
+              [Breakdown: Math - 800, Writing - 800, Reading - 800]
+            </p>
+            <h6>
+              ACT scores:
+            </h6>
+            <p>
+              36
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id ="bottomcomp">
+      <h3>Main Extracurricular Activities</h3>
+      <div class = "gridplacement ">
+        <div class = "row justify-content-center">
+
+          <div class="col-md-4">
+            <div class= "first_activity">
+              <img src="static/icons/football-game.svg">
+              <h3> Soccer Captain</h3>
+            </div>
+          </div>
+
+        <div class="col-md-4">
+          <div class= "second_activity">
+            <img src="static/icons/justice-hammer.svg">
+            <h3>MUN Conference</h3>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class= "third_activity">
+            <img src="static/icons/music-player.svg">
+            <h3>Piano for 12 years</h3>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  </div>
+</div> -->
+{% endblock %}
+{% block footer %}
+{% include "footer.html" %}
+{% endblock %}

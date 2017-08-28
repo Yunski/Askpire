@@ -1,0 +1,34 @@
+{% extends "base_dashboard.html" %}
+{% include "dashboard_sidebar.html" %}
+{% include "dashboard_navbar.html" %}
+{% block content %}
+<div id="content">
+  <div id="consultant-directory">
+    {% for consultant in consultants %}
+    {% if loop.index0 % 5 == 0 %}
+    <div class="row">
+    {% endif %}
+      <div class="col">
+        <a href="/calendar/{{ consultant.id }}">
+          <div class="card">
+            <img class="card-img-top" src="/static/img/example_headshot1.jpg">
+            <div class="card-block">
+              <h4 class="card-title">{{ consultant.first_name}} {{ consultant.last_name }}</h4>
+            </div>
+          </div>
+        </a>
+      </div>
+      {% if loop.index0 == consultants|length - 1 and consultants|length % 5 != 0 %}
+      {% for i in range(0, 5 - consultants|length % 5) %}
+      <div class="col"></div>
+      {% endfor %}
+      {% endif %}
+    {% if loop.index0 != 0 and loop.index0 % 5 == 0 or loop.index0 == consultants|length - 1 %}
+    </div>
+    {% endif %}
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}
+{% block footer %}
+{% endblock %}
